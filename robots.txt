@@ -1,0 +1,19 @@
+# robots.txt — MPOUCK
+# https://mpouck.github.io/mpouckdigitalservice/
+
+User-agent: *
+Allow: /mpouckdigitalservice/
+
+# Bloquer les répertoires sensibles
+Disallow: /mpouckdigitalservice/admin/
+Disallow: /mpouckdigitalservice/private/
+Disallow: /mpouckdigitalservice/tmp/
+Disallow: /mpouckdigitalservice/cgi-bin/
+
+# Bloquer les paramètres inutiles
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?session=*
+
+# Sitemap
+Sitemap: https://mpouck.github.io/mpouckdigitalservice/sitemap.xml
