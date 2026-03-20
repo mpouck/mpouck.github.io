@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taux de conversion, temps de session, bounce rate : comment un bon design UI booste vos KPIs — MPOUCK</title>
+  <meta name="description" content="Découvrez comment chaque décision de design UI — typographie, couleurs, hiérarchie visuelle, espacement — impacte directement vos KPIs et comment mesurer et améliorer chaque indicateur.">
+  <link rel="canonical" href="https://mpouck.github.io/article-design-ui-kpis.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mpouck.github.io/article-design-ui-kpis.html">
+  <meta property="og:title" content="Comment un bon design UI booste vos KPIs — MPOUCK">
+  <meta property="og:description" content="Taux de conversion, temps de session, bounce rate : le lien direct entre vos décisions de design et vos résultats business.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="MPOUCK">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comment un bon design UI booste vos KPIs — MPOUCK">
+  <meta name="twitter:description" content="Taux de conversion, temps de session, bounce rate : le lien direct entre design et résultats business.">
+  <meta name="twitter:image" content="https://mpouck.github.io/https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4TSLNZGEPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4TSLNZGEPK');
+</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root, [data-theme="light"] {
+      --font:         'DM Sans', sans-serif;
+      --bg-page:      #f5f5f7;
+      --bg-nav:       #ffffff;
+      --bg-card:      #ffffff;
+      --bg-hover:     rgba(0,0,0,.045);
+      --text-dark:    #0d1b2a;
+      --text-muted:   #64748b;
+      --text-sub:     #94a3b8;
+      --border-nav:   rgba(0,0,0,.07);
+      --separator:    rgba(0,0,0,.07);
+      --social-bg:    rgba(0,0,0,.055);
+      --social-bg-h:  rgba(0,0,0,.1);
+      --btn-primary:  #0d1b2a;
+      --btn-p-text:   #ffffff;
+      --btn-hover-sh: rgba(0,0,0,.22);
+      --shadow-nav:   0 4px 28px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.05);
+      --shadow-card:  0 8px 40px rgba(0,0,0,.08), 0 1px 6px rgba(0,0,0,.04);
+      --shadow-float: 0 16px 48px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.06);
+      --toggle-track: #e4e4e7;
+      --toggle-thumb: #ffffff;
+      --radius-nav:   20px;
+      --radius-pill:  999px;
+      --ease:         220ms cubic-bezier(.4,0,.2,1);
+      --accent:       #c9a76c;
+    }
+    [data-theme="dark"] {
+      --bg-page:      #0a0a0f;
+      --bg-nav:       #13131a;
+      --bg-card:      #1a1a24;
+      --bg-hover:     rgba(255,255,255,.06);
+      --text-dark:    #f1f5f9;
+      --text-muted:   #94a3b8;
+      --text-sub:     #64748b;
+      --border-nav:   rgba(255,255,255,.08);
+      --separator:    rgba(255,255,255,.07);
+      --social-bg:    rgba(255,255,255,.07);
+      --social-bg-h:  rgba(255,255,255,.13);
+      --btn-primary:  #f1f5f9;
+      --btn-p-text:   #0d1b2a;
+      --btn-hover-sh: rgba(255,255,255,.15);
+      --shadow-nav:   0 4px 28px rgba(0,0,0,.5), 0 1px 4px rgba(0,0,0,.3);
+      --shadow-card:  0 8px 40px rgba(0,0,0,.45), 0 1px 6px rgba(0,0,0,.25);
+      --shadow-float: 0 16px 48px rgba(0,0,0,.6), 0 2px 8px rgba(0,0,0,.3);
+      --toggle-track: #3f3f46;
+      --toggle-thumb: #18181b;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: var(--font); background: var(--bg-page); color: var(--text-dark); overflow-x: hidden; transition: background .35s ease, color .35s ease; }
+
+    /* ══ NAVBAR ══ */
+    .nav-wrapper { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: calc(100% - 48px); max-width: 960px; z-index: 200; }
+    .navbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--bg-nav); border-radius: var(--radius-nav); padding: 10px 12px 10px 22px; box-shadow: var(--shadow-nav); border: 1px solid var(--border-nav); transition: background .35s ease, box-shadow .35s ease, border-color .35s ease; }
+    .nav-logo { font-size: 1.2rem; font-weight: 700; letter-spacing: -.5px; color: var(--text-dark); text-decoration: none; flex-shrink: 0; transition: color .35s ease; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; flex: 1; justify-content: center; }
+    .nav-links a { padding: 6px 13px; border-radius: 10px; font-size: .82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-has-dropdown { position: relative; }
+    .nav-drop-btn { display: flex; align-items: center; gap: 4px; padding: 6px 13px; border-radius: 10px; font-size: .82rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; font-family: var(--font); transition: color var(--ease), background var(--ease); }
+    .nav-drop-btn:hover, .nav-has-dropdown.open .nav-drop-btn { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-drop-btn .chv { transition: transform var(--ease); display: inline-flex; }
+    .nav-has-dropdown.open .chv { transform: rotate(180deg); }
+    .nav-drop-panel { position: absolute; top: calc(100% + 10px); left: 50%; min-width: 190px; background: var(--bg-card); border-radius: 14px; border: 1px solid var(--border-nav); box-shadow: var(--shadow-float); padding: 7px; opacity: 0; pointer-events: none; transform: translateX(-50%) translateY(-6px) scale(.97); transition: opacity .2s ease, transform .2s ease, background .35s ease, border-color .35s ease; }
+    .nav-has-dropdown.open .nav-drop-panel { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0) scale(1); }
+    .nav-drop-panel a { display: flex; align-items: center; gap: 9px; padding: 8px 11px; border-radius: 9px; font-size: .82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .nav-drop-panel a:hover { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-drop-panel .page-icon { width: 26px; height: 26px; border-radius: 7px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .77rem; flex-shrink: 0; }
+    .nav-drop-panel .sep { height: 1px; background: var(--border-nav); margin: 4px 3px; }
+    .nav-right { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .search-btn { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 10px; border: none; background: transparent; cursor: pointer; color: var(--text-muted); flex-shrink: 0; transition: background var(--ease), color var(--ease); }
+    .search-btn:hover { background: var(--bg-hover); color: var(--text-dark); }
+    .theme-btn { position: relative; display: inline-flex; align-items: center; width: 52px; height: 30px; border-radius: 999px; border: none; cursor: pointer; padding: 0; flex-shrink: 0; background: var(--toggle-track); transition: background .35s cubic-bezier(.4,0,.2,1); }
+    .theme-thumb { position: absolute; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: var(--toggle-thumb); box-shadow: 0 1px 6px rgba(0,0,0,.22); display: flex; align-items: center; justify-content: center; transition: transform .35s cubic-bezier(.34,1.4,.64,1), background .35s ease; }
+    [data-theme="dark"] .theme-thumb { transform: translateX(22px); background: #27272a; }
+    .theme-thumb svg { position: absolute; transition: opacity .2s ease; }
+    .ico-sun { color: #f59e0b; } .ico-moon { color: #818cf8; }
+    [data-theme="light"] .ico-sun { opacity: 1; } [data-theme="light"] .ico-moon { opacity: 0; }
+    [data-theme="dark"] .ico-sun { opacity: 0; } [data-theme="dark"] .ico-moon { opacity: 1; }
+    .nav-cta { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: var(--radius-pill); background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .82rem; font-weight: 500; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background .35s ease, color .35s ease; }
+    .nav-cta:hover { transform: scale(1.04); box-shadow: 0 6px 20px var(--btn-hover-sh); }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; padding: 7px; border: none; border-radius: 10px; background: transparent; cursor: pointer; flex-shrink: 0; transition: background var(--ease); }
+    .hamburger:hover { background: var(--bg-hover); }
+    .hamburger span { display: block; width: 100%; height: 2px; border-radius: 2px; background: var(--text-dark); transform-origin: center; transition: transform var(--ease), opacity var(--ease), background .35s ease; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: absolute; top: calc(100% + 10px); left: 0; right: 0; border-radius: 16px; overflow: hidden; max-height: 0; background: transparent; box-shadow: none; border: 1px solid transparent; padding: 0; pointer-events: none; transition: max-height .38s cubic-bezier(.4,0,.2,1), background .28s ease, box-shadow .28s ease, border-color .28s ease, padding .28s ease; }
+    .mobile-menu.open { max-height: 700px; background: var(--bg-nav); box-shadow: var(--shadow-float); border-color: var(--border-nav); padding: 10px; pointer-events: auto; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 2px; padding: 6px 0 4px; }
+    .mobile-menu ul a { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-radius: 10px; font-size: .88rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .mobile-menu ul a:hover { color: var(--text-dark); background: var(--bg-hover); }
+    .mobile-has-sub { display: flex; flex-direction: column; }
+    .mob-sub-trigger { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-radius: 10px; font-size: .88rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; font-family: var(--font); width: 100%; text-align: left; transition: color var(--ease), background var(--ease); }
+    .mob-sub-trigger:hover, .mobile-has-sub.open .mob-sub-trigger { color: var(--text-dark); background: var(--bg-hover); }
+    .mob-chv { display: inline-flex; transition: transform var(--ease); color: var(--text-sub); }
+    .mobile-has-sub.open .mob-chv { transform: rotate(180deg); }
+    .mob-sublist { overflow: hidden; max-height: 0; transition: max-height .32s cubic-bezier(.4,0,.2,1); }
+    .mobile-has-sub.open .mob-sublist { max-height: 400px; }
+    .mob-sublist-inner { display: flex; flex-direction: column; gap: 2px; padding: 4px 0 4px 10px; }
+    .mob-sublink { display: flex !important; align-items: center !important; gap: 9px; padding: 9px 12px !important; border-radius: 10px; font-size: .84rem !important; color: var(--text-muted) !important; text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .mob-sublink:hover { color: var(--text-dark) !important; background: var(--bg-hover) !important; }
+    .mob-sublink .page-icon { width: 24px; height: 24px; border-radius: 6px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .72rem; flex-shrink: 0; }
+    .mob-cta { display: block; width: 100%; margin-top: 6px; padding: 13px; border-radius: var(--radius-pill); background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .88rem; font-weight: 500; text-align: center; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), background .35s ease, color .35s ease; }
+    .mob-cta:hover { transform: scale(1.02); }
+    @media (max-width: 720px) {
+      .nav-links, .nav-cta { display: none !important; }
+      .hamburger { display: flex; } .mobile-menu { display: block; }
+      .nav-wrapper { width: calc(100% - 28px); top: 14px; }
+    }
+
+    /* ══ SEARCH ══ */
+    .search-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); opacity: 0; pointer-events: none; transition: opacity .22s ease; }
+    .search-overlay.open { opacity: 1; pointer-events: auto; }
+    .search-modal { position: fixed; top: 80px; left: 50%; transform: translateX(-50%) translateY(-10px) scale(.97); width: calc(100% - 40px); max-width: 640px; z-index: 901; opacity: 0; pointer-events: none; transition: opacity .22s ease, transform .25s cubic-bezier(.34,1.3,.64,1); }
+    .search-modal.open { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0) scale(1); }
+    .search-box { display: flex; align-items: center; gap: 10px; background: var(--bg-nav); border: 1px solid var(--border-nav); border-radius: 16px; padding: 12px 16px; box-shadow: 0 20px 60px rgba(0,0,0,.25); transition: background .35s ease, border-color .35s ease; }
+    .search-box svg { color: var(--text-sub); flex-shrink: 0; }
+    .search-input { flex: 1; font-family: var(--font); font-size: .97rem; color: var(--text-dark); background: transparent; border: none; outline: none; }
+    .search-input::placeholder { color: var(--text-sub); }
+    .search-close-btn { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; border: 1px solid var(--border-nav); background: var(--bg-hover); cursor: pointer; color: var(--text-muted); transition: background var(--ease), color var(--ease), border-color .35s ease; }
+    .search-close-btn:hover { background: var(--social-bg-h); color: var(--text-dark); }
+    .search-results { background: var(--bg-nav); border: 1px solid var(--border-nav); border-radius: 16px; margin-top: 8px; box-shadow: 0 12px 40px rgba(0,0,0,.13); overflow: hidden; max-height: 400px; overflow-y: auto; display: none; }
+    .search-results.visible { display: block; }
+    .search-results::-webkit-scrollbar { width: 4px; } .search-results::-webkit-scrollbar-thumb { background: var(--border-nav); border-radius: 2px; }
+    .search-item { display: flex; align-items: center; gap: 12px; padding: 11px 16px; text-decoration: none; border-bottom: 1px solid var(--separator); transition: background var(--ease); cursor: pointer; }
+    .search-item:last-child { border-bottom: none; }
+    .search-item:hover, .search-item.focused { background: var(--bg-hover); }
+    .search-item-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+    .search-item-body { flex: 1; min-width: 0; }
+    .search-item-title { font-size: .86rem; font-weight: 600; color: var(--text-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; }
+    .search-item-title mark { background: rgba(201,167,108,.28); color: inherit; border-radius: 2px; padding: 0 1px; }
+    .search-item-desc { font-size: .74rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .search-item-badge { font-size: .64rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--social-bg); color: var(--text-sub); flex-shrink: 0; white-space: nowrap; }
+    .search-empty { padding: 28px 16px; text-align: center; color: var(--text-sub); font-size: .85rem; }
+    .search-footer { padding: 9px 16px; border-top: 1px solid var(--separator); display: flex; align-items: center; justify-content: space-between; font-size: .68rem; color: var(--text-sub); }
+
+    /* ══ HERO ══ */
+    .pub-hero { padding: 140px 32px 0; max-width: 820px; margin: 0 auto; }
+    .pub-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: .75rem; color: var(--text-sub); margin-bottom: 24px; }
+    .pub-breadcrumb a { color: var(--text-sub); text-decoration: none; transition: color var(--ease); }
+    .pub-breadcrumb a:hover { color: var(--accent); }
+    .pub-category { display: inline-flex; align-items: center; gap: 6px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); background: rgba(201,167,108,.1); border: 1px solid rgba(201,167,108,.25); border-radius: 999px; padding: 5px 14px; margin-bottom: 20px; }
+    .pub-title { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.2; color: var(--text-dark); margin-bottom: 20px; transition: color .35s ease; }
+    .pub-title em { font-style: italic; color: var(--accent); }
+    .pub-subtitle { font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px; transition: color .35s ease; }
+    .pub-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 20px 0; border-top: 1px solid var(--separator); border-bottom: 1px solid var(--separator); }
+    .pub-author { display: flex; align-items: center; gap: 10px; }
+    .pub-author-avatar { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--border-nav); background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; color: var(--accent); flex-shrink: 0; overflow: hidden; }
+    .pub-author-avatar-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+    .pub-author-info { display: flex; flex-direction: column; gap: 1px; }
+    .pub-author-name { font-size: .85rem; font-weight: 700; color: var(--text-dark); transition: color .35s ease; }
+    .pub-author-role { font-size: .72rem; color: var(--text-sub); transition: color .35s ease; }
+    .pub-meta-sep { width: 1px; height: 32px; background: var(--separator); }
+    .pub-meta-info { display: flex; flex-direction: column; gap: 2px; }
+    .pub-meta-label { font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-sub); }
+    .pub-meta-val { font-size: .8rem; color: var(--text-muted); transition: color .35s ease; }
+    .pub-share { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+    .pub-share-label { font-size: .72rem; color: var(--text-sub); }
+    .pub-share-btn { width: 27px; height: 27px; border-radius: 9px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; transition: background var(--ease), color var(--ease); cursor: pointer; }
+    .pub-share-btn:hover { background: var(--social-bg-h); color: var(--text-dark); }
+
+    /* ══ BANNIÈRE ══ */
+    .pub-banner { max-width: 820px; margin: 36px auto 0; padding: 0 32px; }
+    .pub-banner-img { width: 100%; aspect-ratio: 16/7; object-fit: cover; border-radius: 20px; border: 1px solid var(--border-nav); background: linear-gradient(135deg, #0d1b2a 0%, #1e3050 50%, #c9a76c 100%); display: block; }
+
+    /* ══ LAYOUT ══ */
+    .pub-layout { max-width: 820px; margin: 0 auto; padding: 52px 32px 80px; display: grid; grid-template-columns: 1fr 220px; gap: 52px; align-items: start; }
+
+    /* ══ CORPS ══ */
+    .pub-body { min-width: 0; }
+    .pub-body h2 { font-size: 1.45rem; font-weight: 800; letter-spacing: -.03em; color: var(--text-dark); margin: 40px 0 14px; transition: color .35s ease; }
+    .pub-body h3 { font-size: 1.1rem; font-weight: 700; letter-spacing: -.02em; color: var(--text-dark); margin: 28px 0 10px; transition: color .35s ease; }
+    .pub-body p { font-size: .97rem; line-height: 1.82; color: var(--text-muted); margin-bottom: 20px; transition: color .35s ease; }
+    .pub-body ul, .pub-body ol { padding-left: 22px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .pub-body li { font-size: .97rem; line-height: 1.7; color: var(--text-muted); transition: color .35s ease; }
+    .pub-body a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(201,167,108,.3); transition: border-color var(--ease); }
+    .pub-body a:hover { border-color: var(--accent); }
+    .pub-body strong { color: var(--text-dark); font-weight: 700; transition: color .35s ease; }
+    .pub-body em { font-style: italic; }
+
+    .pub-callout { background: linear-gradient(135deg, rgba(201,167,108,.08), rgba(201,167,108,.03)); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 28px 0; }
+    .pub-callout p { margin-bottom: 0; color: var(--text-dark); font-weight: 500; font-style: italic; }
+
+    .pub-quote { border-left: 3px solid var(--separator); padding: 14px 22px; margin: 28px 0; }
+    .pub-quote p { color: var(--text-muted); font-size: 1.05rem; font-style: italic; margin-bottom: 8px; }
+    .pub-quote cite { font-size: .78rem; color: var(--text-sub); font-style: normal; }
+
+    .pub-divider { height: 1px; background: var(--separator); margin: 36px 0; }
+
+    /* Numéro de section */
+    .conseil-num { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(201,167,108,.15); border: 1.5px solid rgba(201,167,108,.35); color: var(--accent); font-size: .85rem; font-weight: 800; flex-shrink: 0; margin-right: 12px; vertical-align: middle; }
+    .conseil-heading { display: flex; align-items: center; margin: 40px 0 14px; }
+    .conseil-heading h2 { font-size: 1.35rem; font-weight: 800; letter-spacing: -.03em; color: var(--text-dark); margin: 0; transition: color .35s ease; }
+
+    /* Check / Cross lists */
+    .check-list { list-style: none; padding-left: 0; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .check-list li { font-size: .97rem; line-height: 1.7; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; transition: color .35s ease; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 800; font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .cross-list { list-style: none; padding-left: 0; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .cross-list li { font-size: .97rem; line-height: 1.7; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; }
+    .cross-list li::before { content: '✗'; color: #f87171; font-weight: 800; font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* CTA inline */
+    .pub-cta-block { background: linear-gradient(135deg, rgba(201,167,108,.12), rgba(201,167,108,.04)); border: 1px solid rgba(201,167,108,.3); border-radius: 16px; padding: 28px; margin: 36px 0; text-align: center; }
+    .pub-cta-block p { margin-bottom: 16px; font-size: 1rem; color: var(--text-dark); font-weight: 600; }
+    .pub-cta-block .price-tag { display: inline-block; font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; letter-spacing: -.04em; }
+    .pub-cta-block .price-sub { font-size: .82rem; color: var(--text-muted); margin-bottom: 20px; }
+    .pub-cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: 999px; background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .9rem; font-weight: 700; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background .35s ease, color .35s ease; }
+    .pub-cta-btn:hover { transform: scale(1.04); box-shadow: 0 8px 28px var(--btn-hover-sh); }
+
+    /* Tags */
+    .pub-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
+    .pub-tag { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: var(--social-bg); border: 1px solid var(--border-nav); font-size: .72rem; font-weight: 600; color: var(--text-sub); text-decoration: none; transition: background var(--ease), color var(--ease), border-color .35s ease; }
+    .pub-tag:hover { background: rgba(201,167,108,.12); color: var(--accent); border-color: rgba(201,167,108,.3); }
+
+    /* ══ KPI STAT GRID (nouveau) ══ */
+    .kpi-stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0; }
+    .kpi-stat-card { background: var(--bg-card); border: 1px solid var(--border-nav); border-radius: 16px; padding: 22px 18px; text-align: center; position: relative; overflow: hidden; transition: background .35s ease, border-color .35s ease; }
+    .kpi-stat-card::before { content: ''; position: absolute; inset: 0; opacity: .04; pointer-events: none; }
+    .kpi-stat-card.green::before  { background: #22c55e; }
+    .kpi-stat-card.red::before    { background: #ef4444; }
+    .kpi-stat-card.blue::before   { background: #6366f1; }
+    .kpi-stat-card.orange::before { background: #f97316; }
+    .kpi-stat-card.gold::before   { background: #c9a76c; }
+    .kpi-stat-emoji { font-size: 1.6rem; margin-bottom: 10px; display: block; }
+    .kpi-stat-num { font-size: 2rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; margin-bottom: 6px; }
+    .kpi-stat-card.green  .kpi-stat-num { color: #22c55e; }
+    .kpi-stat-card.red    .kpi-stat-num { color: #ef4444; }
+    .kpi-stat-card.blue   .kpi-stat-num { color: #6366f1; }
+    .kpi-stat-card.orange .kpi-stat-num { color: #f97316; }
+    .kpi-stat-card.gold   .kpi-stat-num { color: var(--accent); }
+    .kpi-stat-label { font-size: .77rem; font-weight: 600; color: var(--text-muted); line-height: 1.45; transition: color .35s ease; }
+    @media (max-width: 580px) { .kpi-stat-grid { grid-template-columns: 1fr 1fr; } }
+
+    /* ══ DESIGN SPLIT CARD (nouveau) ══ */
+    .design-split { background: var(--bg-card); border: 1px solid var(--border-nav); border-radius: 16px; overflow: hidden; margin: 28px 0; transition: background .35s ease, border-color .35s ease; }
+    .design-split-header { padding: 16px 22px 14px; border-bottom: 1px solid var(--separator); display: flex; align-items: center; gap: 10px; }
+    .design-split-icon { font-size: 1.4rem; line-height: 1; }
+    .design-split-title { font-size: .95rem; font-weight: 800; color: var(--text-dark); transition: color .35s ease; }
+    .design-split-subtitle { font-size: .75rem; color: var(--text-sub); margin-top: 2px; }
+    .design-split-cols { display: grid; grid-template-columns: 1fr 1fr; }
+    .design-split-col { padding: 18px 20px; }
+    .design-split-col + .design-split-col { border-left: 1px solid var(--separator); }
+    .split-col-tag { font-size: .6rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; margin-bottom: 10px; display: inline-flex; }
+    .split-col-tag.bad  { background: rgba(239,68,68,.08);  border: 1px solid rgba(239,68,68,.2);  color: #ef4444; }
+    .split-col-tag.good { background: rgba(34,197,94,.08);  border: 1px solid rgba(34,197,94,.2);  color: #22c55e; }
+    .design-split-col p { font-size: .87rem; line-height: 1.7; color: var(--text-muted); transition: color .35s ease; }
+    .design-split-result { padding: 12px 20px; background: var(--bg-hover); border-top: 1px solid var(--separator); display: flex; align-items: center; gap: 8px; }
+    .split-result-label { font-size: .72rem; font-weight: 600; color: var(--text-sub); }
+    .split-result-val { font-size: .82rem; font-weight: 800; color: var(--text-dark); transition: color .35s ease; }
+    .split-result-badge { margin-left: auto; font-size: .68rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+    .split-result-badge.up   { background: rgba(34,197,94,.1); border: 1px solid rgba(34,197,94,.25); color: #22c55e; }
+    .split-result-badge.down { background: rgba(239,68,68,.1); border: 1px solid rgba(239,68,68,.2); color: #ef4444; }
+    @media (max-width: 580px) { .design-split-cols { grid-template-columns: 1fr; } .design-split-col + .design-split-col { border-left: none; border-top: 1px solid var(--separator); } }
+
+    /* ══ TOOL MATRIX (nouveau) ══ */
+    .tool-matrix { background: var(--bg-card); border: 1px solid var(--border-nav); border-radius: 16px; overflow: hidden; margin: 28px 0; transition: background .35s ease, border-color .35s ease; }
+    .tool-matrix-head { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 0; background: var(--bg-hover); border-bottom: 1px solid var(--border-nav); }
+    .tm-head-cell { padding: 10px 14px; font-size: .62rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-sub); }
+    .tool-matrix-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; border-bottom: 1px solid var(--separator); }
+    .tool-matrix-row:last-child { border-bottom: none; }
+    .tm-cell { padding: 12px 14px; font-size: .85rem; color: var(--text-muted); display: flex; align-items: center; transition: color .35s ease; }
+    .tm-cell:first-child { font-weight: 700; color: var(--text-dark); }
+    .tm-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .tm-dot.green  { background: #22c55e; }
+    .tm-dot.yellow { background: #eab308; }
+    .tm-dot.red    { background: #ef4444; }
+    @media (max-width: 580px) { .tool-matrix, .tool-matrix-head, .tool-matrix-row { display: flex; flex-direction: column; } .tm-head-cell { display: none; } .tm-cell { border-bottom: 1px solid var(--separator); font-size: .82rem; } .tm-cell:first-child { font-size: .9rem; background: var(--bg-hover); } }
+
+    /* ══ SIDEBAR ══ */
+    .pub-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-card { background: var(--bg-card); border-radius: 16px; padding: 20px; border: 1px solid var(--border-nav); box-shadow: var(--shadow-card); transition: background .35s ease, border-color .35s ease; }
+    .sidebar-card-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sub); margin-bottom: 14px; }
+    .toc-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+    .toc-list-link { display: block; padding: 6px 10px; border-radius: 8px; font-size: .78rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); border-bottom: none !important; }
+    .toc-list-link:hover, .toc-list-link.active { color: var(--accent); background: rgba(201,167,108,.08); }
+    .sidebar-price-card { background: linear-gradient(135deg, #0d1b2a 0%, #1a2d42 100%); border-radius: 16px; padding: 22px; color: #fff; }
+    [data-theme="dark"] .sidebar-price-card { background: linear-gradient(135deg, var(--accent) 0%, #b8863d 100%); }
+    .s-price { font-size: 1.5rem; font-weight: 800; letter-spacing: -.04em; color: var(--accent); margin-bottom: 6px; }
+    [data-theme="dark"] .s-price { color: #fff; }
+    .s-label { font-size: .78rem; color: rgba(255,255,255,.7); margin-bottom: 18px; line-height: 1.5; }
+    .s-btn { display: block; width: 100%; padding: 11px; border-radius: 999px; background: var(--accent); color: #fff; font-family: var(--font); font-size: .82rem; font-weight: 700; text-align: center; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), opacity var(--ease); }
+    .s-btn:hover { transform: scale(1.03); opacity: .92; }
+    .related-list { display: flex; flex-direction: column; gap: 14px; }
+    .related-item { display: flex; gap: 12px; text-decoration: none; border-bottom: none !important; }
+    .related-item:hover .related-title { color: var(--accent); }
+    .related-thumb { width: 40px; height: 40px; border-radius: 10px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .related-info { display: flex; flex-direction: column; gap: 2px; }
+    .related-cat { font-size: .64rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+    .related-title { font-size: .8rem; font-weight: 600; color: var(--text-dark); line-height: 1.4; transition: color var(--ease); }
+    .related-date { font-size: .68rem; color: var(--text-sub); }
+    .share-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .share-pill { display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px; border-radius: 999px; background: var(--social-bg); border: 1px solid var(--border-nav); font-size: .76rem; font-weight: 600; color: var(--text-muted); text-decoration: none; cursor: pointer; font-family: var(--font); transition: background var(--ease), color var(--ease), border-color .35s ease; }
+    .share-pill:hover { background: var(--social-bg-h); color: var(--text-dark); }
+
+    /* ══ PREV/NEXT ══ */
+    .pub-nav { max-width: 820px; margin: 0 auto; padding: 0 32px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .pub-nav-card { display: flex; flex-direction: column; gap: 6px; padding: 18px 22px; border-radius: 16px; background: var(--bg-card); border: 1px solid var(--border-nav); text-decoration: none; box-shadow: var(--shadow-card); transition: background var(--ease), box-shadow var(--ease), border-color .35s ease; }
+    .pub-nav-card:hover { box-shadow: var(--shadow-float); }
+    .pub-nav-card.prev { text-align: left; }
+    .pub-nav-card.next { text-align: right; }
+    .pub-nav-dir { display: flex; align-items: center; gap: 6px; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-sub); }
+    .pub-nav-card.next .pub-nav-dir { justify-content: flex-end; }
+    .pub-nav-ttl { font-size: .88rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; transition: color .35s ease; }
+    .pub-nav-card:hover .pub-nav-ttl { color: var(--accent); }
+
+    /* ══ FOOTER ══ */
+    .footer-wrapper { background: var(--bg-page); transition: background .35s ease; }
+    .footer-card { max-width: 1100px; margin: 0 auto; background: var(--bg-nav); border-radius: 28px 28px 0 0; border: 1px solid var(--border-nav); border-bottom: none; padding: 52px 52px 0; transition: background .35s ease, border-color .35s ease; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+    .footer-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 14px; }
+    .footer-logo-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-nav); flex-shrink: 0; }
+    .footer-logo-name { font-size: 1.1rem; font-weight: 800; letter-spacing: -.04em; color: var(--text-dark); transition: color .35s ease; }
+    .footer-desc { font-size: .82rem; color: var(--text-muted); line-height: 1.7; max-width: 260px; margin-bottom: 20px; transition: color .35s ease; }
+    .footer-socials { display: flex; gap: 8px; }
+    .social-link { width: 34px; height: 34px; border-radius: 10px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; transition: background var(--ease), color var(--ease), border-color var(--ease); }
+    .social-link:hover { background: var(--social-bg-h); color: var(--text-dark); }
+    .footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sub); margin-bottom: 16px; transition: color .35s ease; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a { font-size: .84rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease); }
+    .footer-col ul a:hover { color: var(--text-dark); }
+    .contact-list { display: flex; flex-direction: column; gap: 12px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 10px; }
+    .contact-icon { width: 30px; height: 30px; border-radius: 8px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); flex-shrink: 0; }
+    .contact-text { display: flex; flex-direction: column; gap: 1px; padding-top: 5px; }
+    .contact-text span, .contact-text a { font-size: .8rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease); }
+    .footer-bottom { border-top: 1px solid var(--separator); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .78rem; color: var(--text-sub); }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { font-size: .78rem; color: var(--text-sub); text-decoration: none; transition: color var(--ease); }
+    .footer-legal a:hover { color: var(--text-dark); }
+
+    @media (max-width: 900px) {
+      .pub-layout { grid-template-columns: 1fr; }
+      .pub-sidebar { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 580px) {
+      .pub-hero, .pub-banner, .pub-layout, .pub-nav { padding-left: 20px; padding-right: 20px; }
+      .pub-hero { padding-top: 110px; }
+      .pub-nav { grid-template-columns: 1fr; }
+      .pub-meta { gap: 14px; }
+      .pub-share { margin-left: 0; }
+      .footer-card { padding: 40px 24px 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH6RQ47D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="nav-wrapper" id="mainNav" role="navigation" aria-label="Navigation principale">
+    <div class="navbar">
+      <a href="index.html" class="nav-logo">MPOUCK</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="nav-has-dropdown" id="deskPages">
+          <button class="nav-drop-btn" id="pagesTrigger" aria-haspopup="true" aria-expanded="false">
+            Pages
+            <svg class="chv" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-drop-panel" id="pagesPanel" role="menu">
+            <a href="about.html" role="menuitem"><span class="page-icon">👤</span> À propos</a>
+            <a href="projet.html" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
+            <a href="blog.html" role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+            <div class="sep"></div>
+            <a href="contact.html" role="menuitem"><span class="page-icon">✉️</span> Contact</a>
+          </div>
+        </li>
+        <li><a href="Webtemplates.html">Templates</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="search-btn" id="searchBtn" aria-label="Rechercher (Ctrl+K)" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="theme-btn" id="themeBtn" aria-label="Changer de thème">
+          <span class="theme-thumb">
+            <svg class="ico-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="ico-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+        <a href="projet.html" class="nav-cta">Nos projets</a>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="menu">
+      <ul>
+        <li><a href="index.html" role="menuitem">Accueil</a></li>
+        <li><a href="services.html" role="menuitem">Services</a></li>
+        <li class="mobile-has-sub" id="mobPages">
+          <button class="mob-sub-trigger" id="mobPagesTrigger" aria-expanded="false">Pages
+            <svg class="mob-chv" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mob-sublist"><div class="mob-sublist-inner">
+            <a href="about.html" class="mob-sublink" role="menuitem"><span class="page-icon">👤</span> À propos</a>
+            <a href="projet.html" class="mob-sublink" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
+            <a href="blog.html" class="mob-sublink" role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+          </div></div>
+        </li>
+        <li><a href="Webtemplates.html" role="menuitem">Templates</a></li>
+        <li><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <a href="projet.html" class="mob-cta" role="menuitem">Nos projets</a>
+    </div>
+  </nav>
+
+  <!-- ══ SEARCH ══ -->
+  <div class="search-overlay" id="searchOverlay"></div>
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un article, service, page…" autocomplete="off" spellcheck="false"/>
+      <button id="searchClose" class="search-close-btn" aria-label="Fermer">
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults" role="listbox"></div>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <header class="pub-hero">
+    <nav class="pub-breadcrumb" aria-label="Fil d'ariane">
+      <a href="index.html">Accueil</a>
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="blog.html">Blog</a>
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Design UI &amp; KPIs</span>
+    </nav>
+
+    <span class="pub-category">✦ UI Design · Analytics · Performance</span>
+
+    <h1 class="pub-title">Taux de conversion, temps de session, bounce rate : <em>comment un bon design UI booste vos KPIs</em></h1>
+
+    <p class="pub-subtitle">Chaque décision de design — la couleur d'un bouton, l'espacement d'un titre, la hiérarchie d'une page — a un impact mesurable sur vos résultats. Voici comment lire vos KPIs comme un designer, et les optimiser de façon méthodique.</p>
+
+    <div class="pub-meta">
+      <div class="pub-author">
+        <div class="pub-author-avatar">
+          <img src="imageProfil.jpg" alt="MPOUCK Jho C." class="pub-author-avatar-img" />
+        </div>
+        <div class="pub-author-info">
+          <span class="pub-author-name">MPOUCK Jho C.</span>
+          <span class="pub-author-role">Design &amp; Stratégie Digitale</span>
+        </div>
+      </div>
+      <div class="pub-meta-sep"></div>
+      <div class="pub-meta-info">
+        <span class="pub-meta-label">Publié le</span>
+        <span class="pub-meta-val">3 mars 2026</span>
+      </div>
+      <div class="pub-meta-sep"></div>
+      <div class="pub-meta-info">
+        <span class="pub-meta-label">Lecture</span>
+        <span class="pub-meta-val">11 min</span>
+      </div>
+      <div class="pub-share">
+        <span class="pub-share-label">Partager :</span>
+        <a href="https://wa.me/?text=Design%20UI%20%26%20KPIs%20%E2%80%94%20MPOUCK%20%3A%20https%3A%2F%2Fmpouck.github.io%2Farticle-design-ui-kpis.html" target="_blank" class="pub-share-btn" aria-label="Partager sur WhatsApp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmpouck.github.io%2Farticle-design-ui-kpis.html" target="_blank" class="pub-share-btn" aria-label="Partager sur Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=Design%20UI%20%26%20KPIs%20%E2%80%94%20MPOUCK&url=https%3A%2F%2Fmpouck.github.io%2Farticle-design-ui-kpis.html" target="_blank" class="pub-share-btn" aria-label="Partager sur Twitter/X">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmpouck.github.io%2Farticle-design-ui-kpis.html" target="_blank" class="pub-share-btn" aria-label="Partager sur LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <button class="pub-share-btn" id="copyLink" aria-label="Copier le lien">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ BANNIÈRE ══ -->
+  <div class="pub-banner">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop" alt="Design UI et KPIs — taux de conversion, temps de session, bounce rate" class="pub-banner-img" />
+  </div>
+
+  <!-- ══ LAYOUT ══ -->
+  <div class="pub-layout">
+    <article class="pub-body">
+
+      <!-- INTRO -->
+      <h2 id="intro">Le design n'est pas de l'art — c'est un levier de performance</h2>
+
+      <p>Beaucoup d'entrepreneurs voient encore le design comme un investissement esthétique : "rendre le site plus beau". C'est une vision réductrice qui coûte des opportunités chaque jour. En réalité, <strong>chaque décision de design est une décision business</strong>. La couleur d'un bouton, l'espacement entre deux sections, la taille d'un titre — tout cela a un impact mesurable, chiffré, sur votre taux de conversion, votre temps de session et votre bounce rate.</p>
+
+      <p>Les KPIs — Key Performance Indicators — sont les indicateurs vitaux de votre site. Ils vous disent objectivement ce qui fonctionne et ce qui ne fonctionne pas. Un designer expérimenté sait lire ces chiffres comme un médecin lit une prise de sang : il y voit non pas des statistiques abstraites, mais des symptômes précis de problèmes de design très concrets.</p>
+
+      <p>Dans cet article, nous explorons les trois KPIs les plus liés au design — le taux de conversion, le temps de session et le bounce rate — et nous vous montrons exactement quels leviers de design les influencent et comment les actionner.</p>
+
+      <div class="pub-callout">
+        <p>📊 Selon Forrester Research, un bon design UX peut augmenter le taux de conversion d'un site de 200 à 400 %. Le design n'est pas un coût — c'est l'un des investissements à retour sur investissement les plus élevés en marketing digital.</p>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- SECTION 0 : LES 3 KPIS -->
+      <h2 id="kpis-fondamentaux">Les 3 KPIs design à maîtriser en priorité</h2>
+
+      <p>Avant d'entrer dans les leviers de design, il faut comprendre précisément ce que mesurent ces trois indicateurs et pourquoi ils reflètent directement la qualité de votre interface.</p>
+
+      <div class="kpi-stat-grid">
+        <div class="kpi-stat-card green">
+          <span class="kpi-stat-emoji">🎯</span>
+          <div class="kpi-stat-num">2–5%</div>
+          <p class="kpi-stat-label">Taux de conversion moyen tous secteurs confondus</p>
+        </div>
+        <div class="kpi-stat-card red">
+          <span class="kpi-stat-emoji">↩️</span>
+          <div class="kpi-stat-num">55%</div>
+          <p class="kpi-stat-label">Bounce rate moyen — 55 % des visiteurs partent sans interagir</p>
+        </div>
+        <div class="kpi-stat-card blue">
+          <span class="kpi-stat-emoji">⏱️</span>
+          <div class="kpi-stat-num">52s</div>
+          <p class="kpi-stat-label">Temps moyen passé sur une page web en 2026</p>
+        </div>
+        <div class="kpi-stat-card orange">
+          <span class="kpi-stat-emoji">📱</span>
+          <div class="kpi-stat-num">+200%</div>
+          <p class="kpi-stat-label">Gain de conversion possible avec un design UI optimisé</p>
+        </div>
+        <div class="kpi-stat-card gold">
+          <span class="kpi-stat-emoji">⚡</span>
+          <div class="kpi-stat-num">0,05s</div>
+          <p class="kpi-stat-label">Temps pour former une première impression visuelle</p>
+        </div>
+        <div class="kpi-stat-card green">
+          <span class="kpi-stat-emoji">💸</span>
+          <div class="kpi-stat-num">×100</div>
+          <p class="kpi-stat-label">Retour sur investissement du design vs. publicité payante</p>
+        </div>
+      </div>
+
+      <h3>Comprendre chaque indicateur</h3>
+      <p>Le <strong>taux de conversion</strong> mesure le pourcentage de visiteurs qui accomplissent l'action souhaitée : acheter, remplir un formulaire, appeler, s'abonner. C'est l'indicateur le plus directement lié au chiffre d'affaires. Le <strong>bounce rate</strong> (taux de rebond) mesure le pourcentage de visiteurs qui quittent votre site après n'avoir vu qu'une seule page, sans interagir. Un taux élevé signale généralement un problème de pertinence ou d'expérience à l'atterrissage. Le <strong>temps de session</strong> mesure la durée moyenne passée sur votre site — un proxy de l'engagement et de la qualité du contenu et de l'interface.</p>
+
+      <div class="pub-divider"></div>
+
+      <!-- LEVIER 1 : HIÉRARCHIE VISUELLE -->
+      <div class="conseil-heading" id="hierarchie-visuelle">
+        <span class="conseil-num">1</span>
+        <h2>La hiérarchie visuelle guide le regard et déclenche l'action</h2>
+      </div>
+
+      <p>La hiérarchie visuelle est l'organisation intentionnelle des éléments d'une page pour guider le regard du visiteur dans l'ordre que vous souhaitez. Une bonne hiérarchie répond à une question silencieuse que chaque visiteur se pose en 3 secondes : <em>"Suis-je au bon endroit, et que dois-je faire ici ?"</em> Si la réponse n'est pas évidente, le visiteur part.</p>
+
+      <div class="design-split">
+        <div class="design-split-header">
+          <div class="design-split-icon">👁️</div>
+          <div>
+            <p class="design-split-title">Hiérarchie visuelle — impact sur le taux de conversion</p>
+            <p class="design-split-subtitle">Même contenu, organisation différente</p>
+          </div>
+        </div>
+        <div class="design-split-cols">
+          <div class="design-split-col">
+            <span class="split-col-tag bad">✗ Sans hiérarchie</span>
+            <p>Tous les textes ont la même taille. Le titre principal et les sous-titres sont indiscernables. Le CTA se fond dans le reste de la page. Le regard ne sait pas où aller en premier — il scanne aléatoirement, ne trouve pas ce qu'il cherche, et l'utilisateur abandonne.</p>
+          </div>
+          <div class="design-split-col">
+            <span class="split-col-tag good">✓ Hiérarchie claire</span>
+            <p>Le titre H1 est 3× plus grand que le corps de texte. Les sous-titres créent des paliers de lecture. Le CTA principal est visuellement dominant grâce à sa couleur contrastée. L'œil suit naturellement un parcours : titre → bénéfice → preuve → action.</p>
+          </div>
+        </div>
+        <div class="design-split-result">
+          <span class="split-result-label">Impact moyen mesuré :</span>
+          <span class="split-result-val">Taux de conversion +38% · Temps de lecture +55%</span>
+          <span class="split-result-badge up">↑ Fort impact</span>
+        </div>
+      </div>
+
+      <h3>Les 4 outils de la hiérarchie visuelle</h3>
+      <ul class="check-list">
+        <li><strong>La taille :</strong> les éléments les plus importants sont les plus grands. Votre H1 doit être au moins 2,5 à 3 fois plus grand que votre texte courant.</li>
+        <li><strong>Le contraste :</strong> un bouton CTA sur fond blanc doit avoir un ratio de contraste d'au moins 4,5:1 (norme WCAG AA). Les éléments secondaires sont plus clairs, les primaires plus foncés ou colorés.</li>
+        <li><strong>L'espacement :</strong> les blancs créent des groupes logiques. Des éléments proches sont perçus comme liés. Des sections séparées par de l'espace blanc sont lues comme distinctes.</li>
+        <li><strong>La couleur :</strong> une seule couleur d'accent appliquée exclusivement aux éléments les plus importants (CTA, liens, badges). Si tout est coloré, rien ne ressort.</li>
+      </ul>
+
+      <div class="pub-divider"></div>
+
+      <!-- LEVIER 2 : TYPOGRAPHIE -->
+      <div class="conseil-heading" id="typographie">
+        <span class="conseil-num">2</span>
+        <h2>La typographie réduit le bounce rate et augmente le temps de session</h2>
+      </div>
+
+      <p>La typographie est souvent négligée — pourtant c'est elle qui conditionne si un visiteur va <em>lire</em> votre contenu ou juste le survoler avant de partir. Un texte illisible (taille trop petite, interligne insuffisant, contraste faible, lignes trop longues) est une promesse d'abandon. À l'inverse, une typographie soignée est une invitation à rester et à s'engager.</p>
+
+      <div class="design-split">
+        <div class="design-split-header">
+          <div class="design-split-icon">Aa</div>
+          <div>
+            <p class="design-split-title">Typographie — impact sur le temps de session</p>
+            <p class="design-split-subtitle">Les règles qui font la différence</p>
+          </div>
+        </div>
+        <div class="design-split-cols">
+          <div class="design-split-col">
+            <span class="split-col-tag bad">✗ Typographie négligée</span>
+            <p>Corps de texte à 13px, interligne à 1.2, lignes de 90+ caractères, contraste texte/fond insuffisant. L'œil fatigue rapidement, le cerveau perçoit l'effort de lecture comme un signal négatif et l'utilisateur abandonne la page au bout de 20 secondes.</p>
+          </div>
+          <div class="design-split-col">
+            <span class="split-col-tag good">✓ Typographie optimisée</span>
+            <p>Corps à 16–18px, interligne à 1.7–1.9, lignes limitées à 65–75 caractères, contraste &gt; 7:1. La lecture devient fluide et naturelle. L'utilisateur consomme le contenu sans friction et continue vers les sections suivantes.</p>
+          </div>
+        </div>
+        <div class="design-split-result">
+          <span class="split-result-label">Impact moyen mesuré :</span>
+          <span class="split-result-val">Temps de session +40% · Bounce rate −28%</span>
+          <span class="split-result-badge up">↑ Fort impact</span>
+        </div>
+      </div>
+
+      <h3>Règles typographiques fondamentales pour le web</h3>
+      <ul class="check-list">
+        <li><strong>Taille minimale :</strong> 16px pour le corps de texte sur desktop, 15px sur mobile. En dessous, la lecture devient un effort sur la plupart des écrans.</li>
+        <li><strong>Interligne :</strong> entre 1.6 et 1.9 pour le corps de texte. C'est l'espacement qui permet à l'œil de retourner facilement au début de la ligne suivante sans se perdre.</li>
+        <li><strong>Longueur de ligne :</strong> entre 55 et 75 caractères par ligne. Au-delà, l'œil perd le fil entre la fin d'une ligne et le début de la suivante.</li>
+        <li><strong>Maximum 2 polices :</strong> une pour les titres (plus expressive), une pour le corps (plus neutre et lisible). Plus de 2 polices crée un chaos visuel qui nuit à la crédibilité.</li>
+      </ul>
+
+      <div class="pub-divider"></div>
+
+      <!-- LEVIER 3 : COULEURS -->
+      <div class="conseil-heading" id="couleurs-psychologie">
+        <span class="conseil-num">3</span>
+        <h2>La psychologie des couleurs influence le comportement d'achat</h2>
+      </div>
+
+      <p>Les couleurs ne sont pas qu'une question d'esthétique — elles communiquent des émotions et des valeurs avant même que le visiteur ait lu un mot. Des études en neuromarketing montrent que <strong>la couleur influence jusqu'à 85 % de la décision d'achat initiale</strong>. Ce n'est pas de la manipulation — c'est comprendre comment le cerveau humain traite l'information visuelle et s'y adapter.</p>
+
+      <div class="design-split">
+        <div class="design-split-header">
+          <div class="design-split-icon">🎨</div>
+          <div>
+            <p class="design-split-title">Couleur du bouton CTA — impact sur le taux de clic</p>
+            <p class="design-split-subtitle">Test A/B réel — même page, bouton différent</p>
+          </div>
+        </div>
+        <div class="design-split-cols">
+          <div class="design-split-col">
+            <span class="split-col-tag bad">✗ Bouton gris ou terne</span>
+            <p>Un bouton gris ou d'une couleur similaire au fond de la page ne crée aucun contraste visuel. Il se fond dans l'interface et le cerveau ne le détecte pas comme un élément cliquable prioritaire. Le visiteur ne le voit tout simplement pas.</p>
+          </div>
+          <div class="design-split-col">
+            <span class="split-col-tag good">✓ Couleur contrastée et intentionnelle</span>
+            <p>Un bouton orange vif sur fond bleu marine, ou doré sur fond sombre — le contraste de teinte combiné au contraste de luminosité rend l'élément immédiatement visible. Le regard est attiré naturellement et le taux de clic augmente significativement.</p>
+          </div>
+        </div>
+        <div class="design-split-result">
+          <span class="split-result-label">Impact moyen mesuré :</span>
+          <span class="split-result-val">CTR bouton +21% à +54% selon contraste</span>
+          <span class="split-result-badge up">↑ Impact direct</span>
+        </div>
+      </div>
+
+      <h3>Guide des couleurs et leurs associations psychologiques</h3>
+      <ul class="check-list">
+        <li><strong>Bleu marine / foncé :</strong> confiance, sérieux, professionnalisme. Idéal pour les secteurs finance, tech, services B2B. C'est pour cette raison que la plupart des banques et agences utilisent le bleu.</li>
+        <li><strong>Or / Doré :</strong> premium, luxe, excellence. Parfait pour les agences, les services haut de gamme, tout ce qui veut signaler la qualité. À utiliser avec parcimonie — c'est l'accent, pas le fond.</li>
+        <li><strong>Vert :</strong> action, accord, sécurité, nature. Les boutons "Confirmer", "Payer", "C'est parti" fonctionnent particulièrement bien en vert — le cerveau l'associe au signal "go".</li>
+        <li><strong>Rouge / Orange :</strong> urgence, énergie, promotion. Efficace pour les offres limitées, les CTA de vente directe. Peut augmenter significativement les clics si utilisé à bon escient.</li>
+      </ul>
+
+      <div class="pub-divider"></div>
+
+      <!-- LEVIER 4 : LAYOUT -->
+      <div class="conseil-heading" id="layout-structure">
+        <span class="conseil-num">4</span>
+        <h2>La structure de page réduit le bounce rate par la clarté</h2>
+      </div>
+
+      <p>Le layout — la structure et l'organisation des blocs d'une page — est le squelette invisible de votre interface. Un bon layout guide le visiteur naturellement du problème à la solution, de la curiosité à la confiance, de l'hésitation à l'action. Un mauvais layout, lui, crée de la confusion, force le scroll inutile et dilue l'attention sur des éléments non prioritaires.</p>
+
+      <div class="pub-quote">
+        <p>"Les utilisateurs ne lisent pas les pages web — ils les scannent. Votre job est de rendre ce scan aussi efficace et gratifiant que possible."</p>
+        <cite>— Jakob Nielsen, fondateur du Nielsen Norman Group</cite>
+      </div>
+
+      <h3>La structure F-pattern et Z-pattern</h3>
+      <p>Les études d'eye-tracking (suivi du regard) montrent que les utilisateurs scannent les pages web selon deux schémas dominants. Le <strong>F-pattern</strong> s'observe sur les pages de contenu long (blogs, articles) : les yeux lisent la première ligne horizontalement, descendent et lisent partiellement la seconde, puis descendent verticalement en colonne gauche. Le <strong>Z-pattern</strong> s'observe sur les pages épurées (landing pages) : le regard part du coin haut gauche, traverse horizontalement vers le droit, puis redescend en diagonale vers le bas gauche, et traverse à nouveau vers le droit.</p>
+
+      <div class="design-split">
+        <div class="design-split-header">
+          <div class="design-split-icon">📐</div>
+          <div>
+            <p class="design-split-title">Structure de page — impact sur le bounce rate</p>
+            <p class="design-split-subtitle">Organisation des blocs above the fold</p>
+          </div>
+        </div>
+        <div class="design-split-cols">
+          <div class="design-split-col">
+            <span class="split-col-tag bad">✗ Layout non structuré</span>
+            <p>Le héros de la page ne répond pas clairement à la question "pour qui et pour quoi ?". Le CTA principal est en bas de page. Les blocs ne suivent pas un ordre logique de persuasion. L'utilisateur ne comprend pas en 5 secondes s'il est au bon endroit.</p>
+          </div>
+          <div class="design-split-col">
+            <span class="split-col-tag good">✓ Layout orienté conversion</span>
+            <p>Le héros répond en une phrase à : problème, solution, pour qui. Le CTA primaire est visible sans scroller. La structure suit l'ordre : problème → solution → preuves → objections → action. L'utilisateur n'a jamais à chercher la prochaine étape.</p>
+          </div>
+        </div>
+        <div class="design-split-result">
+          <span class="split-result-label">Impact moyen mesuré :</span>
+          <span class="split-result-val">Bounce rate −35% · Conversions +47%</span>
+          <span class="split-result-badge up">↑ Impact très fort</span>
+        </div>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- LEVIER 5 : MESURER -->
+      <div class="conseil-heading" id="mesurer-kpis">
+        <span class="conseil-num">5</span>
+        <h2>Mesurer et itérer : les outils pour relier design et KPIs</h2>
+      </div>
+
+      <p>Le plus grand piège du design est de travailler à l'instinct sans valider avec des données. "Je pense que ce bouton rouge convertit mieux" n'est pas une stratégie — c'est une hypothèse. <strong>La méthode data-driven consiste à formuler des hypothèses, à les tester, et à laisser les chiffres trancher.</strong> Voici les outils qui créent ce pont entre les décisions de design et les résultats mesurés.</p>
+
+      <div class="tool-matrix">
+        <div class="tool-matrix-head">
+          <div class="tm-head-cell">Outil</div>
+          <div class="tm-head-cell">KPI ciblé</div>
+          <div class="tm-head-cell">Difficulté</div>
+          <div class="tm-head-cell">Budget</div>
+        </div>
+        <div class="tool-matrix-row">
+          <div class="tm-cell">Google Analytics 4</div>
+          <div class="tm-cell">Tous (conversion, sessions, rebond)</div>
+          <div class="tm-cell"><span class="tm-dot yellow"></span>&nbsp; Moyen</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Gratuit</div>
+        </div>
+        <div class="tool-matrix-row">
+          <div class="tm-cell">Hotjar / Microsoft Clarity</div>
+          <div class="tm-cell">Heatmaps, enregistrements sessions</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Facile</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Gratuit</div>
+        </div>
+        <div class="tool-matrix-row">
+          <div class="tm-cell">Google Optimize / VWO</div>
+          <div class="tm-cell">Taux de conversion (A/B tests)</div>
+          <div class="tm-cell"><span class="tm-dot yellow"></span>&nbsp; Moyen</div>
+          <div class="tm-cell"><span class="tm-dot yellow"></span>&nbsp; Freemium</div>
+        </div>
+        <div class="tool-matrix-row">
+          <div class="tm-cell">Crazy Egg</div>
+          <div class="tm-cell">Scroll map, clics, heatmap</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Facile</div>
+          <div class="tm-cell"><span class="tm-dot yellow"></span>&nbsp; Payant</div>
+        </div>
+        <div class="tool-matrix-row">
+          <div class="tm-cell">Google Search Console</div>
+          <div class="tm-cell">CTR organique, impressions</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Facile</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Gratuit</div>
+        </div>
+        <div class="tool-matrix-row">
+          <div class="tm-cell">PageSpeed Insights</div>
+          <div class="tm-cell">Vitesse, Core Web Vitals</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Facile</div>
+          <div class="tm-cell"><span class="tm-dot green"></span>&nbsp; Gratuit</div>
+        </div>
+      </div>
+
+      <h3>La méthode des micro-tests : itérer sans tout reconstruire</h3>
+      <p>Vous n'avez pas besoin de refaire tout votre site pour améliorer vos KPIs. La méthode des micro-tests consiste à identifier un seul élément à tester à la fois — le libellé de votre CTA principal, la couleur de votre bouton, l'ordre de vos blocs — et à mesurer l'impact avant de passer au suivant. En testant un élément par semaine, vous pouvez transformer significativement vos résultats en 2 à 3 mois sans jamais risquer de tout casser.</p>
+
+      <ul class="check-list">
+        <li><strong>Semaine 1 :</strong> installez Clarity (gratuit, de Microsoft) pour enregistrer les sessions utilisateurs pendant 7 jours. Regardez où les gens s'arrêtent, ce qu'ils ignorent, où ils cliquent par erreur.</li>
+        <li><strong>Semaine 2 :</strong> identifiez la page avec le bounce rate le plus élevé dans GA4. Formulez une hypothèse sur la cause (CTA peu visible, contenu ambigu, vitesse…).</li>
+        <li><strong>Semaine 3 :</strong> implémentez la correction et attendez 2 semaines de données pour une comparaison statistiquement valable.</li>
+        <li><strong>En continu :</strong> répétez ce cycle. Les sites qui convertissent le mieux ne sont pas ceux qui ont été bien conçus une fois — ce sont ceux qui testent et s'améliorent en permanence.</li>
+      </ul>
+
+      <div class="pub-divider"></div>
+
+      <!-- CONCLUSION -->
+      <h2 id="conclusion">Un bon design n'est pas invisible — il parle en chiffres</h2>
+
+      <p>Le design et les KPIs ne sont pas deux mondes séparés. Ils sont profondément interconnectés. Chaque décision visuelle génère une réaction mesurable chez l'utilisateur — une émotion, une hésitation, une confiance, une action. Comprendre cette mécanique, c'est passer d'un designer artiste à un <strong>designer stratège</strong> qui conçoit non pas pour l'esthétique, mais pour la performance.</p>
+
+      <p>La hiérarchie visuelle oriente le regard. La typographie conditionne la lecture. Les couleurs influencent l'émotion. Le layout guide le parcours. Ensemble, ces quatre leviers déterminent si un visiteur devient un prospect — ou une statistique de rebond de plus dans votre tableau de bord.</p>
+
+      <p>Pour approfondir votre maîtrise du design axé performance, notre article sur les <a href="article-erreurs-ux-corriger-ia.html">5 erreurs UX qui font fuir vos visiteurs</a> complète parfaitement ce guide avec des cas concrets et des correctifs IA.</p>
+
+      <!-- CTA bloc -->
+      <div class="pub-cta-block">
+        <p class="price-tag">Audit Design &amp; KPIs</p>
+        <p class="price-sub">MPOUCK analyse votre site et identifie les leviers de design prioritaires pour booster votre taux de conversion, réduire votre bounce rate et augmenter le temps de session.</p>
+        <a href="contact.html" class="pub-cta-btn">
+          Demander mon audit →
+        </a>
+      </div>
+
+      <div class="pub-tags">
+        <a href="blog.html" class="pub-tag">#UIDesign</a>
+        <a href="blog.html" class="pub-tag">#KPIs</a>
+        <a href="blog.html" class="pub-tag">#TauxDeConversion</a>
+        <a href="blog.html" class="pub-tag">#BounceRate</a>
+        <a href="blog.html" class="pub-tag">#TempsDeSession</a>
+        <a href="blog.html" class="pub-tag">#DesignWeb</a>
+        <a href="blog.html" class="pub-tag">#Analytics</a>
+        <a href="blog.html" class="pub-tag">#Performance</a>
+      </div>
+
+    </article>
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="pub-sidebar" aria-label="Sidebar">
+
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">Sommaire</p>
+        <ul class="toc-list" role="list">
+          <li><a href="#intro" class="toc-list-link">Introduction</a></li>
+          <li><a href="#kpis-fondamentaux" class="toc-list-link">Les 3 KPIs clés</a></li>
+          <li><a href="#hierarchie-visuelle" class="toc-list-link">1. Hiérarchie visuelle</a></li>
+          <li><a href="#typographie" class="toc-list-link">2. Typographie</a></li>
+          <li><a href="#couleurs-psychologie" class="toc-list-link">3. Psychologie des couleurs</a></li>
+          <li><a href="#layout-structure" class="toc-list-link">4. Structure de page</a></li>
+          <li><a href="#mesurer-kpis" class="toc-list-link">5. Mesurer et itérer</a></li>
+          <li><a href="#conclusion" class="toc-list-link">Conclusion</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-price-card">
+        <div class="s-price">Audit Design</div>
+        <div class="s-label">Identifiez les blocages de conversion sur votre site et recevez un plan d'action concret.</div>
+        <a href="contact.html" class="s-btn">Démarrer l'audit →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">Articles liés</p>
+        <div class="related-list">
+          <a href="article-erreurs-ux-corriger-ia.html" class="related-item">
+            <div class="related-thumb">🎨</div>
+            <div class="related-info">
+              <div class="related-cat">UX Design</div>
+              <div class="related-title">5 erreurs UX qui font fuir vos visiteurs</div>
+              <div class="related-date">20 mars 2026</div>
+            </div>
+          </a>
+          <a href="article-uiux-2026.html" class="related-item">
+            <div class="related-thumb">✨</div>
+            <div class="related-info">
+              <div class="related-cat">UI/UX</div>
+              <div class="related-title">Les tendances UI/UX qui vont dominer 2026</div>
+              <div class="related-date">8 mars 2026</div>
+            </div>
+          </a>
+          <a href="article-landing-page-conversion-2026.html" class="related-item">
+            <div class="related-thumb">🚀</div>
+            <div class="related-info">
+              <div class="related-cat">Conversion</div>
+              <div class="related-title">Landing page à 25–30 % de conversion en 2026</div>
+              <div class="related-date">15 mars 2026</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">Partager cet article</p>
+        <div class="share-row">
+          <a href="https://wa.me/?text=Design%20UI%20%26%20KPIs%20%3A%20https%3A%2F%2Fmpouck.github.io%2Farticle-design-ui-kpis.html" target="_blank" class="share-pill" aria-label="WhatsApp">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmpouck.github.io%2Farticle-design-ui-kpis.html" target="_blank" class="share-pill" aria-label="LinkedIn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <button class="share-pill" id="copyLinkSidebar">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Copier
+          </button>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ══ PREV / NEXT ══ -->
+  <nav class="pub-nav" aria-label="Articles précédent et suivant">
+    <a href="article-erreurs-ux-corriger-ia.html" class="pub-nav-card prev">
+      <div class="pub-nav-dir">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Article précédent
+      </div>
+      <div class="pub-nav-ttl">5 erreurs UX qui font fuir vos visiteurs</div>
+    </a>
+    <a href="blog.html" class="pub-nav-card next">
+      <div class="pub-nav-dir">
+        Voir tous les articles
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="pub-nav-ttl">Explorer l'ensemble du Blog MPOUCK →</div>
+    </a>
+  </nav>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer-wrapper">
+    <div class="footer-card">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">
+            <img src="logoMpouck.jpg" alt="Logo MPOUCK" class="footer-logo-img" />
+            <span class="footer-logo-name">MPOUCK</span>
+          </a>
+          <p class="footer-desc">Agence digitale basée à Brazzaville. Création web, SEO, design graphique et formation IA pour les entrepreneurs africains.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/242068652120" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/mpouck" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://linkedin.com/company/mpouck" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Création web</a></li>
+            <li><a href="seoservice.html">SEO &amp; Contenu</a></li>
+            <li><a href="services.html">Design graphique</a></li>
+            <li><a href="aicours.html">Formation IA</a></li>
+            <li><a href="social-media-packs.html">Packs Réseaux Sociaux</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="projet.html">Projets</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-text"><span>Brazzaville, Congo</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-text"><a href="https://wa.me/242068652120">+242 06 865 21 20</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-text"><a href="mailto:contact@mpouck.com">contact@mpouck.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 MPOUCK Digital Service. Tous droits réservés.</span>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Confidentialité</a>
+          <a href="conditions-utilisation.html">CGU</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Theme ── */
+    (function() { var s = localStorage.getItem('mpouck-theme'); if (s) document.documentElement.setAttribute('data-theme', s); })();
+    document.getElementById('themeBtn').addEventListener('click', function() {
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('mpouck-theme', next);
+    });
+
+    /* ── Hamburger ── */
+    document.getElementById('hamburger').addEventListener('click', function() {
+      var open = this.classList.toggle('open');
+      var m = document.getElementById('mobileMenu');
+      m.classList.toggle('open', open);
+      this.setAttribute('aria-expanded', open);
+      m.setAttribute('aria-hidden', !open);
+    });
+
+    /* ── Dropdown desktop ── */
+    var deskPages = document.getElementById('deskPages');
+    var pagesTrig = document.getElementById('pagesTrigger');
+    pagesTrig.addEventListener('click', function(e) { e.stopPropagation(); var o = deskPages.classList.toggle('open'); pagesTrig.setAttribute('aria-expanded', o); });
+    function closeDrop() { deskPages.classList.remove('open'); pagesTrig.setAttribute('aria-expanded','false'); }
+    document.getElementById('mainNav').addEventListener('click', function(e) { if (!deskPages.contains(e.target)) closeDrop(); });
+    document.getElementById('pagesPanel').querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeDrop); });
+
+    /* ── Accordion mobile ── */
+    document.getElementById('mobPagesTrigger').addEventListener('click', function(e) { e.stopPropagation(); var o = document.getElementById('mobPages').classList.toggle('open'); this.setAttribute('aria-expanded', o); });
+
+    /* ── Ombre navbar au scroll ── */
+    var navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() { navbar.style.boxShadow = window.scrollY > 10 ? '0 8px 40px rgba(0,0,0,.14), 0 2px 8px rgba(0,0,0,.08)' : ''; }, { passive: true });
+
+    /* ── TOC active ── */
+    var tocLinks = document.querySelectorAll('.toc-list-link');
+    var sections = [];
+    tocLinks.forEach(function(a) { var id = a.getAttribute('href').slice(1); var el = document.getElementById(id); if (el) sections.push({ el: el, a: a }); });
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY + 120; var active = null;
+      sections.forEach(function(s) { if (s.el.offsetTop <= scrollY) active = s; });
+      tocLinks.forEach(function(a) { a.classList.remove('active'); });
+      if (active) active.a.classList.add('active');
+    }, { passive: true });
+
+    /* ── Copier le lien ── */
+    document.getElementById('copyLink').addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var btn = document.getElementById('copyLink'); btn.style.color = '#4ade80';
+        setTimeout(function() { btn.style.color = ''; }, 1500);
+      });
+    });
+    document.getElementById('copyLinkSidebar').addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var btn = document.getElementById('copyLinkSidebar'); var orig = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copié !';
+        btn.style.color = '#4ade80';
+        setTimeout(function() { btn.innerHTML = orig; btn.style.color = ''; }, 1800);
+      });
+    });
+
+    /* ── Search ── */
+    var searchBtn = document.getElementById('searchBtn');
+    var searchOverlay = document.getElementById('searchOverlay');
+    var searchModal = document.getElementById('searchModal');
+    var searchInput = document.getElementById('searchInput');
+    var searchResults = document.getElementById('searchResults');
+    var searchClose = document.getElementById('searchClose');
+    var focusedIdx = -1;
+
+    var CONTENT = [
+      { type:'Page',    icon:'🏠', title:'Accueil',                    desc:'Page accueil MPOUCK.',                       href:'index.html' },
+      { type:'Page',    icon:'⚡', title:'Services',                   desc:'Nos services digitaux.',                     href:'services.html' },
+      { type:'Page',    icon:'👤', title:'À propos',                   desc:'Notre histoire et notre équipe.',            href:'about.html' },
+      { type:'Page',    icon:'📰', title:'Blog',                       desc:'Articles et ressources.',                    href:'blog.html' },
+      { type:'Page',    icon:'✉️', title:'Contact',                    desc:'Contactez-nous.',                            href:'contact.html' },
+      { type:'Article', icon:'📈', title:'Design UI & KPIs : taux de conversion, bounce rate, temps de session', desc:'Hiérarchie visuelle, typographie, couleurs, layout et outils de mesure.', href:'article-design-ui-kpis.html' },
+      { type:'Article', icon:'🎨', title:'5 erreurs UX qui font fuir vos visiteurs', desc:'Navigation, vitesse, CTA, mobile, copywriting et corrections IA.', href:'article-erreurs-ux-corriger-ia.html' },
+      { type:'Article', icon:'🎯', title:'Comment trouver des clients en ligne pour son business', desc:'SEO, réseaux sociaux, WhatsApp, prospection, pub, email.', href:'article-trouver-clients-en-ligne.html' },
+      { type:'Article', icon:'🌱', title:'Les racines invisibles de la richesse', desc:'Métaphore de l\'arbre, monde intérieur, croyances, résultats financiers.', href:'article-racines-invisibles-richesse.html' },
+      { type:'Article', icon:'🚀', title:'Landing page à 25-30 % de conversion en 2026', desc:'Copywriting, design, structure de conversion.', href:'article-landing-page-conversion-2026.html' },
+      { type:'Article', icon:'✨', title:'Les tendances UI/UX qui vont dominer 2026', desc:'IA, Quiet Design, 3D, Bento Grids.', href:'article-uiux-2026.html' },
+    ];
+
+    function openSearch() { searchOverlay.classList.add('open'); searchModal.classList.add('open'); document.body.style.overflow = 'hidden'; searchBtn.setAttribute('aria-expanded','true'); setTimeout(function(){ searchInput.focus(); }, 80); renderHints(); }
+    function closeSearch() { searchOverlay.classList.remove('open'); searchModal.classList.remove('open'); document.body.style.overflow = ''; searchBtn.setAttribute('aria-expanded','false'); searchInput.value = ''; searchResults.innerHTML = ''; searchResults.classList.remove('visible'); focusedIdx = -1; }
+    if (searchBtn) searchBtn.addEventListener('click', openSearch);
+    if (searchOverlay) searchOverlay.addEventListener('click', closeSearch);
+    if (searchClose) searchClose.addEventListener('click', closeSearch);
+    document.addEventListener('keydown', function(e) { if ((e.ctrlKey||e.metaKey) && e.key==='k') { e.preventDefault(); openSearch(); } if (e.key==='Escape' && searchModal.classList.contains('open')) closeSearch(); });
+    function hl(t,q) { if (!q) return t; return t.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>'); }
+    function iHTML(d,q) { return '<a class="search-item" href="'+d.href+'"><div class="search-item-icon">'+d.icon+'</div><div class="search-item-body"><div class="search-item-title">'+hl(d.title,q)+'</div><div class="search-item-desc">'+d.desc+'</div></div><span class="search-item-badge">'+d.type+'</span></a>'; }
+    function fHTML(n) { return '<div class="search-footer"><span>'+n+' résultat'+(n>1?'s':'')+'</span><span>ESC fermer</span></div>'; }
+    function bindItems() { document.querySelectorAll('.search-item').forEach(function(el,i) { el.addEventListener('click', closeSearch); el.addEventListener('mouseenter', function(){ focusedIdx=i; uFocus(); }); }); }
+    function uFocus() { document.querySelectorAll('.search-item').forEach(function(el,i){ el.classList.toggle('focused',i===focusedIdx); }); }
+    function renderHints() { var h=''; CONTENT.slice(0,6).forEach(function(d){ h+=iHTML(d,''); }); h+=fHTML(CONTENT.length); searchResults.innerHTML=h; searchResults.classList.add('visible'); bindItems(); }
+    var dbt;
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        clearTimeout(dbt); var v = searchInput.value;
+        dbt = setTimeout(function() {
+          var q = v.trim().toLowerCase();
+          if (!q) { renderHints(); return; }
+          var hits = CONTENT.filter(function(d) { return d.title.toLowerCase().indexOf(q) >= 0 || d.desc.toLowerCase().indexOf(q) >= 0; });
+          searchResults.classList.add('visible');
+          if (!hits.length) { searchResults.innerHTML = '<div class="search-empty">Aucun résultat pour "' + v + '"</div>'; return; }
+          var h = ''; hits.forEach(function(d) { h += iHTML(d, q); }); h += fHTML(hits.length);
+          searchResults.innerHTML = h; focusedIdx = -1; bindItems();
+        }, 80);
+      });
+      searchInput.addEventListener('keydown', function(e) {
+        var items = document.querySelectorAll('.search-item');
+        if (!items.length) return;
+        if (e.key === 'ArrowDown') { e.preventDefault(); focusedIdx = Math.min(focusedIdx + 1, items.length - 1); uFocus(); items[focusedIdx] && items[focusedIdx].scrollIntoView({ block: 'nearest' }); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); focusedIdx = Math.max(focusedIdx - 1, 0); uFocus(); items[focusedIdx] && items[focusedIdx].scrollIntoView({ block: 'nearest' }); }
+        else if (e.key === 'Enter') { if (focusedIdx >= 0 && items[focusedIdx]) { items[focusedIdx].click(); } }
+      });
+    }
+  </script>
+</body>
+</html>
