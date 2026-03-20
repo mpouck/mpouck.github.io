@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design brutaliste, glassmorphism, skeuomorphisme 2.0 : à quoi ressembleront les interfaces en 2026 ? — MPOUCK</title>
+  <meta name="description" content="Brutalisme digital, glassmorphism, skeuomorphisme 2.0, dark mode évolué, micro-interactions IA… Plongez dans les tendances de design d'interface qui redéfinissent le web en 2026.">
+  <link rel="canonical" href="https://mpouck.github.io/article-tendances-design-interfaces-2026.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mpouck.github.io/article-tendances-design-interfaces-2026.html">
+  <meta property="og:title" content="Brutalisme, glassmorphism, skeuomorphisme 2.0 : les interfaces de 2026 — MPOUCK">
+  <meta property="og:description" content="Les 5 tendances de design d'interface qui redéfinissent le web et les apps en 2026.">
+  <meta property="og:image" content="https://mpouck.github.io/iaspecial2.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="MPOUCK">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brutalisme, glassmorphism, skeuomorphisme 2.0 : les interfaces de 2026 — MPOUCK">
+  <meta name="twitter:description" content="Les 5 tendances de design d'interface qui redéfinissent le web et les apps en 2026.">
+  <meta name="twitter:image" content="https://mpouck.github.io/iaspecial2.jpg">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4TSLNZGEPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4TSLNZGEPK');
+</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root, [data-theme="light"] {
+      --font: 'DM Sans', sans-serif;
+      --bg-page: #f5f5f7; --bg-nav: #ffffff; --bg-card: #ffffff;
+      --bg-hover: rgba(0,0,0,.045); --text-dark: #0d1b2a; --text-muted: #64748b;
+      --text-sub: #94a3b8; --border-nav: rgba(0,0,0,.07); --separator: rgba(0,0,0,.07);
+      --social-bg: rgba(0,0,0,.055); --social-bg-h: rgba(0,0,0,.1);
+      --btn-primary: #0d1b2a; --btn-p-text: #ffffff; --btn-hover-sh: rgba(0,0,0,.22);
+      --shadow-nav: 0 4px 28px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.05);
+      --shadow-card: 0 8px 40px rgba(0,0,0,.08), 0 1px 6px rgba(0,0,0,.04);
+      --shadow-float: 0 16px 48px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.06);
+      --toggle-track: #e4e4e7; --toggle-thumb: #ffffff;
+      --radius-nav: 20px; --radius-pill: 999px;
+      --ease: 220ms cubic-bezier(.4,0,.2,1); --accent: #c9a76c;
+    }
+    [data-theme="dark"] {
+      --bg-page: #0a0a0f; --bg-nav: #13131a; --bg-card: #1a1a24;
+      --bg-hover: rgba(255,255,255,.06); --text-dark: #f1f5f9; --text-muted: #94a3b8;
+      --text-sub: #64748b; --border-nav: rgba(255,255,255,.08); --separator: rgba(255,255,255,.07);
+      --social-bg: rgba(255,255,255,.07); --social-bg-h: rgba(255,255,255,.13);
+      --btn-primary: #f1f5f9; --btn-p-text: #0d1b2a; --btn-hover-sh: rgba(255,255,255,.15);
+      --shadow-nav: 0 4px 28px rgba(0,0,0,.5), 0 1px 4px rgba(0,0,0,.3);
+      --shadow-card: 0 8px 40px rgba(0,0,0,.45), 0 1px 6px rgba(0,0,0,.25);
+      --shadow-float: 0 16px 48px rgba(0,0,0,.6), 0 2px 8px rgba(0,0,0,.3);
+      --toggle-track: #3f3f46; --toggle-thumb: #18181b;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: var(--font); background: var(--bg-page); color: var(--text-dark); overflow-x: hidden; transition: background .35s ease, color .35s ease; }
+
+    /* ══ NAVBAR ══ */
+    .nav-wrapper { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: calc(100% - 48px); max-width: 960px; z-index: 200; }
+    .navbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--bg-nav); border-radius: var(--radius-nav); padding: 10px 12px 10px 22px; box-shadow: var(--shadow-nav); border: 1px solid var(--border-nav); transition: background .35s ease, box-shadow .35s ease, border-color .35s ease; }
+    .nav-logo { font-size: 1.2rem; font-weight: 700; letter-spacing: -.5px; color: var(--text-dark); text-decoration: none; flex-shrink: 0; transition: color .35s ease; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; flex: 1; justify-content: center; }
+    .nav-links a { padding: 6px 13px; border-radius: 10px; font-size: .82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-has-dropdown { position: relative; }
+    .nav-drop-btn { display: flex; align-items: center; gap: 4px; padding: 6px 13px; border-radius: 10px; font-size: .82rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; font-family: var(--font); transition: color var(--ease), background var(--ease); }
+    .nav-drop-btn:hover, .nav-has-dropdown.open .nav-drop-btn { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-drop-btn .chv { transition: transform var(--ease); display: inline-flex; }
+    .nav-has-dropdown.open .chv { transform: rotate(180deg); }
+    .nav-drop-panel { position: absolute; top: calc(100% + 10px); left: 50%; min-width: 190px; background: var(--bg-card); border-radius: 14px; border: 1px solid var(--border-nav); box-shadow: var(--shadow-float); padding: 7px; opacity: 0; pointer-events: none; transform: translateX(-50%) translateY(-6px) scale(.97); transition: opacity .2s ease, transform .2s ease, background .35s ease, border-color .35s ease; }
+    .nav-has-dropdown.open .nav-drop-panel { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0) scale(1); }
+    .nav-drop-panel a { display: flex; align-items: center; gap: 9px; padding: 8px 11px; border-radius: 9px; font-size: .82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .nav-drop-panel a:hover { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-drop-panel .page-icon { width: 26px; height: 26px; border-radius: 7px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .77rem; flex-shrink: 0; }
+    .nav-drop-panel .sep { height: 1px; background: var(--border-nav); margin: 4px 3px; }
+    .nav-right { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .search-btn { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 10px; border: none; background: transparent; cursor: pointer; color: var(--text-muted); flex-shrink: 0; transition: background var(--ease), color var(--ease); }
+    .search-btn:hover { background: var(--bg-hover); color: var(--text-dark); }
+    .theme-btn { position: relative; display: inline-flex; align-items: center; width: 52px; height: 30px; border-radius: 999px; border: none; cursor: pointer; padding: 0; flex-shrink: 0; background: var(--toggle-track); transition: background .35s cubic-bezier(.4,0,.2,1); }
+    .theme-thumb { position: absolute; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: var(--toggle-thumb); box-shadow: 0 1px 6px rgba(0,0,0,.22); display: flex; align-items: center; justify-content: center; transition: transform .35s cubic-bezier(.34,1.4,.64,1), background .35s ease; }
+    [data-theme="dark"] .theme-thumb { transform: translateX(22px); background: #27272a; }
+    .theme-thumb svg { position: absolute; transition: opacity .2s ease; }
+    .ico-sun { color: #f59e0b; } .ico-moon { color: #818cf8; }
+    [data-theme="light"] .ico-sun { opacity: 1; } [data-theme="light"] .ico-moon { opacity: 0; }
+    [data-theme="dark"] .ico-sun { opacity: 0; } [data-theme="dark"] .ico-moon { opacity: 1; }
+    .nav-cta { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: var(--radius-pill); background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .82rem; font-weight: 500; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background .35s ease, color .35s ease; }
+    .nav-cta:hover { transform: scale(1.04); box-shadow: 0 6px 20px var(--btn-hover-sh); }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; padding: 7px; border: none; border-radius: 10px; background: transparent; cursor: pointer; flex-shrink: 0; transition: background var(--ease); }
+    .hamburger:hover { background: var(--bg-hover); }
+    .hamburger span { display: block; width: 100%; height: 2px; border-radius: 2px; background: var(--text-dark); transform-origin: center; transition: transform var(--ease), opacity var(--ease), background .35s ease; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: absolute; top: calc(100% + 10px); left: 0; right: 0; border-radius: 16px; overflow: hidden; max-height: 0; background: transparent; box-shadow: none; border: 1px solid transparent; padding: 0; pointer-events: none; transition: max-height .38s cubic-bezier(.4,0,.2,1), background .28s ease, box-shadow .28s ease, border-color .28s ease, padding .28s ease; }
+    .mobile-menu.open { max-height: 700px; background: var(--bg-nav); box-shadow: var(--shadow-float); border-color: var(--border-nav); padding: 10px; pointer-events: auto; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 2px; padding: 6px 0 4px; }
+    .mobile-menu ul a { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-radius: 10px; font-size: .88rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .mobile-menu ul a:hover { color: var(--text-dark); background: var(--bg-hover); }
+    .mobile-has-sub { display: flex; flex-direction: column; }
+    .mob-sub-trigger { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-radius: 10px; font-size: .88rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; font-family: var(--font); width: 100%; text-align: left; transition: color var(--ease), background var(--ease); }
+    .mob-sub-trigger:hover, .mobile-has-sub.open .mob-sub-trigger { color: var(--text-dark); background: var(--bg-hover); }
+    .mob-chv { display: inline-flex; transition: transform var(--ease); color: var(--text-sub); }
+    .mobile-has-sub.open .mob-chv { transform: rotate(180deg); }
+    .mob-sublist { overflow: hidden; max-height: 0; transition: max-height .32s cubic-bezier(.4,0,.2,1); }
+    .mobile-has-sub.open .mob-sublist { max-height: 400px; }
+    .mob-sublist-inner { display: flex; flex-direction: column; gap: 2px; padding: 4px 0 4px 10px; }
+    .mob-sublink { display: flex !important; align-items: center !important; gap: 9px; padding: 9px 12px !important; border-radius: 10px; font-size: .84rem !important; color: var(--text-muted) !important; text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .mob-sublink:hover { color: var(--text-dark) !important; background: var(--bg-hover) !important; }
+    .mob-sublink .page-icon { width: 24px; height: 24px; border-radius: 6px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .72rem; flex-shrink: 0; }
+    .mob-cta { display: block; width: 100%; margin-top: 6px; padding: 13px; border-radius: var(--radius-pill); background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .88rem; font-weight: 500; text-align: center; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), background .35s ease, color .35s ease; }
+    .mob-cta:hover { transform: scale(1.02); }
+    @media (max-width: 720px) {
+      .nav-links, .nav-cta { display: none !important; }
+      .hamburger { display: flex; } .mobile-menu { display: block; }
+      .nav-wrapper { width: calc(100% - 28px); top: 14px; }
+    }
+
+    /* ══ SEARCH ══ */
+    .search-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); opacity: 0; pointer-events: none; transition: opacity .22s ease; }
+    .search-overlay.open { opacity: 1; pointer-events: auto; }
+    .search-modal { position: fixed; top: 80px; left: 50%; transform: translateX(-50%) translateY(-10px) scale(.97); width: calc(100% - 40px); max-width: 640px; z-index: 901; opacity: 0; pointer-events: none; transition: opacity .22s ease, transform .25s cubic-bezier(.34,1.3,.64,1); }
+    .search-modal.open { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0) scale(1); }
+    .search-box { display: flex; align-items: center; gap: 10px; background: var(--bg-nav); border: 1px solid var(--border-nav); border-radius: 16px; padding: 12px 16px; box-shadow: 0 20px 60px rgba(0,0,0,.25); transition: background .35s ease, border-color .35s ease; }
+    .search-box svg { color: var(--text-sub); flex-shrink: 0; }
+    .search-input { flex: 1; font-family: var(--font); font-size: .97rem; color: var(--text-dark); background: transparent; border: none; outline: none; }
+    .search-input::placeholder { color: var(--text-sub); }
+    .search-close-btn { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; border: 1px solid var(--border-nav); background: var(--bg-hover); cursor: pointer; color: var(--text-muted); transition: background var(--ease), color var(--ease), border-color .35s ease; }
+    .search-close-btn:hover { background: var(--social-bg-h); color: var(--text-dark); }
+    .search-results { background: var(--bg-nav); border: 1px solid var(--border-nav); border-radius: 16px; margin-top: 8px; box-shadow: 0 12px 40px rgba(0,0,0,.13); overflow: hidden; max-height: 400px; overflow-y: auto; display: none; }
+    .search-results.visible { display: block; }
+    .search-results::-webkit-scrollbar { width: 4px; } .search-results::-webkit-scrollbar-thumb { background: var(--border-nav); border-radius: 2px; }
+    .search-item { display: flex; align-items: center; gap: 12px; padding: 11px 16px; text-decoration: none; border-bottom: 1px solid var(--separator); transition: background var(--ease); cursor: pointer; }
+    .search-item:last-child { border-bottom: none; }
+    .search-item:hover, .search-item.focused { background: var(--bg-hover); }
+    .search-item-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+    .search-item-body { flex: 1; min-width: 0; }
+    .search-item-title { font-size: .86rem; font-weight: 600; color: var(--text-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; }
+    .search-item-title mark { background: rgba(201,167,108,.28); color: inherit; border-radius: 2px; padding: 0 1px; }
+    .search-item-desc { font-size: .74rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .search-item-badge { font-size: .64rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--social-bg); color: var(--text-sub); flex-shrink: 0; white-space: nowrap; }
+    .search-empty { padding: 28px 16px; text-align: center; color: var(--text-sub); font-size: .85rem; }
+    .search-footer { padding: 9px 16px; border-top: 1px solid var(--separator); display: flex; align-items: center; justify-content: space-between; font-size: .68rem; color: var(--text-sub); }
+
+    /* ══ HERO ══ */
+    .pub-hero { padding: 140px 32px 0; max-width: 820px; margin: 0 auto; }
+    .pub-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: .75rem; color: var(--text-sub); margin-bottom: 24px; }
+    .pub-breadcrumb a { color: var(--text-sub); text-decoration: none; transition: color var(--ease); }
+    .pub-breadcrumb a:hover { color: var(--accent); }
+    .pub-category { display: inline-flex; align-items: center; gap: 6px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); background: rgba(201,167,108,.1); border: 1px solid rgba(201,167,108,.25); border-radius: 999px; padding: 5px 14px; margin-bottom: 20px; }
+    .pub-title { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.2; color: var(--text-dark); margin-bottom: 20px; transition: color .35s ease; }
+    .pub-title em { font-style: italic; color: var(--accent); }
+    .pub-subtitle { font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 32px; transition: color .35s ease; }
+    .pub-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 20px 0; border-top: 1px solid var(--separator); border-bottom: 1px solid var(--separator); }
+    .pub-author { display: flex; align-items: center; gap: 10px; }
+    .pub-author-avatar { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--border-nav); background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; color: var(--accent); flex-shrink: 0; overflow: hidden; }
+    .pub-author-avatar-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+    .pub-author-info { display: flex; flex-direction: column; gap: 1px; }
+    .pub-author-name { font-size: .85rem; font-weight: 700; color: var(--text-dark); transition: color .35s ease; }
+    .pub-author-role { font-size: .72rem; color: var(--text-sub); transition: color .35s ease; }
+    .pub-meta-sep { width: 1px; height: 32px; background: var(--separator); }
+    .pub-meta-info { display: flex; flex-direction: column; gap: 2px; }
+    .pub-meta-label { font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-sub); }
+    .pub-meta-val { font-size: .8rem; color: var(--text-muted); transition: color .35s ease; }
+    .pub-share { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+    .pub-share-label { font-size: .72rem; color: var(--text-sub); }
+    .pub-share-btn { width: 27px; height: 27px; border-radius: 9px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; transition: background var(--ease), color var(--ease); cursor: pointer; }
+    .pub-share-btn:hover { background: var(--social-bg-h); color: var(--text-dark); }
+
+    /* ══ BANNIÈRE ══ */
+    .pub-banner { max-width: 820px; margin: 36px auto 0; padding: 0 32px; }
+    .pub-banner-img { width: 100%; aspect-ratio: 16/7; object-fit: cover; border-radius: 20px; border: 1px solid var(--border-nav); background: linear-gradient(135deg, #0d1b2a 0%, #1a1440 50%, #c9a76c 100%); display: block; }
+
+    /* ══ LAYOUT ══ */
+    .pub-layout { max-width: 820px; margin: 0 auto; padding: 52px 32px 80px; display: grid; grid-template-columns: 1fr 220px; gap: 52px; align-items: start; }
+
+    /* ══ CORPS ══ */
+    .pub-body { min-width: 0; }
+    .pub-body h2 { font-size: 1.45rem; font-weight: 800; letter-spacing: -.03em; color: var(--text-dark); margin: 40px 0 14px; transition: color .35s ease; }
+    .pub-body h3 { font-size: 1.1rem; font-weight: 700; letter-spacing: -.02em; color: var(--text-dark); margin: 28px 0 10px; transition: color .35s ease; }
+    .pub-body p { font-size: .97rem; line-height: 1.82; color: var(--text-muted); margin-bottom: 20px; transition: color .35s ease; }
+    .pub-body ul, .pub-body ol { padding-left: 22px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .pub-body li { font-size: .97rem; line-height: 1.7; color: var(--text-muted); transition: color .35s ease; }
+    .pub-body a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(201,167,108,.3); transition: border-color var(--ease); }
+    .pub-body a:hover { border-color: var(--accent); }
+    .pub-body strong { color: var(--text-dark); font-weight: 700; transition: color .35s ease; }
+    .pub-body em { font-style: italic; }
+
+    .pub-callout { background: linear-gradient(135deg, rgba(201,167,108,.08), rgba(201,167,108,.03)); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 28px 0; }
+    .pub-callout p { margin-bottom: 0; color: var(--text-dark); font-weight: 500; font-style: italic; }
+
+    .pub-quote { border-left: 3px solid var(--separator); padding: 14px 22px; margin: 28px 0; }
+    .pub-quote p { color: var(--text-muted); font-size: 1.05rem; font-style: italic; margin-bottom: 8px; }
+    .pub-quote cite { font-size: .78rem; color: var(--text-sub); font-style: normal; }
+
+    .pub-divider { height: 1px; background: var(--separator); margin: 36px 0; }
+
+    /* Numéro de section */
+    .conseil-num { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(201,167,108,.15); border: 1.5px solid rgba(201,167,108,.35); color: var(--accent); font-size: .85rem; font-weight: 800; flex-shrink: 0; margin-right: 12px; vertical-align: middle; }
+    .conseil-heading { display: flex; align-items: center; margin: 40px 0 14px; }
+    .conseil-heading h2 { font-size: 1.35rem; font-weight: 800; letter-spacing: -.03em; color: var(--text-dark); margin: 0; transition: color .35s ease; }
+
+    /* Check list */
+    .check-list { list-style: none; padding-left: 0; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .check-list li { font-size: .97rem; line-height: 1.7; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; transition: color .35s ease; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 800; font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* CTA inline */
+    .pub-cta-block { background: linear-gradient(135deg, rgba(201,167,108,.12), rgba(201,167,108,.04)); border: 1px solid rgba(201,167,108,.3); border-radius: 16px; padding: 28px; margin: 36px 0; text-align: center; }
+    .pub-cta-block p { margin-bottom: 16px; font-size: 1rem; color: var(--text-dark); font-weight: 600; }
+    .pub-cta-block .price-tag { display: inline-block; font-size: 2rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; letter-spacing: -.04em; }
+    .pub-cta-block .price-sub { font-size: .82rem; color: var(--text-muted); margin-bottom: 20px; }
+    .pub-cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: 999px; background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .9rem; font-weight: 700; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background .35s ease, color .35s ease; }
+    .pub-cta-btn:hover { transform: scale(1.04); box-shadow: 0 8px 28px var(--btn-hover-sh); }
+
+    /* Tags */
+    .pub-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
+    .pub-tag { display: inline-flex; padding: 6px 13px; border-radius: 999px; background: var(--social-bg); border: 1px solid var(--border-nav); font-size: .72rem; font-weight: 600; color: var(--text-sub); text-decoration: none; transition: background var(--ease), color var(--ease), border-color .35s ease; }
+    .pub-tag:hover { background: rgba(201,167,108,.12); color: var(--accent); border-color: rgba(201,167,108,.3); }
+
+    /* ══ STYLE DEMO CARD (nouveau) — carte qui démontre visuellement le style ══ */
+    .style-demo { border-radius: 20px; overflow: hidden; margin: 28px 0; border: 1px solid var(--border-nav); transition: border-color .35s ease; }
+
+    /* Brutalisme */
+    .style-demo.brutal { background: #fff; border: 3px solid #0d1b2a; border-radius: 4px; box-shadow: 5px 5px 0 #0d1b2a; }
+    [data-theme="dark"] .style-demo.brutal { background: #1a1a24; border-color: #f1f5f9; box-shadow: 5px 5px 0 #f1f5f9; }
+    .brutal-demo-inner { padding: 24px 26px; }
+    .brutal-title { font-size: 1.6rem; font-weight: 900; letter-spacing: -.03em; color: #0d1b2a; text-transform: uppercase; line-height: 1.1; margin-bottom: 10px; }
+    [data-theme="dark"] .brutal-title { color: #f1f5f9; }
+    .brutal-subtitle { font-size: .82rem; color: #64748b; margin-bottom: 18px; letter-spacing: .04em; text-transform: uppercase; }
+    .brutal-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .brutal-btn { padding: 10px 20px; border: 2px solid #0d1b2a; background: #0d1b2a; color: #fff; font-family: var(--font); font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; cursor: pointer; border-radius: 2px; box-shadow: 3px 3px 0 #c9a76c; transition: transform .1s ease, box-shadow .1s ease; }
+    .brutal-btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #c9a76c; }
+    .brutal-btn.outline { background: transparent; color: #0d1b2a; }
+    [data-theme="dark"] .brutal-btn { border-color: #f1f5f9; background: #f1f5f9; color: #0d1b2a; }
+    [data-theme="dark"] .brutal-btn.outline { background: transparent; color: #f1f5f9; }
+
+    /* Glassmorphism */
+    .style-demo.glass { background: linear-gradient(135deg, #0d1b2a 0%, #1a2d50 100%); border: none; }
+    .glass-demo-inner { padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+    .glass-card { background: rgba(255,255,255,.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.18); border-radius: 16px; padding: 18px 20px; }
+    .glass-title { font-size: .95rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .glass-sub { font-size: .78rem; color: rgba(255,255,255,.6); line-height: 1.55; }
+    .glass-row { display: flex; gap: 10px; }
+    .glass-pill { padding: 7px 14px; border-radius: 999px; background: rgba(201,167,108,.25); border: 1px solid rgba(201,167,108,.4); color: #c9a76c; font-size: .74rem; font-weight: 700; }
+    .glass-pill.white { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.2); color: rgba(255,255,255,.85); }
+
+    /* Skeuomorphisme 2.0 */
+    .style-demo.skeu { background: #f0ede8; border: 1px solid #d4ccc2; }
+    [data-theme="dark"] .style-demo.skeu { background: #1e1c1a; border-color: #3a3530; }
+    .skeu-demo-inner { padding: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .skeu-item { background: linear-gradient(145deg, #faf8f5 0%, #e8e4de 100%); border: 1px solid #ccc5bc; border-radius: 14px; padding: 18px; box-shadow: 4px 4px 10px rgba(0,0,0,.12), -2px -2px 8px rgba(255,255,255,.8); }
+    [data-theme="dark"] .skeu-item { background: linear-gradient(145deg, #2a2723 0%, #1a1816 100%); border-color: #3d3830; box-shadow: 4px 4px 10px rgba(0,0,0,.4), -2px -2px 8px rgba(255,255,255,.04); }
+    .skeu-icon { font-size: 1.8rem; margin-bottom: 8px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,.2)); }
+    .skeu-label { font-size: .82rem; font-weight: 700; color: #4a4540; margin-bottom: 3px; }
+    [data-theme="dark"] .skeu-label { color: #c8c4be; }
+    .skeu-val { font-size: .72rem; color: #8a8480; }
+    [data-theme="dark"] .skeu-val { color: #6a6460; }
+    @media (max-width: 480px) { .skeu-demo-inner { grid-template-columns: 1fr; } }
+
+    /* ══ STYLE METADATA BAND (nouveau) — bandeau de métadonnées d'un style ══ */
+    .style-meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 28px; }
+    .style-meta-item { display: flex; flex-direction: column; gap: 3px; background: var(--bg-card); border: 1px solid var(--border-nav); border-radius: 12px; padding: 10px 16px; min-width: 100px; flex: 1; transition: background .35s ease, border-color .35s ease; }
+    .style-meta-label { font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sub); }
+    .style-meta-val { font-size: .85rem; font-weight: 700; color: var(--text-dark); transition: color .35s ease; }
+    .style-meta-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+    .dot-hot    { background: #ef4444; }
+    .dot-warm   { background: #f97316; }
+    .dot-cool   { background: #6366f1; }
+    .dot-stable { background: #22c55e; }
+    .dot-new    { background: #c9a76c; }
+
+    /* ══ USAGE GRID (nouveau) — grille de cas d'usage ══ */
+    .usage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
+    .usage-item { background: var(--bg-card); border: 1px solid var(--border-nav); border-radius: 12px; padding: 14px 16px; display: flex; gap: 10px; align-items: flex-start; transition: background .35s ease, border-color .35s ease; }
+    .usage-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+    .usage-text { flex: 1; min-width: 0; }
+    .usage-title { font-size: .83rem; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; transition: color .35s ease; }
+    .usage-desc  { font-size: .74rem; color: var(--text-muted); line-height: 1.5; transition: color .35s ease; }
+    @media (max-width: 560px) { .usage-grid { grid-template-columns: 1fr; } }
+
+    /* ══ SIDEBAR ══ */
+    .pub-sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-card { background: var(--bg-card); border-radius: 16px; padding: 20px; border: 1px solid var(--border-nav); box-shadow: var(--shadow-card); transition: background .35s ease, border-color .35s ease; }
+    .sidebar-card-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sub); margin-bottom: 14px; }
+    .toc-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+    .toc-list-link { display: block; padding: 6px 10px; border-radius: 8px; font-size: .78rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); border-bottom: none !important; }
+    .toc-list-link:hover, .toc-list-link.active { color: var(--accent); background: rgba(201,167,108,.08); }
+    .sidebar-price-card { background: linear-gradient(135deg, #0d1b2a 0%, #1a2d42 100%); border-radius: 16px; padding: 22px; color: #fff; }
+    [data-theme="dark"] .sidebar-price-card { background: linear-gradient(135deg, var(--accent) 0%, #b8863d 100%); }
+    .s-price { font-size: 1.5rem; font-weight: 800; letter-spacing: -.04em; color: var(--accent); margin-bottom: 6px; }
+    [data-theme="dark"] .s-price { color: #fff; }
+    .s-label { font-size: .78rem; color: rgba(255,255,255,.7); margin-bottom: 18px; line-height: 1.5; }
+    .s-btn { display: block; width: 100%; padding: 11px; border-radius: 999px; background: var(--accent); color: #fff; font-family: var(--font); font-size: .82rem; font-weight: 700; text-align: center; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), opacity var(--ease); }
+    .s-btn:hover { transform: scale(1.03); opacity: .92; }
+    .related-list { display: flex; flex-direction: column; gap: 14px; }
+    .related-item { display: flex; gap: 12px; text-decoration: none; border-bottom: none !important; }
+    .related-item:hover .related-title { color: var(--accent); }
+    .related-thumb { width: 40px; height: 40px; border-radius: 10px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .related-info { display: flex; flex-direction: column; gap: 2px; }
+    .related-cat { font-size: .64rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+    .related-title { font-size: .8rem; font-weight: 600; color: var(--text-dark); line-height: 1.4; transition: color var(--ease); }
+    .related-date { font-size: .68rem; color: var(--text-sub); }
+    .share-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .share-pill { display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px; border-radius: 999px; background: var(--social-bg); border: 1px solid var(--border-nav); font-size: .76rem; font-weight: 600; color: var(--text-muted); text-decoration: none; cursor: pointer; font-family: var(--font); transition: background var(--ease), color var(--ease), border-color .35s ease; }
+    .share-pill:hover { background: var(--social-bg-h); color: var(--text-dark); }
+
+    /* ══ PREV/NEXT ══ */
+    .pub-nav { max-width: 820px; margin: 0 auto; padding: 0 32px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .pub-nav-card { display: flex; flex-direction: column; gap: 6px; padding: 18px 22px; border-radius: 16px; background: var(--bg-card); border: 1px solid var(--border-nav); text-decoration: none; box-shadow: var(--shadow-card); transition: background var(--ease), box-shadow var(--ease), border-color .35s ease; }
+    .pub-nav-card:hover { box-shadow: var(--shadow-float); }
+    .pub-nav-card.prev { text-align: left; } .pub-nav-card.next { text-align: right; }
+    .pub-nav-dir { display: flex; align-items: center; gap: 6px; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-sub); }
+    .pub-nav-card.next .pub-nav-dir { justify-content: flex-end; }
+    .pub-nav-ttl { font-size: .88rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; transition: color .35s ease; }
+    .pub-nav-card:hover .pub-nav-ttl { color: var(--accent); }
+
+    /* ══ FOOTER ══ */
+    .footer-wrapper { background: var(--bg-page); transition: background .35s ease; }
+    .footer-card { max-width: 1100px; margin: 0 auto; background: var(--bg-nav); border-radius: 28px 28px 0 0; border: 1px solid var(--border-nav); border-bottom: none; padding: 52px 52px 0; transition: background .35s ease, border-color .35s ease; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+    .footer-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 14px; }
+    .footer-logo-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-nav); flex-shrink: 0; }
+    .footer-logo-name { font-size: 1.1rem; font-weight: 800; letter-spacing: -.04em; color: var(--text-dark); transition: color .35s ease; }
+    .footer-desc { font-size: .82rem; color: var(--text-muted); line-height: 1.7; max-width: 260px; margin-bottom: 20px; transition: color .35s ease; }
+    .footer-socials { display: flex; gap: 8px; }
+    .social-link { width: 34px; height: 34px; border-radius: 10px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; transition: background var(--ease), color var(--ease), border-color var(--ease); }
+    .social-link:hover { background: var(--social-bg-h); color: var(--text-dark); }
+    .footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sub); margin-bottom: 16px; transition: color .35s ease; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a { font-size: .84rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease); }
+    .footer-col ul a:hover { color: var(--text-dark); }
+    .contact-list { display: flex; flex-direction: column; gap: 12px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 10px; }
+    .contact-icon { width: 30px; height: 30px; border-radius: 8px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); flex-shrink: 0; }
+    .contact-text { display: flex; flex-direction: column; gap: 1px; padding-top: 5px; }
+    .contact-text span, .contact-text a { font-size: .8rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease); }
+    .footer-bottom { border-top: 1px solid var(--separator); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: .78rem; color: var(--text-sub); }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { font-size: .78rem; color: var(--text-sub); text-decoration: none; transition: color var(--ease); }
+    .footer-legal a:hover { color: var(--text-dark); }
+
+    @media (max-width: 900px) { .pub-layout { grid-template-columns: 1fr; } .pub-sidebar { position: static; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 580px) { .pub-hero, .pub-banner, .pub-layout, .pub-nav { padding-left: 20px; padding-right: 20px; } .pub-hero { padding-top: 110px; } .pub-nav { grid-template-columns: 1fr; } .pub-meta { gap: 14px; } .pub-share { margin-left: 0; } .footer-card { padding: 40px 24px 0; } .footer-grid { grid-template-columns: 1fr; gap: 28px; } .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; } }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH6RQ47D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="nav-wrapper" id="mainNav" role="navigation" aria-label="Navigation principale">
+    <div class="navbar">
+      <a href="index.html" class="nav-logo">MPOUCK</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="nav-has-dropdown" id="deskPages">
+          <button class="nav-drop-btn" id="pagesTrigger" aria-haspopup="true" aria-expanded="false">Pages <svg class="chv" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-drop-panel" id="pagesPanel" role="menu">
+            <a href="about.html" role="menuitem"><span class="page-icon">👤</span> À propos</a>
+            <a href="projet.html" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
+            <a href="blog.html" role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+            <div class="sep"></div>
+            <a href="contact.html" role="menuitem"><span class="page-icon">✉️</span> Contact</a>
+          </div>
+        </li>
+        <li><a href="Webtemplates.html">Templates</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="search-btn" id="searchBtn" aria-label="Rechercher (Ctrl+K)" aria-expanded="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="theme-btn" id="themeBtn" aria-label="Changer de thème">
+          <span class="theme-thumb">
+            <svg class="ico-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="ico-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+        <a href="projet.html" class="nav-cta">Nos projets</a>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="menu">
+      <ul>
+        <li><a href="index.html" role="menuitem">Accueil</a></li>
+        <li><a href="services.html" role="menuitem">Services</a></li>
+        <li class="mobile-has-sub" id="mobPages">
+          <button class="mob-sub-trigger" id="mobPagesTrigger" aria-expanded="false">Pages <svg class="mob-chv" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="mob-sublist"><div class="mob-sublist-inner">
+            <a href="about.html" class="mob-sublink" role="menuitem"><span class="page-icon">👤</span> À propos</a>
+            <a href="projet.html" class="mob-sublink" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
+            <a href="blog.html" class="mob-sublink" role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+          </div></div>
+        </li>
+        <li><a href="Webtemplates.html" role="menuitem">Templates</a></li>
+        <li><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <a href="projet.html" class="mob-cta" role="menuitem">Nos projets</a>
+    </div>
+  </nav>
+
+  <!-- ══ SEARCH ══ -->
+  <div class="search-overlay" id="searchOverlay"></div>
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un article, service, page…" autocomplete="off" spellcheck="false"/>
+      <button id="searchClose" class="search-close-btn" aria-label="Fermer">
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults" role="listbox"></div>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <header class="pub-hero">
+    <nav class="pub-breadcrumb" aria-label="Fil d'ariane">
+      <a href="index.html">Accueil</a>
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="blog.html">Blog</a>
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Tendances design interfaces 2026</span>
+    </nav>
+
+    <span class="pub-category">✦ UI Design · Tendances · Interfaces</span>
+
+    <h1 class="pub-title">Design brutaliste, glassmorphism, skeuomorphisme 2.0 : <em>à quoi ressembleront les interfaces en 2026 ?</em></h1>
+
+    <p class="pub-subtitle">Les interfaces visuelles traversent une période de renaissance créative sans précédent. Cinq courants stylistiques majeurs redéfinissent l'esthétique du web et des apps. Décryptage complet — avec des démos visuelles en temps réel directement dans cet article.</p>
+
+    <div class="pub-meta">
+      <div class="pub-author">
+        <div class="pub-author-avatar"><img src="imageProfil.jpg" alt="MPOUCK Jho C." class="pub-author-avatar-img" /></div>
+        <div class="pub-author-info">
+          <span class="pub-author-name">MPOUCK Jho C.</span>
+          <span class="pub-author-role">Design &amp; Stratégie Digitale</span>
+        </div>
+      </div>
+      <div class="pub-meta-sep"></div>
+      <div class="pub-meta-info"><span class="pub-meta-label">Publié le</span><span class="pub-meta-val">20 mars 2026</span></div>
+      <div class="pub-meta-sep"></div>
+      <div class="pub-meta-info"><span class="pub-meta-label">Lecture</span><span class="pub-meta-val">12 min</span></div>
+      <div class="pub-share">
+        <span class="pub-share-label">Partager :</span>
+        <a href="https://wa.me/?text=Tendances%20design%202026%20%E2%80%94%20MPOUCK%20%3A%20https%3A%2F%2Fmpouck.github.io%2Farticle-tendances-design-interfaces-2026.html" target="_blank" class="pub-share-btn" aria-label="WhatsApp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmpouck.github.io%2Farticle-tendances-design-interfaces-2026.html" target="_blank" class="pub-share-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://twitter.com/intent/tweet?text=Tendances%20design%20interfaces%202026%20%E2%80%94%20MPOUCK&url=https%3A%2F%2Fmpouck.github.io%2Farticle-tendances-design-interfaces-2026.html" target="_blank" class="pub-share-btn" aria-label="Twitter/X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmpouck.github.io%2Farticle-tendances-design-interfaces-2026.html" target="_blank" class="pub-share-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <button class="pub-share-btn" id="copyLink" aria-label="Copier le lien"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ BANNIÈRE ══ -->
+  <div class="pub-banner">
+    <img src="iaspecial2.jpg" alt="Tendances design interfaces 2026 — MPOUCK" class="pub-banner-img" />
+  </div>
+
+  <!-- ══ LAYOUT ══ -->
+  <div class="pub-layout">
+    <article class="pub-body">
+
+      <!-- INTRO -->
+      <h2 id="intro">Pourquoi le design d'interface connaît une renaissance en 2026</h2>
+
+      <p>Pendant une décennie, le web a été dominé par le même langage visuel : fond blanc, typographie sans-serif neutre, couleurs primaires douces, coins arrondis omniprésents. Le flat design et le material design ont imposé une uniformité qui garantissait accessibilité et lisibilité — au prix d'une certaine monotonie.</p>
+
+      <p>En 2026, cette monoculture se fissure. Plusieurs courants stylistiques coexistent et se répondent, portés par trois forces convergentes : <strong>la maturité créative de la génération Z</strong> qui rejette l'esthétique corporate du flat design, <strong>les capacités techniques désormais accessibles</strong> (backdrop-filter, container queries, animations GPU) qui permettent des effets autrefois réservés aux apps natives, et <strong>l'IA générative</strong> qui accélère considérablement l'expérimentation stylistique.</p>
+
+      <p>Ce n'est pas un remplacement d'un style par un autre — c'est une <em>pluralisation</em>. Chaque tendance répond à un contexte, une audience, un objectif différent. La question n'est plus "quel style est à la mode ?" mais "quel style sert le mieux mon produit et mon utilisateur ?"</p>
+
+      <div class="pub-callout">
+        <p>🎨 Chaque tendance de cet article est illustrée par une démo CSS fonctionnelle directement dans la page. Bascule en mode sombre (bouton en haut à droite) pour voir comment chaque style se comporte dans les deux thèmes.</p>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- TENDANCE 1 : BRUTALISME -->
+      <div class="conseil-heading" id="brutalisme">
+        <span class="conseil-num">1</span>
+        <h2>Le design brutaliste digital</h2>
+      </div>
+
+      <p>Le brutalisme emprunte à l'architecture brutaliste des années 50–70 son refus de la décoration superflue et son goût pour la structure apparente. Appliqué au design digital, il se traduit par des <strong>bordures épaisses et franches</strong>, des typographies ultra-grasses en majuscules, une palette souvent monochrome ou très contrastée, des ombres portées simples et géométriques — et une absence totale de dégradés ou d'effets "cosmétiques".</p>
+
+      <p>Ce qui pourrait sembler une régression esthétique est en réalité une déclaration d'intention : le brutalisme dit que l'interface ne cherche pas à séduire — elle cherche à <em>communiquer</em>. C'est une esthétique de la confiance, du refus du vernis.</p>
+
+      <!-- DÉMO BRUTALISTE -->
+      <div class="style-demo brutal">
+        <div class="brutal-demo-inner">
+          <p class="brutal-title">MPOUCK<br>DIGITAL</p>
+          <p class="brutal-subtitle">Agence — Brazzaville, Congo</p>
+          <div class="brutal-row">
+            <button class="brutal-btn">Démarrer</button>
+            <button class="brutal-btn outline">En savoir +</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="style-meta">
+        <div class="style-meta-item"><span class="style-meta-label">Popularité 2026</span><span class="style-meta-val"><span class="style-meta-dot dot-hot"></span>En forte hausse</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Complexité CSS</span><span class="style-meta-val">Faible</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Perf. mobile</span><span class="style-meta-val">Excellente</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Origine</span><span class="style-meta-val">Archi. 1950s</span></div>
+      </div>
+
+      <h3>Où l'utiliser ?</h3>
+      <div class="usage-grid">
+        <div class="usage-item"><div class="usage-icon">📰</div><div class="usage-text"><p class="usage-title">Médias indépendants</p><p class="usage-desc">Blogs éditoriaux, journaux en ligne qui veulent afficher leur authenticité et refuser les codes du corporate.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🎨</div><div class="usage-text"><p class="usage-title">Portfolios créatifs</p><p class="usage-desc">Artistes, photographes, illustrateurs qui veulent que leur personnalité transperce l'interface.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🚀</div><div class="usage-text"><p class="usage-title">Startups tech disruptives</p><p class="usage-desc">Entreprises qui veulent signaler leur rupture avec les normes établies dès la première impression.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">⚠️</div><div class="usage-text"><p class="usage-title">À éviter pour</p><p class="usage-desc">Sites e-commerce grand public, institutions financières, services médicaux — audiences qui attendent du rassurant.</p></div></div>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- TENDANCE 2 : GLASSMORPHISM -->
+      <div class="conseil-heading" id="glassmorphism">
+        <span class="conseil-num">2</span>
+        <h2>Le glassmorphism évolué</h2>
+      </div>
+
+      <p>Le glassmorphism — apparu vers 2021 avec macOS Big Sur — repose sur un principe simple et visuellement saisissant : des surfaces en verre dépoli, semi-transparentes, qui flottent sur des fonds colorés ou photographiques. En 2026, il connaît une seconde vie grâce au support universel de <code>backdrop-filter</code> et à des interprétations plus nuancées qui évitent les écueils de la première vague (illisibilité, excès de transparence).</p>
+
+      <p>Le glassmorphism évolué de 2026 se distingue par une <strong>gestion plus disciplinée des niveaux de transparence</strong> : les surfaces en verre ne sont plus uniformément translucides, mais varient selon leur hiérarchie dans l'interface. Les éléments primaires sont plus opaques, les secondaires plus transparents, créant une profondeur spatiale lisible et intuitive.</p>
+
+      <!-- DÉMO GLASSMORPHISM -->
+      <div class="style-demo glass">
+        <div class="glass-demo-inner">
+          <div class="glass-card">
+            <p class="glass-title">Tableau de bord</p>
+            <p class="glass-sub">Vos performances digitales en temps réel</p>
+          </div>
+          <div class="glass-card" style="background: rgba(201,167,108,.12); border-color: rgba(201,167,108,.3);">
+            <p class="glass-title" style="color: #c9a76c;">+38% conversion</p>
+            <p class="glass-sub">Ce mois vs. mois dernier</p>
+          </div>
+          <div class="glass-row">
+            <span class="glass-pill">Analytics</span>
+            <span class="glass-pill white">SEO</span>
+            <span class="glass-pill white">UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="style-meta">
+        <div class="style-meta-item"><span class="style-meta-label">Popularité 2026</span><span class="style-meta-val"><span class="style-meta-dot dot-warm"></span>Mature, raffinée</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Complexité CSS</span><span class="style-meta-val">Moyenne</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Perf. mobile</span><span class="style-meta-val">Bonne (GPU)</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Origine</span><span class="style-meta-val">macOS 2021</span></div>
+      </div>
+
+      <h3>La recette CSS du glassmorphism 2026</h3>
+      <p>La formule technique s'est stabilisée : <code>backdrop-filter: blur(12–20px)</code> pour l'effet verre, <code>background: rgba(255,255,255,.08–.15)</code> pour la teinte légère, <code>border: 1px solid rgba(255,255,255,.15–.25)</code> pour le liseré lumineux, et une légère ombre portée pour la profondeur. La clé est dans la sobriété : un seul niveau de flou par couche, jamais deux effets superposés qui se neutralisent.</p>
+
+      <div class="usage-grid">
+        <div class="usage-item"><div class="usage-icon">📊</div><div class="usage-text"><p class="usage-title">Dashboards & SaaS</p><p class="usage-desc">Interfaces de données où la profondeur visuelle aide à hiérarchiser les informations complexes.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">📱</div><div class="usage-text"><p class="usage-title">Apps mobiles premium</p><p class="usage-desc">Finance, santé, bien-être — secteurs où l'esthétique "propre et premium" renforce la confiance.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🎵</div><div class="usage-text"><p class="usage-title">Plateformes créatives</p><p class="usage-desc">Musique, streaming, gaming — univers où l'immersion visuelle est une valeur en soi.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">⚠️</div><div class="usage-text"><p class="usage-title">Attention à</p><p class="usage-desc">L'accessibilité. Le texte sur surfaces transparentes doit toujours atteindre un ratio de contraste WCAG de 4.5:1 minimum.</p></div></div>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- TENDANCE 3 : SKEUOMORPHISME 2.0 -->
+      <div class="conseil-heading" id="skeuomorphisme">
+        <span class="conseil-num">3</span>
+        <h2>Le skeuomorphisme 2.0 — le retour du tactile</h2>
+      </div>
+
+      <p>Le skeuomorphisme original — popularisé par les premières interfaces iOS d'Apple jusqu'en 2013 — imitait les objets physiques : une calculatrice avec des boutons en relief, un carnet de notes avec des spirales métalliques, une bibliothèque avec du bois simulé. Abandonné au profit du flat design, il revient en 2026 sous une forme radicalement différente et plus sophistiquée.</p>
+
+      <p>Le skeuomorphisme 2.0 ne cherche plus à imiter le réel de façon littérale — il en capture l'<em>essence tactile</em>. Lumières douces, ombres subtiles, textures légères, surfaces qui semblent avoir une matière physique sans pour autant représenter un objet identifiable. C'est une invitation au toucher dans un monde d'écrans, un design qui dit "ceci a du poids, de la consistance, de la présence".</p>
+
+      <!-- DÉMO SKEUOMORPHISME 2.0 -->
+      <div class="style-demo skeu">
+        <div class="skeu-demo-inner">
+          <div class="skeu-item">
+            <span class="skeu-icon">📈</span>
+            <p class="skeu-label">Trafic mensuel</p>
+            <p class="skeu-val">12 480 visiteurs</p>
+          </div>
+          <div class="skeu-item">
+            <span class="skeu-icon">🎯</span>
+            <p class="skeu-label">Conversions</p>
+            <p class="skeu-val">342 leads qualifiés</p>
+          </div>
+          <div class="skeu-item">
+            <span class="skeu-icon">⭐</span>
+            <p class="skeu-label">Satisfaction</p>
+            <p class="skeu-val">4,9 / 5 — 128 avis</p>
+          </div>
+          <div class="skeu-item">
+            <span class="skeu-icon">🚀</span>
+            <p class="skeu-label">Croissance</p>
+            <p class="skeu-val">+38 % ce trimestre</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="style-meta">
+        <div class="style-meta-item"><span class="style-meta-label">Popularité 2026</span><span class="style-meta-val"><span class="style-meta-dot dot-new"></span>Renaissance ciblée</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Complexité CSS</span><span class="style-meta-val">Moyenne-haute</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Perf. mobile</span><span class="style-meta-val">Bonne</span></div>
+        <div class="style-meta-item"><span class="style-meta-label">Origine</span><span class="style-meta-val">iOS 1.0 — 2007</span></div>
+      </div>
+
+      <p>La différence technique clé entre l'ancien skeuomorphisme et le 2.0 réside dans l'utilisation des <strong>multi-layer shadows</strong> plutôt que des textures bitmap lourdes. Un bouton skeuomorphique moderne utilise des ombres et des lumières CSS pures — aucune image, aucun fichier externe — pour créer l'illusion de relief. C'est performant, adaptable au dark mode, et maintenable.</p>
+
+      <div class="usage-grid">
+        <div class="usage-item"><div class="usage-icon">🎛️</div><div class="usage-text"><p class="usage-title">Interfaces audio & musique</p><p class="usage-desc">Platines, équaliseurs, synthétiseurs — des éléments qui bénéficient encore d'une métaphore physique.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🏋️</div><div class="usage-text"><p class="usage-title">Apps santé & bien-être</p><p class="usage-desc">Fitness, méditation — interfaces qui veulent incarner quelque chose de solide, rassurant, tangible.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🏦</div><div class="usage-text"><p class="usage-title">Finance & premium</p><p class="usage-desc">Cartes, wallets, services exclusifs — où la sensation de "valeur" physique renforce la perception de qualité.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🎮</div><div class="usage-text"><p class="usage-title">Gaming & entertainment</p><p class="usage-desc">Manettes, inventaires, menus — espaces où l'immersion sensorielle est une promesse de marque.</p></div></div>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- TENDANCE 4 : DARK MODE ÉVOLUÉ -->
+      <div class="conseil-heading" id="dark-mode-evolue">
+        <span class="conseil-num">4</span>
+        <h2>Le dark mode de seconde génération</h2>
+      </div>
+
+      <p>Le dark mode basique — remplacer le blanc par du noir et le noir par du blanc — est dépassé. En 2026, les interfaces dark sophistiquées ne travaillent pas en noir pur mais en <strong>nuances de gris très foncés et de bleus nuit</strong>, avec des couches de profondeur distinctes : le fond le plus sombre, les cartes légèrement plus claires, les surfaces actives encore un peu plus claires. Cette graduation crée une hiérarchie spatiale lisible sans avoir recours à des bordures explicites.</p>
+
+      <p>Ce que vous lisez en ce moment — si vous avez basculé en mode sombre — est un exemple de ce principe : le fond page est à <code>#0a0a0f</code>, les cards à <code>#1a1a24</code>, et la navbar à <code>#13131a</code>. Trois niveaux distincts, zéro bordure visible, hiérarchie parfaitement lisible.</p>
+
+      <div class="pub-callout">
+        <p>🌙 Le dark mode réduit la consommation d'énergie des écrans OLED de 30 à 60 % sur mobile — un argument d'accessibilité et d'éco-conception de plus en plus important pour les audiences africaines, où la gestion de la batterie reste un enjeu quotidien.</p>
+      </div>
+
+      <h3>Les règles du dark mode bien conçu</h3>
+      <ul class="check-list">
+        <li><strong>Jamais de noir pur :</strong> <code>#000000</code> crée un contraste trop brutal avec le contenu. Préférez des fonds dans les gammes <code>#0a0a0f</code> à <code>#141420</code>.</li>
+        <li><strong>Élever la saturation des couleurs d'accent :</strong> ce qui ressemble à un orange vif sur fond clair doit être légèrement désaturé sur fond sombre pour éviter la vibration optique.</li>
+        <li><strong>Réduire la luminosité des images :</strong> les images et photos doivent perdre 10 à 20 % de luminosité en dark mode pour ne pas "sauter" hors de l'interface.</li>
+        <li><strong>Adapter les ombres :</strong> les ombres portées claires n'existent pas sur fond sombre. En dark mode, les ombres sont remplacées par des lueurs légères — un léger halo de couleur qui simule l'effet de profondeur.</li>
+      </ul>
+
+      <div class="usage-grid">
+        <div class="usage-item"><div class="usage-icon">💻</div><div class="usage-text"><p class="usage-title">Outils développeurs</p><p class="usage-desc">IDEs, terminaux, dashboards tech — audiences qui préfèrent systématiquement les interfaces sombres.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🎬</div><div class="usage-text"><p class="usage-title">Streaming & médias</p><p class="usage-desc">Vidéo, photo, création — dark mode qui met en valeur le contenu visuel sans l'interférence du blanc.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🌙</div><div class="usage-text"><p class="usage-title">Apps nocturnes</p><p class="usage-desc">Météo, actualités, podcasts — tout contenu consommé le soir bénéficie d'un dark mode pour les yeux.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">📋</div><div class="usage-text"><p class="usage-title">Recommandation universelle</p><p class="usage-desc">En 2026, tout site pro devrait supporter les deux modes. C'est un standard d'accessibilité, pas une option.</p></div></div>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- TENDANCE 5 : MICRO-INTERACTIONS IA -->
+      <div class="conseil-heading" id="micro-interactions-ia">
+        <span class="conseil-num">5</span>
+        <h2>Les micro-interactions générées et adaptées par l'IA</h2>
+      </div>
+
+      <p>La tendance la plus radicalement nouvelle de 2026 n'est pas un style visuel — c'est une <em>couche comportementale</em>. Les micro-interactions IA sont des animations, transitions et réponses visuelles qui s'adaptent en temps réel au comportement de l'utilisateur, grâce à des modèles d'apprentissage légers embarqués dans le navigateur.</p>
+
+      <p>En pratique, cela signifie : un bouton qui s'anime légèrement différemment selon la façon dont le curseur s'en approche (vitesse, trajectoire), des transitions qui s'accélèrent ou ralentissent selon les préférences implicites détectées au fil de la session, ou des mises en avant visuelles qui se réorganisent selon les zones où l'œil passe le plus de temps.</p>
+
+      <div class="pub-quote">
+        <p>"Les interfaces de demain ne seront pas juste belles — elles seront vivantes. Elles apprendront de vous, s'adapteront à vous, et deviendront plus efficaces à chaque interaction."</p>
+        <cite>— Tendance observée par le Nielsen Norman Group, rapport 2026</cite>
+      </div>
+
+      <h3>Ce qui est déjà applicable aujourd'hui</h3>
+      <p>Vous n'avez pas besoin d'une IA embarquée pour commencer à implémenter des micro-interactions intelligentes. Plusieurs approches sont accessibles dès maintenant :</p>
+
+      <ul class="check-list">
+        <li><strong>CSS custom properties animées :</strong> faire varier dynamiquement des variables CSS (couleurs, espacements, opacités) en réponse à des événements JavaScript simples — survol, scroll, focus — crée des interfaces qui "respirent".</li>
+        <li><strong>Intersection Observer + animations d'entrée :</strong> les éléments qui apparaissent progressivement à mesure que l'utilisateur fait défiler — avec des délais et des courbes de Bézier soigneusement calibrés — créent une sensation de découverte active qui retient l'attention.</li>
+        <li><strong>CSS :has() et :focus-visible :</strong> ces sélecteurs modernes permettent des réponses contextuelles à l'état de l'interface sans une ligne de JavaScript, pour des interactions d'une fluidité GPU native.</li>
+        <li><strong>View Transition API :</strong> support natif Chrome depuis 2024, permet des transitions fluides entre pages entières — une révolution pour les SPAs et sites multi-pages qui veulent l'expérience d'une app native.</li>
+      </ul>
+
+      <div class="usage-grid">
+        <div class="usage-item"><div class="usage-icon">🛒</div><div class="usage-text"><p class="usage-title">E-commerce</p><p class="usage-desc">Les micro-interactions sur les boutons "Ajouter au panier" peuvent augmenter le taux de clic de 20 à 35 %.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">📝</div><div class="usage-text"><p class="usage-title">Formulaires</p><p class="usage-desc">Validation en temps réel avec animations de confirmation — le taux d'abandon de formulaire chute significativement.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🔔</div><div class="usage-text"><p class="usage-title">Notifications & feedback</p><p class="usage-desc">Toast notifications, progress bars, états de chargement — des moments qui transforment l'attente en expérience.</p></div></div>
+        <div class="usage-item"><div class="usage-icon">🧭</div><div class="usage-text"><p class="usage-title">Navigation active</p><p class="usage-desc">Des indicateurs de position actifs dans la navigation qui glissent plutôt que de clignoter — élégance perçue immédiate.</p></div></div>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <!-- CONCLUSION -->
+      <h2 id="conclusion">Choisir son style : la règle des trois questions</h2>
+
+      <p>Face à cette pluralité stylistique, la tentation est de tout vouloir tester — un peu de glassmorphism ici, un soupçon de brutalisme là, quelques touches skeuomorphiques. C'est une recette pour l'incohérence. Un design fort en 2026 n'est pas celui qui empile le plus de tendances — c'est celui qui <strong>choisit une direction et l'assume complètement</strong>.</p>
+
+      <p>Avant d'adopter l'une de ces tendances, posez-vous trois questions. Première question : <em>Qui est mon utilisateur, et quelles sont ses attentes esthétiques ?</em> Un entrepreneur congolais de 35 ans qui cherche une agence web a des attentes différentes d'un développeur parisien de 25 ans. Deuxième question : <em>Quelle émotion veux-je déclencher à la première seconde ?</em> La confiance ? L'énergie ? La créativité ? La précision ? Chaque style répond à une émotion différente. Troisième question : <em>Est-ce que je peux maintenir cette direction sur l'ensemble du site, y compris sur mobile et en dark mode ?</em> Une tendance qui s'effondre sur smartphone ou qui devient illisible en mode sombre n'est pas encore maîtrisée.</p>
+
+      <p>Pour approfondir la relation entre ces choix de design et leur impact mesurable sur vos résultats, notre article sur le <a href="article-design-ui-kpis.html">lien entre design UI et KPIs</a> vous donnera le cadre analytique pour valider vos décisions stylistiques avec des données.</p>
+
+      <!-- CTA bloc -->
+      <div class="pub-cta-block">
+        <p class="price-tag">Design sur-mesure</p>
+        <p class="price-sub">MPOUCK conçoit des interfaces qui marient esthétique contemporaine et performance mesurable — adaptées au marché africain et optimisées pour la conversion.</p>
+        <a href="contact.html" class="pub-cta-btn">Discuter de mon design →</a>
+      </div>
+
+      <div class="pub-tags">
+        <a href="blog.html" class="pub-tag">#UIDesign</a>
+        <a href="blog.html" class="pub-tag">#Brutalisme</a>
+        <a href="blog.html" class="pub-tag">#Glassmorphism</a>
+        <a href="blog.html" class="pub-tag">#Skeuomorphisme</a>
+        <a href="blog.html" class="pub-tag">#DarkMode</a>
+        <a href="blog.html" class="pub-tag">#MicroInteractions</a>
+        <a href="blog.html" class="pub-tag">#TendancesDesign2026</a>
+        <a href="blog.html" class="pub-tag">#DesignWeb</a>
+      </div>
+
+    </article>
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="pub-sidebar" aria-label="Sidebar">
+
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">Sommaire</p>
+        <ul class="toc-list" role="list">
+          <li><a href="#intro" class="toc-list-link">Introduction</a></li>
+          <li><a href="#brutalisme" class="toc-list-link">1. Design brutaliste</a></li>
+          <li><a href="#glassmorphism" class="toc-list-link">2. Glassmorphism évolué</a></li>
+          <li><a href="#skeuomorphisme" class="toc-list-link">3. Skeuomorphisme 2.0</a></li>
+          <li><a href="#dark-mode-evolue" class="toc-list-link">4. Dark mode 2e gen.</a></li>
+          <li><a href="#micro-interactions-ia" class="toc-list-link">5. Micro-interactions IA</a></li>
+          <li><a href="#conclusion" class="toc-list-link">Conclusion</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-price-card">
+        <div class="s-price">Design UI</div>
+        <div class="s-label">Interface sur-mesure pour votre marque — adaptée aux tendances actuelles et à votre audience.</div>
+        <a href="contact.html" class="s-btn">Démarrer le projet →</a>
+      </div>
+
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">Articles liés</p>
+        <div class="related-list">
+          <a href="article-design-ui-kpis.html" class="related-item">
+            <div class="related-thumb">📈</div>
+            <div class="related-info">
+              <div class="related-cat">UI &amp; Analytics</div>
+              <div class="related-title">Design UI &amp; KPIs : taux de conversion, bounce rate</div>
+              <div class="related-date">20 mars 2026</div>
+            </div>
+          </a>
+          <a href="article-erreurs-ux-corriger-ia.html" class="related-item">
+            <div class="related-thumb">🎨</div>
+            <div class="related-info">
+              <div class="related-cat">UX Design</div>
+              <div class="related-title">5 erreurs UX qui font fuir vos visiteurs</div>
+              <div class="related-date">20 mars 2026</div>
+            </div>
+          </a>
+          <a href="article-ia-ux-designer-2026.html" class="related-item">
+            <div class="related-thumb">🤖</div>
+            <div class="related-info">
+              <div class="related-cat">IA &amp; Design</div>
+              <div class="related-title">L'IA peut-elle vraiment remplacer un UX designer ?</div>
+              <div class="related-date">5 mars 2026</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">Partager cet article</p>
+        <div class="share-row">
+          <a href="https://wa.me/?text=Tendances%20design%202026%20%3A%20https%3A%2F%2Fmpouck.github.io%2Farticle-tendances-design-interfaces-2026.html" target="_blank" class="share-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmpouck.github.io%2Farticle-tendances-design-interfaces-2026.html" target="_blank" class="share-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <button class="share-pill" id="copyLinkSidebar">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Copier
+          </button>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ══ PREV / NEXT ══ -->
+  <nav class="pub-nav" aria-label="Articles précédent et suivant">
+    <a href="article-design-ui-kpis.html" class="pub-nav-card prev">
+      <div class="pub-nav-dir"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Article précédent</div>
+      <div class="pub-nav-ttl">Design UI &amp; KPIs : taux de conversion, bounce rate, temps de session</div>
+    </a>
+    <a href="blog.html" class="pub-nav-card next">
+      <div class="pub-nav-dir">Voir tous les articles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="pub-nav-ttl">Explorer l'ensemble du Blog MPOUCK →</div>
+    </a>
+  </nav>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer-wrapper">
+    <div class="footer-card">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo"><img src="logoMpouck.jpg" alt="Logo MPOUCK" class="footer-logo-img" /><span class="footer-logo-name">MPOUCK</span></a>
+          <p class="footer-desc">Agence digitale basée à Brazzaville. Création web, SEO, design graphique et formation IA pour les entrepreneurs africains.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/242068652120" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+            <a href="https://www.facebook.com/mpouck" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://linkedin.com/company/mpouck" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Création web</a></li>
+            <li><a href="seoservice.html">SEO &amp; Contenu</a></li>
+            <li><a href="services.html">Design graphique</a></li>
+            <li><a href="aicours.html">Formation IA</a></li>
+            <li><a href="social-media-packs.html">Packs Réseaux Sociaux</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="projet.html">Projets</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="contact-list">
+            <div class="contact-item"><div class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="contact-text"><span>Brazzaville, Congo</span></div></div>
+            <div class="contact-item"><div class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="contact-text"><a href="https://wa.me/242068652120">+242 06 865 21 20</a></div></div>
+            <div class="contact-item"><div class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="contact-text"><a href="mailto:contact@mpouck.com">contact@mpouck.com</a></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 MPOUCK Digital Service. Tous droits réservés.</span>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Confidentialité</a>
+          <a href="conditions-utilisation.html">CGU</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Theme ── */
+    (function() { var s = localStorage.getItem('mpouck-theme'); if (s) document.documentElement.setAttribute('data-theme', s); })();
+    document.getElementById('themeBtn').addEventListener('click', function() {
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('mpouck-theme', next);
+    });
+
+    /* ── Hamburger ── */
+    document.getElementById('hamburger').addEventListener('click', function() {
+      var open = this.classList.toggle('open');
+      var m = document.getElementById('mobileMenu');
+      m.classList.toggle('open', open);
+      this.setAttribute('aria-expanded', open);
+      m.setAttribute('aria-hidden', !open);
+    });
+
+    /* ── Dropdown desktop ── */
+    var deskPages = document.getElementById('deskPages');
+    var pagesTrig = document.getElementById('pagesTrigger');
+    pagesTrig.addEventListener('click', function(e) { e.stopPropagation(); var o = deskPages.classList.toggle('open'); pagesTrig.setAttribute('aria-expanded', o); });
+    function closeDrop() { deskPages.classList.remove('open'); pagesTrig.setAttribute('aria-expanded','false'); }
+    document.getElementById('mainNav').addEventListener('click', function(e) { if (!deskPages.contains(e.target)) closeDrop(); });
+    document.getElementById('pagesPanel').querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeDrop); });
+
+    /* ── Accordion mobile ── */
+    document.getElementById('mobPagesTrigger').addEventListener('click', function(e) { e.stopPropagation(); var o = document.getElementById('mobPages').classList.toggle('open'); this.setAttribute('aria-expanded', o); });
+
+    /* ── Ombre navbar au scroll ── */
+    var navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() { navbar.style.boxShadow = window.scrollY > 10 ? '0 8px 40px rgba(0,0,0,.14), 0 2px 8px rgba(0,0,0,.08)' : ''; }, { passive: true });
+
+    /* ── TOC active ── */
+    var tocLinks = document.querySelectorAll('.toc-list-link');
+    var sections = [];
+    tocLinks.forEach(function(a) { var id = a.getAttribute('href').slice(1); var el = document.getElementById(id); if (el) sections.push({ el: el, a: a }); });
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY + 120; var active = null;
+      sections.forEach(function(s) { if (s.el.offsetTop <= scrollY) active = s; });
+      tocLinks.forEach(function(a) { a.classList.remove('active'); });
+      if (active) active.a.classList.add('active');
+    }, { passive: true });
+
+    /* ── Copier le lien ── */
+    document.getElementById('copyLink').addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var btn = document.getElementById('copyLink'); btn.style.color = '#4ade80';
+        setTimeout(function() { btn.style.color = ''; }, 1500);
+      });
+    });
+    document.getElementById('copyLinkSidebar').addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var btn = document.getElementById('copyLinkSidebar'); var orig = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copié !';
+        btn.style.color = '#4ade80';
+        setTimeout(function() { btn.innerHTML = orig; btn.style.color = ''; }, 1800);
+      });
+    });
+
+    /* ── Search ── */
+    var searchBtn = document.getElementById('searchBtn');
+    var searchOverlay = document.getElementById('searchOverlay');
+    var searchModal = document.getElementById('searchModal');
+    var searchInput = document.getElementById('searchInput');
+    var searchResults = document.getElementById('searchResults');
+    var searchClose = document.getElementById('searchClose');
+    var focusedIdx = -1;
+
+    var CONTENT = [
+      { type:'Page',    icon:'🏠', title:'Accueil',               desc:'Page accueil MPOUCK.',                       href:'index.html' },
+      { type:'Page',    icon:'⚡', title:'Services',              desc:'Nos services digitaux.',                     href:'services.html' },
+      { type:'Page',    icon:'👤', title:'À propos',              desc:'Notre histoire et notre équipe.',            href:'about.html' },
+      { type:'Page',    icon:'📰', title:'Blog',                  desc:'Articles et ressources.',                    href:'blog.html' },
+      { type:'Page',    icon:'✉️', title:'Contact',               desc:'Contactez-nous.',                            href:'contact.html' },
+      { type:'Article', icon:'🎭', title:'Design brutaliste, glassmorphism, skeuomorphisme 2.0 : interfaces 2026', desc:'Les 5 tendances visuelles qui redéfinissent le web — avec démos CSS.', href:'article-tendances-design-interfaces-2026.html' },
+      { type:'Article', icon:'📈', title:'Design UI & KPIs : taux de conversion, bounce rate', desc:'Hiérarchie visuelle, typographie, couleurs, layout et mesure.', href:'article-design-ui-kpis.html' },
+      { type:'Article', icon:'🎨', title:'5 erreurs UX qui font fuir vos visiteurs', desc:'Navigation, vitesse, CTA, mobile, copywriting et corrections IA.', href:'article-erreurs-ux-corriger-ia.html' },
+      { type:'Article', icon:'🚀', title:'Landing page à 25-30 % de conversion en 2026', desc:'Copywriting, design, structure de conversion.', href:'article-landing-page-conversion-2026.html' },
+      { type:'Article', icon:'✨', title:'Les tendances UI/UX qui vont dominer 2026', desc:'IA, Quiet Design, 3D, Bento Grids.', href:'article-uiux-2026.html' },
+      { type:'Article', icon:'🌱', title:'Les racines invisibles de la richesse', desc:'Métaphore de l\'arbre, monde intérieur, croyances, résultats financiers.', href:'article-racines-invisibles-richesse.html' },
+    ];
+
+    function openSearch() { searchOverlay.classList.add('open'); searchModal.classList.add('open'); document.body.style.overflow = 'hidden'; searchBtn.setAttribute('aria-expanded','true'); setTimeout(function(){ searchInput.focus(); }, 80); renderHints(); }
+    function closeSearch() { searchOverlay.classList.remove('open'); searchModal.classList.remove('open'); document.body.style.overflow = ''; searchBtn.setAttribute('aria-expanded','false'); searchInput.value = ''; searchResults.innerHTML = ''; searchResults.classList.remove('visible'); focusedIdx = -1; }
+    if (searchBtn) searchBtn.addEventListener('click', openSearch);
+    if (searchOverlay) searchOverlay.addEventListener('click', closeSearch);
+    if (searchClose) searchClose.addEventListener('click', closeSearch);
+    document.addEventListener('keydown', function(e) { if ((e.ctrlKey||e.metaKey) && e.key==='k') { e.preventDefault(); openSearch(); } if (e.key==='Escape' && searchModal.classList.contains('open')) closeSearch(); });
+    function hl(t,q) { if (!q) return t; return t.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>'); }
+    function iHTML(d,q) { return '<a class="search-item" href="'+d.href+'"><div class="search-item-icon">'+d.icon+'</div><div class="search-item-body"><div class="search-item-title">'+hl(d.title,q)+'</div><div class="search-item-desc">'+d.desc+'</div></div><span class="search-item-badge">'+d.type+'</span></a>'; }
+    function fHTML(n) { return '<div class="search-footer"><span>'+n+' résultat'+(n>1?'s':'')+'</span><span>ESC fermer</span></div>'; }
+    function bindItems() { document.querySelectorAll('.search-item').forEach(function(el,i) { el.addEventListener('click', closeSearch); el.addEventListener('mouseenter', function(){ focusedIdx=i; uFocus(); }); }); }
+    function uFocus() { document.querySelectorAll('.search-item').forEach(function(el,i){ el.classList.toggle('focused',i===focusedIdx); }); }
+    function renderHints() { var h=''; CONTENT.slice(0,6).forEach(function(d){ h+=iHTML(d,''); }); h+=fHTML(CONTENT.length); searchResults.innerHTML=h; searchResults.classList.add('visible'); bindItems(); }
+    var dbt;
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        clearTimeout(dbt); var v = searchInput.value;
+        dbt = setTimeout(function() {
+          var q = v.trim().toLowerCase();
+          if (!q) { renderHints(); return; }
+          var hits = CONTENT.filter(function(d) { return d.title.toLowerCase().indexOf(q) >= 0 || d.desc.toLowerCase().indexOf(q) >= 0; });
+          searchResults.classList.add('visible');
+          if (!hits.length) { searchResults.innerHTML = '<div class="search-empty">Aucun résultat pour "' + v + '"</div>'; return; }
+          var h = ''; hits.forEach(function(d) { h += iHTML(d, q); }); h += fHTML(hits.length);
+          searchResults.innerHTML = h; focusedIdx = -1; bindItems();
+        }, 80);
+      });
+      searchInput.addEventListener('keydown', function(e) {
+        var items = document.querySelectorAll('.search-item');
+        if (!items.length) return;
+        if (e.key === 'ArrowDown') { e.preventDefault(); focusedIdx = Math.min(focusedIdx + 1, items.length - 1); uFocus(); items[focusedIdx] && items[focusedIdx].scrollIntoView({ block: 'nearest' }); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); focusedIdx = Math.max(focusedIdx - 1, 0); uFocus(); items[focusedIdx] && items[focusedIdx].scrollIntoView({ block: 'nearest' }); }
+        else if (e.key === 'Enter') { if (focusedIdx >= 0 && items[focusedIdx]) { items[focusedIdx].click(); } }
+      });
+    }
+  </script>
+</body>
+</html>
