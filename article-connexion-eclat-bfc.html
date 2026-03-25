@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion ECLAT BFC : guide complet, problèmes & solutions 2026 — MPOUCK</title>
+  <meta name="description" content="Comment se connecter à ECLAT BFC via EduConnect ? Mot de passe oublié, compte bloqué, première connexion, accès parent, élève ou enseignant : toutes les solutions pas à pas.">
+  <!-- Open Graph / Réseaux sociaux -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mpouck.github.io/article-connexion-eclat-bfc.html">
+  <meta property="og:title" content="Connexion ECLAT BFC : guide complet, problèmes & solutions 2026">
+  <meta property="og:description" content="Première connexion, mot de passe oublié, compte bloqué ENT BFC — toutes les réponses aux problèmes les plus fréquents d'ECLAT BFC.">
+  <meta property="og:image" content="https://mpouck.github.io/ia.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="MPOUCK">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Connexion ECLAT BFC : guide complet, problèmes & solutions 2026">
+  <meta name="twitter:description" content="Première connexion, mot de passe oublié, compte bloqué ENT BFC — toutes les réponses aux problèmes fréquents.">
+  <meta name="twitter:image" content="https://mpouck.github.io/ia.jpg">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Connexion ECLAT BFC : guide complet, problèmes & solutions 2026",
+    "description": "Comment se connecter à ECLAT BFC via EduConnect, résoudre un mot de passe oublié, un compte bloqué, et accéder à l'ENT BFC selon votre profil (parent, élève, enseignant).",
+    "author": { "@type": "Person", "name": "MPOUCK Jho Chadrack" },
+    "publisher": { "@type": "Organization", "name": "MPOUCK" },
+    "datePublished": "2026-03-25",
+    "dateModified": "2026-03-25",
+    "mainEntityOfPage": "https://mpouck.github.io/article-connexion-eclat-bfc.html"
+  }
+  </script>
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4TSLNZGEPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4TSLNZGEPK');
+</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ══ DESIGN TOKENS ══ */
+    :root, [data-theme="light"] {
+      --font:         'DM Sans', sans-serif;
+      --bg-page:      #f5f5f7;
+      --bg-nav:       #ffffff;
+      --bg-card:      #ffffff;
+      --bg-hover:     rgba(0,0,0,.045);
+      --text-dark:    #0d1b2a;
+      --text-muted:   #64748b;
+      --text-sub:     #94a3b8;
+      --border-nav:   rgba(0,0,0,.07);
+      --separator:    rgba(0,0,0,.07);
+      --social-bg:    rgba(0,0,0,.055);
+      --social-bg-h:  rgba(0,0,0,.1);
+      --btn-primary:  #0d1b2a;
+      --btn-p-text:   #ffffff;
+      --btn-s-bg:     #ffffff;
+      --btn-s-text:   #0d1b2a;
+      --btn-s-border: rgba(0,0,0,.15);
+      --btn-hover-sh: rgba(0,0,0,.22);
+      --shadow-nav:   0 4px 28px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.05);
+      --shadow-card:  0 8px 40px rgba(0,0,0,.08), 0 1px 6px rgba(0,0,0,.04);
+      --shadow-float: 0 16px 48px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.06);
+      --toggle-track: #e4e4e7;
+      --toggle-thumb: #ffffff;
+      --radius-nav:   20px;
+      --radius-pill:  999px;
+      --ease:         220ms cubic-bezier(.4,0,.2,1);
+      --accent:       #c9a76c;
+    }
+    [data-theme="dark"] {
+      --bg-page:      #0a0a0f;
+      --bg-nav:       #13131a;
+      --bg-card:      #1a1a24;
+      --bg-hover:     rgba(255,255,255,.06);
+      --text-dark:    #f1f5f9;
+      --text-muted:   #94a3b8;
+      --text-sub:     #64748b;
+      --border-nav:   rgba(255,255,255,.08);
+      --separator:    rgba(255,255,255,.07);
+      --social-bg:    rgba(255,255,255,.07);
+      --social-bg-h:  rgba(255,255,255,.13);
+      --btn-primary:  #f1f5f9;
+      --btn-p-text:   #0d1b2a;
+      --btn-s-bg:     transparent;
+      --btn-s-text:   #f1f5f9;
+      --btn-s-border: rgba(255,255,255,.2);
+      --btn-hover-sh: rgba(255,255,255,.15);
+      --shadow-nav:   0 4px 28px rgba(0,0,0,.5), 0 1px 4px rgba(0,0,0,.3);
+      --shadow-card:  0 8px 40px rgba(0,0,0,.45), 0 1px 6px rgba(0,0,0,.25);
+      --shadow-float: 0 16px 48px rgba(0,0,0,.6), 0 2px 8px rgba(0,0,0,.3);
+      --toggle-track: #3f3f46;
+      --toggle-thumb: #18181b;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg-page);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      transition: background .35s ease, color .35s ease;
+    }
+
+    /* ══ NAVBAR ══ */
+    .nav-wrapper {
+      position: fixed; top: 20px; left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 48px); max-width: 960px; z-index: 200;
+    }
+    .navbar {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px; background: var(--bg-nav); border-radius: var(--radius-nav);
+      padding: 10px 12px 10px 22px;
+      box-shadow: var(--shadow-nav); border: 1px solid var(--border-nav);
+      transition: background .35s ease, box-shadow .35s ease, border-color .35s ease;
+    }
+    .nav-logo { font-size: 1.2rem; font-weight: 700; letter-spacing: -.5px; color: var(--text-dark); text-decoration: none; flex-shrink: 0; transition: color .35s ease; }
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; flex: 1; justify-content: center; }
+    .nav-links a { padding: 6px 13px; border-radius: 10px; font-size: .82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-has-dropdown { position: relative; }
+    .nav-drop-btn { display: flex; align-items: center; gap: 4px; padding: 6px 13px; border-radius: 10px; font-size: .82rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; font-family: var(--font); transition: color var(--ease), background var(--ease); }
+    .nav-drop-btn:hover, .nav-has-dropdown.open .nav-drop-btn { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-drop-btn .chv { transition: transform var(--ease); display: inline-flex; }
+    .nav-has-dropdown.open .chv { transform: rotate(180deg); }
+    .nav-drop-panel { position: absolute; top: calc(100% + 10px); left: 50%; min-width: 190px; background: var(--bg-card); border-radius: 14px; border: 1px solid var(--border-nav); box-shadow: var(--shadow-float); padding: 7px; opacity: 0; pointer-events: none; transform: translateX(-50%) translateY(-6px) scale(.97); transition: opacity .2s ease, transform .2s ease, background .35s ease, border-color .35s ease; }
+    .nav-has-dropdown.open .nav-drop-panel { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0) scale(1); }
+    .nav-drop-panel a { display: flex; align-items: center; gap: 9px; padding: 8px 11px; border-radius: 9px; font-size: .82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .nav-drop-panel a:hover { color: var(--text-dark); background: var(--bg-hover); }
+    .nav-drop-panel .page-icon { width: 26px; height: 26px; border-radius: 7px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .77rem; flex-shrink: 0; }
+    .nav-drop-panel .sep { height: 1px; background: var(--border-nav); margin: 4px 3px; }
+    .nav-right { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .search-btn { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 10px; border: none; background: transparent; cursor: pointer; color: var(--text-muted); flex-shrink: 0; transition: background var(--ease), color var(--ease); }
+    .search-btn:hover { background: var(--bg-hover); color: var(--text-dark); }
+    .theme-btn { position: relative; display: inline-flex; align-items: center; width: 52px; height: 30px; border-radius: 999px; border: none; cursor: pointer; padding: 0; flex-shrink: 0; background: var(--toggle-track); transition: background .35s cubic-bezier(.4,0,.2,1); }
+    .theme-thumb { position: absolute; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: var(--toggle-thumb); box-shadow: 0 1px 6px rgba(0,0,0,.22); display: flex; align-items: center; justify-content: center; transition: transform .35s cubic-bezier(.34,1.4,.64,1), background .35s ease; }
+    [data-theme="dark"] .theme-thumb { transform: translateX(22px); background: #27272a; }
+    .theme-thumb svg { position: absolute; transition: opacity .2s ease; }
+    .ico-sun { color: #f59e0b; } .ico-moon { color: #818cf8; }
+    [data-theme="light"] .ico-sun  { opacity: 1; } [data-theme="light"] .ico-moon { opacity: 0; }
+    [data-theme="dark"]  .ico-sun  { opacity: 0; } [data-theme="dark"]  .ico-moon { opacity: 1; }
+    .nav-cta { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: var(--radius-pill); background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .82rem; font-weight: 500; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background .35s ease, color .35s ease; }
+    .nav-cta:hover { transform: scale(1.04); box-shadow: 0 6px 20px var(--btn-hover-sh); }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; padding: 7px; border: none; border-radius: 10px; background: transparent; cursor: pointer; flex-shrink: 0; transition: background var(--ease); }
+    .hamburger:hover { background: var(--bg-hover); }
+    .hamburger span { display: block; width: 100%; height: 2px; border-radius: 2px; background: var(--text-dark); transform-origin: center; transition: transform var(--ease), opacity var(--ease), background .35s ease; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; position: absolute; top: calc(100% + 10px); left: 0; right: 0; border-radius: 16px; overflow: hidden; max-height: 0; background: transparent; box-shadow: none; border: 1px solid transparent; padding: 0; pointer-events: none; transition: max-height .38s cubic-bezier(.4,0,.2,1), background .28s ease, box-shadow .28s ease, border-color .28s ease, padding .28s ease; }
+    .mobile-menu.open { max-height: 700px; background: var(--bg-nav); box-shadow: var(--shadow-float); border-color: var(--border-nav); padding: 10px; pointer-events: auto; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 2px; padding: 6px 0 4px; }
+    .mobile-menu ul a { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-radius: 10px; font-size: .88rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .mobile-menu ul a:hover { color: var(--text-dark); background: var(--bg-hover); }
+    .mobile-has-sub { display: flex; flex-direction: column; }
+    .mob-sub-trigger { display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-radius: 10px; font-size: .88rem; font-weight: 500; color: var(--text-muted); background: transparent; border: none; cursor: pointer; font-family: var(--font); width: 100%; text-align: left; transition: color var(--ease), background var(--ease); }
+    .mob-sub-trigger:hover, .mobile-has-sub.open .mob-sub-trigger { color: var(--text-dark); background: var(--bg-hover); }
+    .mob-chv { display: inline-flex; transition: transform var(--ease); color: var(--text-sub); }
+    .mobile-has-sub.open .mob-chv { transform: rotate(180deg); }
+    .mob-sublist { overflow: hidden; max-height: 0; transition: max-height .32s cubic-bezier(.4,0,.2,1); }
+    .mobile-has-sub.open .mob-sublist { max-height: 400px; }
+    .mob-sublist-inner { display: flex; flex-direction: column; gap: 2px; padding: 4px 0 4px 10px; }
+    .mob-sublink { display: flex !important; align-items: center !important; gap: 9px; padding: 9px 12px !important; border-radius: 10px; font-size: .84rem !important; color: var(--text-muted) !important; text-decoration: none; transition: color var(--ease), background var(--ease); }
+    .mob-sublink:hover { color: var(--text-dark) !important; background: var(--bg-hover) !important; }
+    .mob-sublink .page-icon { width: 24px; height: 24px; border-radius: 6px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .72rem; flex-shrink: 0; }
+    .mob-cta { display: block; width: 100%; margin-top: 6px; padding: 13px; border-radius: var(--radius-pill); background: var(--btn-primary); color: var(--btn-p-text); font-family: var(--font); font-size: .88rem; font-weight: 500; text-align: center; text-decoration: none; border: none; cursor: pointer; transition: transform var(--ease), background .35s ease, color .35s ease; }
+    .mob-cta:hover { transform: scale(1.02); }
+    @media (max-width: 720px) {
+      .nav-links, .nav-cta { display: none !important; }
+      .hamburger { display: flex; } .mobile-menu { display: block; }
+      .nav-wrapper { width: calc(100% - 28px); top: 14px; }
+    }
+
+    /* ══ SEARCH ══ */
+    .search-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,.5); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); opacity: 0; pointer-events: none; transition: opacity .22s ease; }
+    .search-overlay.open { opacity: 1; pointer-events: auto; }
+    .search-modal { position: fixed; top: 80px; left: 50%; transform: translateX(-50%) translateY(-10px) scale(.97); width: calc(100% - 40px); max-width: 640px; z-index: 901; opacity: 0; pointer-events: none; transition: opacity .22s ease, transform .25s cubic-bezier(.34,1.3,.64,1); }
+    .search-modal.open { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0) scale(1); }
+    .search-box { display: flex; align-items: center; gap: 10px; background: var(--bg-nav); border: 1px solid var(--border-nav); border-radius: 16px; padding: 12px 16px; box-shadow: 0 20px 60px rgba(0,0,0,.25); transition: background .35s ease, border-color .35s ease; }
+    .search-box svg { color: var(--text-sub); flex-shrink: 0; }
+    .search-input { flex: 1; font-family: var(--font); font-size: .97rem; color: var(--text-dark); background: transparent; border: none; outline: none; }
+    .search-input::placeholder { color: var(--text-sub); }
+    .search-close-btn { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; border: 1px solid var(--border-nav); background: var(--bg-hover); cursor: pointer; color: var(--text-muted); transition: background var(--ease), color var(--ease), border-color .35s ease; }
+    .search-close-btn:hover { background: var(--social-bg-h); color: var(--text-dark); }
+    .search-results { background: var(--bg-nav); border: 1px solid var(--border-nav); border-radius: 16px; margin-top: 8px; box-shadow: 0 12px 40px rgba(0,0,0,.13); overflow: hidden; max-height: 400px; overflow-y: auto; display: none; }
+    .search-results.visible { display: block; }
+    .search-results::-webkit-scrollbar { width: 4px; } .search-results::-webkit-scrollbar-thumb { background: var(--border-nav); border-radius: 2px; }
+    .search-item { display: flex; align-items: center; gap: 12px; padding: 11px 16px; text-decoration: none; border-bottom: 1px solid var(--separator); transition: background var(--ease); cursor: pointer; }
+    .search-item:last-child { border-bottom: none; }
+    .search-item:hover, .search-item.focused { background: var(--bg-hover); }
+    .search-item-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--social-bg); display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+    .search-item-body { flex: 1; min-width: 0; }
+    .search-item-title { font-size: .86rem; font-weight: 600; color: var(--text-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; }
+    .search-item-title mark { background: rgba(201,167,108,.28); color: inherit; border-radius: 2px; padding: 0 1px; }
+    .search-item-desc { font-size: .74rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .search-item-badge { font-size: .64rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--social-bg); color: var(--text-sub); flex-shrink: 0; white-space: nowrap; }
+    .search-empty { padding: 28px 16px; text-align: center; color: var(--text-sub); font-size: .85rem; }
+    .search-footer { padding: 9px 16px; border-top: 1px solid var(--separator); display: flex; align-items: center; justify-content: space-between; font-size: .68rem; color: var(--text-sub); }
+
+    /* ══ PUBLICATION — HERO ══ */
+    .pub-hero {
+      padding: 140px 0 0;
+      max-width: 820px;
+      margin: 0 auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    .pub-breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .75rem; color: var(--text-sub);
+      margin-bottom: 24px;
+    }
+    .pub-breadcrumb a { color: var(--text-sub); text-decoration: none; transition: color var(--ease); }
+    .pub-breadcrumb a:hover { color: var(--accent); }
+    .pub-breadcrumb svg { flex-shrink: 0; }
+    .pub-category {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent);
+      background: rgba(201,167,108,.1); border: 1px solid rgba(201,167,108,.25);
+      border-radius: 999px; padding: 5px 14px;
+      margin-bottom: 20px;
+    }
+    .pub-title {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.2;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      transition: color .35s ease;
+    }
+    .pub-title em { font-style: italic; color: var(--accent); }
+    .pub-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      transition: color .35s ease;
+    }
+    .pub-meta {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      padding: 20px 0;
+      border-top: 1px solid var(--separator);
+      border-bottom: 1px solid var(--separator);
+      margin-bottom: 0;
+    }
+    .pub-author { display: flex; align-items: center; gap: 10px; }
+    .pub-author-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 2px solid var(--border-nav);
+      background: var(--social-bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700; color: var(--accent);
+      flex-shrink: 0; overflow: hidden;
+    }
+    .pub-author-avatar-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+    .pub-author-info { display: flex; flex-direction: column; gap: 1px; }
+    .pub-author-name { font-size: .85rem; font-weight: 700; color: var(--text-dark); transition: color .35s ease; }
+    .pub-author-role { font-size: .72rem; color: var(--text-sub); transition: color .35s ease; }
+    .pub-meta-sep { width: 1px; height: 32px; background: var(--separator); }
+    .pub-meta-info { display: flex; flex-direction: column; gap: 2px; }
+    .pub-meta-label { font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-sub); }
+    .pub-meta-val { font-size: .8rem; color: var(--text-muted); transition: color .35s ease; }
+    .pub-share { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+    .pub-share-label { font-size: .72rem; color: var(--text-sub); }
+    .pub-share-btn {
+      width: 27px; height: 27px; border-radius: 9px;
+      background: var(--social-bg); border: 1px solid var(--border-nav);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); text-decoration: none;
+      transition: background var(--ease), color var(--ease);
+      cursor: pointer;
+    }
+    .pub-share-btn:hover { background: var(--social-bg-h); color: var(--text-dark); }
+
+    /* ══ IMAGE BANNIÈRE ══ */
+    .pub-banner {
+      max-width: 820px;
+      margin: 36px auto 0;
+      padding: 0 32px;
+    }
+    .pub-banner-img {
+      width: 100%;
+      aspect-ratio: 16/7;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 1px solid var(--border-nav);
+      background: var(--social-bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; color: var(--text-sub);
+    }
+    .pub-banner-placeholder {
+      width: 100%; aspect-ratio: 16/7;
+      border-radius: 20px; border: 2px dashed var(--border-nav);
+      background: var(--bg-nav);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; color: var(--text-sub); font-size: .85rem;
+    }
+    .pub-banner-placeholder svg { opacity: .4; }
+
+    /* ══ LAYOUT ARTICLE ══ */
+    .pub-layout {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 52px 32px 80px;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 52px;
+      align-items: start;
+    }
+    .pub-body { min-width: 0; }
+    .pub-body h2 {
+      font-size: 1.45rem; font-weight: 800; letter-spacing: -.03em;
+      color: var(--text-dark); margin: 40px 0 14px;
+      transition: color .35s ease;
+    }
+    .pub-body h3 {
+      font-size: 1.1rem; font-weight: 700; letter-spacing: -.02em;
+      color: var(--text-dark); margin: 28px 0 10px;
+      transition: color .35s ease;
+    }
+    .pub-body p {
+      font-size: .97rem; line-height: 1.82; color: var(--text-muted);
+      margin-bottom: 20px;
+      transition: color .35s ease;
+    }
+    .pub-body ul, .pub-body ol {
+      padding-left: 22px; margin-bottom: 20px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .pub-body li {
+      font-size: .97rem; line-height: 1.7; color: var(--text-muted);
+      transition: color .35s ease;
+    }
+    .pub-body a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(201,167,108,.3); transition: border-color var(--ease); }
+    .pub-body a:hover { border-color: var(--accent); }
+    .pub-body strong { color: var(--text-dark); font-weight: 700; transition: color .35s ease; }
+    .pub-body em { font-style: italic; }
+
+    /* Callout */
+    .pub-callout {
+      background: linear-gradient(135deg, rgba(201,167,108,.08), rgba(201,167,108,.03));
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+    }
+    .pub-callout p { margin-bottom: 0; color: var(--text-dark); font-weight: 500; font-style: italic; }
+
+    /* Citation */
+    .pub-quote {
+      border-left: 3px solid var(--separator);
+      padding: 14px 22px;
+      margin: 28px 0;
+    }
+    .pub-quote p { color: var(--text-muted); font-size: 1.05rem; font-style: italic; margin-bottom: 8px; }
+    .pub-quote cite { font-size: .78rem; color: var(--text-sub); font-style: normal; }
+
+    /* Séparateur */
+    .pub-divider {
+      height: 1px; background: var(--separator);
+      margin: 36px 0;
+    }
+
+    /* Tableau comparatif */
+    .pub-table-wrap {
+      overflow-x: auto; margin: 28px 0;
+      border-radius: 12px; border: 1px solid var(--border-nav);
+    }
+    .pub-table {
+      width: 100%; border-collapse: collapse; font-size: .88rem;
+    }
+    .pub-table th {
+      padding: 12px 16px; text-align: left;
+      background: var(--social-bg); color: var(--text-dark);
+      font-weight: 700; font-size: .72rem; letter-spacing: .06em;
+      text-transform: uppercase; border-bottom: 1px solid var(--border-nav);
+      white-space: nowrap;
+    }
+    .pub-table td {
+      padding: 12px 16px; color: var(--text-muted);
+      border-bottom: 1px solid var(--separator);
+      line-height: 1.5;
+    }
+    .pub-table tr:last-child td { border-bottom: none; }
+    .pub-table tr:hover td { background: var(--bg-hover); }
+    .pub-table .badge {
+      display: inline-block; padding: 2px 9px; border-radius: 999px;
+      font-size: .68rem; font-weight: 700;
+    }
+    .badge-green { background: rgba(74,222,128,.1); color: #16a34a; border: 1px solid rgba(74,222,128,.25); }
+    .badge-orange { background: rgba(251,146,60,.1); color: #c2410c; border: 1px solid rgba(251,146,60,.25); }
+    .badge-blue { background: rgba(96,165,250,.1); color: #1d4ed8; border: 1px solid rgba(96,165,250,.25); }
+
+    /* Tags */
+    .pub-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 40px; padding-top: 28px;
+      border-top: 1px solid var(--separator);
+    }
+    .pub-tag {
+      font-size: .72rem; font-weight: 600; letter-spacing: .04em;
+      padding: 5px 14px; border-radius: 999px;
+      background: var(--social-bg); border: 1px solid var(--border-nav);
+      color: var(--text-muted); text-decoration: none;
+      transition: background var(--ease), color var(--ease);
+    }
+    .pub-tag:hover { background: var(--social-bg-h); color: var(--text-dark); }
+
+    /* ══ SIDEBAR ══ */
+    .pub-sidebar {
+      position: sticky; top: 100px;
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .sidebar-card {
+      background: var(--bg-nav); border: 1px solid var(--border-nav);
+      border-radius: 16px; padding: 20px;
+      transition: background .35s ease, border-color .35s ease;
+    }
+    .sidebar-card-title {
+      font-size: .65rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-sub);
+      margin-bottom: 14px;
+      transition: color .35s ease;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-list a {
+      display: block; font-size: .8rem; color: var(--text-muted);
+      text-decoration: none; padding: 5px 8px; border-radius: 8px;
+      transition: color var(--ease), background var(--ease);
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--accent); background: rgba(201,167,108,.07); }
+    .toc-list .toc-sub { padding-left: 14px; font-size: .75rem; }
+    .related-list { display: flex; flex-direction: column; gap: 14px; }
+    .related-item { display: flex; gap: 12px; align-items: flex-start; text-decoration: none; }
+    .related-thumb {
+      width: 52px; height: 52px; border-radius: 10px; flex-shrink: 0;
+      background: var(--social-bg); border: 1px solid var(--border-nav);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; overflow: hidden;
+    }
+    .related-info { flex: 1; min-width: 0; }
+    .related-cat { font-size: .62rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
+    .related-title { font-size: .8rem; font-weight: 600; color: var(--text-dark); line-height: 1.4; transition: color .35s ease; }
+    .related-item:hover .related-title { color: var(--accent); }
+    .related-date { font-size: .68rem; color: var(--text-sub); margin-top: 3px; }
+    .share-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .share-pill {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .75rem; font-weight: 600; padding: 7px 13px;
+      border-radius: 999px; background: var(--social-bg);
+      border: 1px solid var(--border-nav); color: var(--text-muted);
+      text-decoration: none; cursor: pointer;
+      transition: background var(--ease), color var(--ease);
+    }
+    .share-pill:hover { background: var(--social-bg-h); color: var(--text-dark); }
+
+    /* ══ NAV ARTICLE ══ */
+    .pub-nav {
+      max-width: 820px; margin: 0 auto;
+      padding: 0 32px 80px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .pub-nav-card {
+      background: var(--bg-nav); border: 1px solid var(--border-nav);
+      border-radius: 16px; padding: 22px;
+      text-decoration: none;
+      transition: background var(--ease), border-color var(--ease), transform var(--ease);
+    }
+    .pub-nav-card:hover { background: var(--bg-card); transform: translateY(-2px); box-shadow: var(--shadow-card); }
+    .pub-nav-dir { font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sub); margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
+    .pub-nav-ttl { font-size: .9rem; font-weight: 700; color: var(--text-dark); line-height: 1.4; transition: color .35s ease; }
+    .pub-nav-card:hover .pub-nav-ttl { color: var(--accent); }
+    .pub-nav-card.next { text-align: right; }
+    .pub-nav-card.next .pub-nav-dir { justify-content: flex-end; }
+
+    /* ══ FOOTER ══ */
+    .footer-wrapper { background: var(--bg-page); transition: background .35s ease; }
+    .footer-card { max-width: 1100px; margin: 0 auto; background: var(--bg-nav); border-radius: 28px 28px 0 0; border: 1px solid var(--border-nav); border-bottom: none; padding: 52px 52px 0; transition: background .35s ease, border-color .35s ease; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+    .footer-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 14px; }
+    .footer-logo-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-nav); flex-shrink: 0; }
+    .footer-logo-name { font-size: 1.1rem; font-weight: 800; letter-spacing: -.04em; color: var(--text-dark); transition: color .35s ease; }
+    .footer-desc { font-size: .82rem; color: var(--text-muted); line-height: 1.7; max-width: 260px; margin-bottom: 20px; transition: color .35s ease; }
+    .footer-socials { display: flex; gap: 8px; }
+    .social-link { width: 34px; height: 34px; border-radius: 10px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; transition: background var(--ease), color var(--ease), border-color var(--ease); }
+    .social-link:hover { background: var(--social-bg-h); color: var(--text-dark); }
+    .footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-sub); margin-bottom: 16px; transition: color .35s ease; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a { font-size: .84rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease); }
+    .footer-col ul a:hover { color: var(--text-dark); }
+    .contact-list { display: flex; flex-direction: column; gap: 12px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 10px; }
+    .contact-icon { width: 30px; height: 30px; border-radius: 8px; background: var(--social-bg); border: 1px solid var(--border-nav); display: flex; align-items: center; justify-content: center; color: var(--text-muted); flex-shrink: 0; transition: all .35s ease; }
+    .contact-text { display: flex; flex-direction: column; gap: 1px; padding-top: 5px; }
+    .contact-text span, .contact-text a { font-size: .8rem; color: var(--text-muted); text-decoration: none; transition: color var(--ease); }
+    .contact-text a:hover { color: var(--text-dark); }
+    .footer-bottom { border-top: 1px solid var(--separator); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; transition: border-color .35s ease; }
+    .footer-copy { font-size: .78rem; color: var(--text-sub); transition: color .35s ease; }
+    .footer-legal { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-legal a { font-size: .78rem; color: var(--text-sub); text-decoration: none; transition: color var(--ease); }
+    .footer-legal a:hover { color: var(--text-dark); }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 900px) {
+      .pub-layout { grid-template-columns: 1fr; }
+      .pub-sidebar { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 580px) {
+      .pub-hero, .pub-banner, .pub-layout, .pub-nav { padding-left: 20px; padding-right: 20px; }
+      .pub-hero { padding-top: 110px; }
+      .pub-nav { grid-template-columns: 1fr; }
+      .pub-meta { gap: 14px; }
+      .pub-share { margin-left: 0; }
+      .footer-card { padding: 40px 24px 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .pub-table th, .pub-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="nav-wrapper" id="mainNav" role="navigation" aria-label="Navigation principale">
+    <div class="navbar">
+      <a href="index.html" class="nav-logo">MPOUCK</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="nav-has-dropdown" id="deskPages">
+          <button class="nav-drop-btn" id="pagesTrigger" aria-haspopup="true" aria-expanded="false">
+            Pages
+            <svg class="chv" width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-drop-panel" id="pagesPanel" role="menu">
+            <a href="about.html" role="menuitem"><span class="page-icon">👤</span> A propos</a>
+            <a href="projet.html" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
+            <div class="sep"></div>
+            <a href="blog.html" role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+          </div>
+        </li>
+        <li><a href="Webtemplates.html">Templates</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="theme-btn" id="themeBtn" aria-label="Mode jour/nuit">
+          <span class="theme-thumb">
+            <svg class="ico-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="ico-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          </span>
+        </button>
+        <a href="projet.html" class="nav-cta">Nos projets</a>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="menu">
+      <ul>
+        <li><a href="index.html" role="menuitem">Accueil</a></li>
+        <li><a href="services.html" role="menuitem">Services</a></li>
+        <li class="mobile-has-sub" id="mobPages">
+          <button class="mob-sub-trigger" id="mobPagesTrigger" aria-expanded="false">Pages
+            <svg class="mob-chv" width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mob-sublist"><div class="mob-sublist-inner">
+            <a href="about.html" class="mob-sublink" role="menuitem"><span class="page-icon">👤</span> A propos</a>
+            <a href="projet.html" class="mob-sublink" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
+            <a href="blog.html" class="mob-sublink" role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+          </div></div>
+        </li>
+        <li><a href="Webtemplates.html" role="menuitem">Templates</a></li>
+        <li><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <a href="projet.html" class="mob-cta" role="menuitem">Nos projets</a>
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+  <div class="search-overlay" id="searchOverlay"></div>
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un article, service, page…" autocomplete="off" spellcheck="false"/>
+      <button id="searchClose" class="search-close-btn" aria-label="Fermer">
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults" role="listbox"></div>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <header class="pub-hero">
+
+    <nav class="pub-breadcrumb" aria-label="Fil d'ariane">
+      <a href="index.html">Accueil</a>
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <a href="blog.html">Blog</a>
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Connexion ECLAT BFC : guide complet</span>
+    </nav>
+
+    <span class="pub-category">🔐 Connexion & Accès ENT</span>
+
+    <h1 class="pub-title">Connexion ECLAT BFC : <em>guide complet</em> étape par étape — problèmes, solutions & accès selon votre profil</h1>
+
+    <p class="pub-subtitle">Mot de passe oublié, compte bloqué, première connexion, accès via EduConnect ou erreur inconnue : toutes les réponses aux problèmes les plus fréquents de l'ENT BFC, pour les élèves, les parents et les enseignants.</p>
+
+    <div class="pub-meta">
+      <div class="pub-author">
+        <div class="pub-author-avatar">
+          <img src="images/avatar-author.jpg" alt="Avatar auteur" class="pub-author-avatar-img" />
+        </div>
+        <div class="pub-author-info">
+          <span class="pub-author-name">MPOUCK Jho Chadrack</span>
+          <span class="pub-author-role">Éducation Numérique</span>
+        </div>
+      </div>
+      <div class="pub-meta-sep"></div>
+      <div class="pub-meta-info">
+        <span class="pub-meta-label">Publié le</span>
+        <span class="pub-meta-val">25 mars 2026</span>
+      </div>
+      <div class="pub-meta-sep"></div>
+      <div class="pub-meta-info">
+        <span class="pub-meta-label">Lecture</span>
+        <span class="pub-meta-val">10 min</span>
+      </div>
+      <div class="pub-share">
+        <span class="pub-share-label">Partager :</span>
+        <a href="https://wa.me/?text=D%C3%A9couvrez%20cet%20article%20MPOUCK%20%3A%20https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="pub-share-btn" aria-label="Partager sur WhatsApp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="pub-share-btn" aria-label="Partager sur Facebook">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=Connexion%20ECLAT%20BFC%20%3A%20guide%20complet%20%E2%80%94%20MPOUCK&url=https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="pub-share-btn" aria-label="Partager sur Twitter/X">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="pub-share-btn" aria-label="Partager sur LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <button class="pub-share-btn" id="copyLink" aria-label="Copier le lien">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </button>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ══ BANNIÈRE ══ -->
+  <div class="pub-banner">
+    <img src="https://mesphotosetsouvenirs.wordpress.com/wp-content/uploads/2026/03/img_20260325_114042_281000_x_667_pixel295645830846215612661.png" alt="Connexion ECLAT BFC : guide complet étape par étape" class="pub-banner-img" />
+  </div>
+
+  <!-- ══ LAYOUT ══ -->
+  <div class="pub-layout">
+
+    <!-- ── Corps de l'article ── -->
+    <article class="pub-body">
+
+      <h2 id="intro">ECLAT BFC : qu'est-ce que c'est et pourquoi la connexion pose problème ?</h2>
+      <p><strong>ECLAT BFC</strong> (Espace Collaboratif de Liaison et d'Apprentissage de la région Bourgogne-Franche-Comté) est l'<a href="https://www.eclat-bfc.fr" target="_blank" rel="noopener noreferrer">Espace Numérique de Travail (ENT)</a> officiel de la région académique BFC. Conçu pour connecter élèves, parents, enseignants et personnels administratifs en un espace unique, il centralise les ressources pédagogiques, les communications scolaires, les cahiers de textes numériques et bien davantage.</p>
+      <p>Pourtant, malgré son utilité évidente, la connexion à ECLAT BFC reste l'une des sources de frustration les plus fréquentes pour les utilisateurs. Mot de passe oublié, compte bloqué, erreur de connexion inexpliquée, confusion entre accès parent et accès élève : les problèmes signalés chaque rentrée sont légion. Ce guide exhaustif a été rédigé pour y répondre une bonne fois pour toutes, de manière claire, structurée et exploitable immédiatement.</p>
+      <p>Selon les données publiées par le <a href="https://www.education.gouv.fr/les-espaces-numeriques-de-travail-ent-1557" target="_blank" rel="noopener noreferrer">Ministère de l'Éducation nationale</a>, les ENT régionaux sont désormais utilisés par plus de 12 millions d'élèves et 800 000 enseignants en France. Les problèmes de connexion représentent la première cause de contact avec les services d'assistance scolaire numérique. Pour aller plus loin sur les outils numériques éducatifs, consultez également notre article sur <a href="article-outils-ia-contenu-2026.html">les outils numériques qui transforment l'éducation en 2026</a>.</p>
+
+      <div class="pub-callout">
+        <p>🎯 Ce guide couvre l'intégralité des situations : première connexion, connexion via EduConnect, mot de passe oublié, compte bloqué, erreurs fréquentes, et accès différenciés selon le profil (élève, parent, enseignant).</p>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="premiere-connexion">Première connexion ECLAT BFC : le guide pas à pas</h2>
+      <p>Si vous vous connectez pour la toute première fois à ECLAT BFC, la procédure dépend de votre profil. Dans tous les cas, <strong>vous ne créez pas vous-même votre compte</strong> : les identifiants sont fournis par l'établissement scolaire (pour les élèves et les parents) ou par l'Académie de Dijon ou Besançon (pour les enseignants et personnels).</p>
+
+      <h3 id="premiere-connexion-eleve">Première connexion pour un élève</h3>
+      <p>L'élève reçoit ses identifiants de connexion à ECLAT BFC directement auprès de son établissement, généralement en début d'année scolaire ou lors de l'inscription. Ces identifiants se présentent sous la forme d'un identifiant (souvent nom + initiale du prénom + chiffres) et d'un mot de passe temporaire à changer à la première connexion.</p>
+      <ul>
+        <li>Rendez-vous sur <a href="https://www.eclat-bfc.fr" target="_blank" rel="noopener noreferrer">www.eclat-bfc.fr</a></li>
+        <li>Cliquez sur le bouton <strong>« Se connecter »</strong></li>
+        <li>Sélectionnez <strong>« Connexion avec identifiants locaux »</strong> (si EduConnect n'est pas encore activé)</li>
+        <li>Saisissez l'identifiant et le mot de passe fournis par l'établissement</li>
+        <li>À la première connexion, le système vous demandera de <strong>créer un nouveau mot de passe personnel</strong> — choisissez-en un robuste (12 caractères minimum, majuscules, chiffres, caractères spéciaux)</li>
+        <li>Renseignez votre adresse e-mail de récupération : elle sera indispensable en cas d'oubli ultérieur</li>
+      </ul>
+
+      <h3 id="premiere-connexion-parent">Première connexion pour un parent</h3>
+      <p>Les parents reçoivent leurs identifiants ECLAT BFC via le carnet de liaison numérique ou par courrier de l'établissement. Attention : le compte parent est distinct du compte élève, même si les deux accèdent à des informations communes (absences, notes, cahier de textes). Si vous n'avez pas reçu vos identifiants, contactez directement le secrétariat de l'établissement — c'est le point d'entrée obligatoire pour toute création ou récupération de compte parent.</p>
+
+      <div class="pub-quote">
+        <p>"Un compte parent et un compte élève donnent accès aux mêmes données scolaires, mais avec des droits différents : le parent consulte, l'élève peut interagir avec certains services pédagogiques."</p>
+        <cite>— Documentation officielle ENT BFC</cite>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="educonnect">Connexion ECLAT BFC via EduConnect</h2>
+      <p><a href="https://educonnect.education.gouv.fr" target="_blank" rel="noopener noreferrer">EduConnect</a> est le service d'authentification unique du Ministère de l'Éducation nationale. Depuis 2022, il est progressivement déployé dans tous les ENT régionaux, dont ECLAT BFC. Son avantage majeur : <strong>un seul identifiant pour accéder à tous les services éducatifs numériques nationaux</strong> — ECLAT BFC, Pronote, Mon Bureau Numérique, et d'autres encore.</p>
+      <p>Pour se connecter à ECLAT BFC via EduConnect :</p>
+      <ul>
+        <li>Accédez à <a href="https://www.eclat-bfc.fr" target="_blank" rel="noopener noreferrer">www.eclat-bfc.fr</a> et cliquez sur <strong>« Se connecter avec EduConnect »</strong></li>
+        <li>Vous êtes redirigé vers la page d'authentification EduConnect (domaine <em>educonnect.education.gouv.fr</em>)</li>
+        <li>Choisissez votre profil : <strong>Élève ou Étudiant</strong> / <strong>Parent ou Responsable</strong> / <strong>Enseignant ou Personnel</strong></li>
+        <li>Saisissez votre identifiant EduConnect (fourni par l'établissement) et votre mot de passe</li>
+        <li>Vous êtes automatiquement redirigé vers ECLAT BFC une fois l'authentification validée</li>
+      </ul>
+
+      <div class="pub-callout">
+        <p>💡 Si vous utilisez EduConnect avec France Connect (via impots.gouv.fr, Ameli, etc.), les parents peuvent accéder à leur espace ECLAT BFC sans avoir besoin d'identifiants séparés — une option particulièrement pratique et sécurisée.</p>
+      </div>
+
+      <p>Si vous ne savez pas si votre établissement a activé EduConnect, vérifiez auprès du secrétariat ou consultez la page d'information de l'<a href="https://www.ac-dijon.fr" target="_blank" rel="noopener noreferrer">Académie de Dijon</a> ou de l'<a href="https://www.ac-besancon.fr" target="_blank" rel="noopener noreferrer">Académie de Besançon</a>. Le déploiement est progressif mais quasi-complet pour les établissements de la région BFC.</p>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="mot-de-passe-oublie">Mot de passe oublié ECLAT BFC : que faire ?</h2>
+      <p>C'est le cas le plus fréquent signalé aux assistances scolaires numériques. Si vous avez oublié votre mot de passe ECLAT BFC, plusieurs options s'offrent à vous selon votre situation.</p>
+
+      <h3 id="reset-autonome">Réinitialisation autonome (avec e-mail de récupération)</h3>
+      <p>Si vous avez renseigné une adresse e-mail de récupération lors de votre première connexion, la procédure est simple :</p>
+      <ul>
+        <li>Sur la page de connexion d'ECLAT BFC, cliquez sur <strong>« Mot de passe oublié »</strong></li>
+        <li>Saisissez votre identifiant ou votre adresse e-mail de récupération</li>
+        <li>Vous recevez un lien de réinitialisation valable 30 minutes</li>
+        <li>Suivez le lien et définissez un nouveau mot de passe sécurisé</li>
+        <li>Reconnectez-vous avec vos nouveaux identifiants</li>
+      </ul>
+
+      <h3 id="reset-via-etablissement">Réinitialisation via l'établissement</h3>
+      <p>Si vous n'avez pas renseigné d'e-mail de récupération ou si le lien de réinitialisation ne fonctionne pas, <strong>la seule solution est de contacter l'établissement scolaire</strong>. Le gestionnaire ENT local (souvent le responsable informatique ou le secrétariat) peut réinitialiser votre mot de passe manuellement depuis l'interface d'administration. Munissez-vous de votre carte scolaire ou d'une pièce d'identité pour toute demande en présentiel.</p>
+
+      <h3 id="reset-educonnect">Réinitialisation du mot de passe EduConnect</h3>
+      <p>Si vous passez par EduConnect, la réinitialisation se gère directement sur <a href="https://educonnect.education.gouv.fr" target="_blank" rel="noopener noreferrer">le portail EduConnect</a> (lien « Mot de passe oublié » sur la page de connexion). Pour les parents utilisant France Connect, la récupération se fait via votre compte France Connect habituel.</p>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="compte-bloque">Compte bloqué ENT BFC : causes et solutions</h2>
+      <p>Un compte ECLAT BFC peut être bloqué pour plusieurs raisons. Identifier la cause est indispensable pour appliquer la bonne solution.</p>
+
+      <h3 id="blocage-tentatives">Blocage après tentatives de connexion échouées</h3>
+      <p>Le système ECLAT BFC bloque automatiquement un compte après <strong>5 tentatives de connexion incorrectes consécutives</strong>, pour des raisons de sécurité. Ce blocage est temporaire : il se lève automatiquement après 30 minutes d'inactivité. Si vous ne souhaitez pas attendre, contactez l'administrateur ENT de votre établissement pour un déblocage immédiat.</p>
+
+      <h3 id="blocage-administratif">Blocage administratif</h3>
+      <p>Un compte peut également être désactivé par l'administration scolaire (désinscription, changement d'établissement, fin d'année scolaire pour les anciens élèves). Dans ce cas, le compte n'est pas déblocable : un nouveau compte doit être créé par le nouvel établissement d'accueil, ou vous devez vous adresser au service d'assistance académique si vous êtes enseignant.</p>
+
+      <div class="pub-callout">
+        <p>⚠️ Attention : lors des transitions de rentrée (septembre) ou de changement d'établissement, les comptes ECLAT BFC peuvent subir des délais de migration de 48 à 72 heures. Ne vous précipitez pas à signaler un problème dès les premiers jours — patientez et réessayez après 2 jours ouvrés.</p>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="erreurs-frequentes">Erreurs de connexion fréquentes et leurs solutions</h2>
+      <p>Au-delà des cas de figure classiques, plusieurs messages d'erreur reviennent régulièrement dans les forums d'entraide et les tickets d'assistance. Voici un tableau récapitulatif des erreurs les plus signalées et des solutions éprouvées.</p>
+
+      <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th>Message d'erreur</th>
+              <th>Cause probable</th>
+              <th>Solution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>« Identifiant ou mot de passe incorrect »</td>
+              <td>Faute de frappe, majuscules/minuscules, caractères spéciaux</td>
+              <td><span class="badge badge-blue">Vérifier</span> la saisie, essayer avec CapsLock désactivé</td>
+            </tr>
+            <tr>
+              <td>« Compte désactivé »</td>
+              <td>Changement d'établissement, fin de scolarité</td>
+              <td><span class="badge badge-orange">Contacter</span> le secrétariat ou l'académie</td>
+            </tr>
+            <tr>
+              <td>« Trop de tentatives »</td>
+              <td>5+ tentatives échouées</td>
+              <td><span class="badge badge-green">Attendre</span> 30 min ou contacter l'admin ENT</td>
+            </tr>
+            <tr>
+              <td>« Certificat de sécurité invalide »</td>
+              <td>Navigateur obsolète ou cache corrompu</td>
+              <td><span class="badge badge-blue">Vider</span> le cache, mettre à jour le navigateur</td>
+            </tr>
+            <tr>
+              <td>« Erreur 500 » ou page blanche</td>
+              <td>Maintenance ou surcharge serveur</td>
+              <td><span class="badge badge-green">Patienter</span> et réessayer dans 1 à 2 heures</td>
+            </tr>
+            <tr>
+              <td>« Accès non autorisé à cette ressource »</td>
+              <td>Mauvais profil sélectionné (parent vs élève)</td>
+              <td><span class="badge badge-blue">Choisir</span> le bon profil dans EduConnect</td>
+            </tr>
+            <tr>
+              <td>Redirection en boucle infinie</td>
+              <td>Cookies tiers bloqués ou extension de navigateur</td>
+              <td><span class="badge badge-blue">Désactiver</span> les bloqueurs, autoriser les cookies eclat-bfc.fr</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Pour la grande majorité des erreurs liées au navigateur, une solution universelle existe : <strong>ouvrir ECLAT BFC en navigation privée</strong> (Ctrl+Maj+N sur Chrome/Firefox) permet d'éliminer les conflits de cache ou de cookies en quelques secondes. Si la connexion fonctionne en navigation privée mais pas en navigation normale, le problème vient bien de votre cache ou d'une extension de navigateur.</p>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="acces-parent-eleve">Accès parent vs accès élève : quelles différences ?</h2>
+      <p>L'une des confusions les plus fréquentes concerne la distinction entre le <strong>compte parent</strong> et le <strong>compte élève</strong> sur ECLAT BFC. Ces deux types de comptes coexistent et donnent accès à des espaces distincts — même si une partie des informations est partagée.</p>
+
+      <h3 id="compte-parent">Ce que permet le compte parent</h3>
+      <ul>
+        <li>Consultation du carnet de correspondance et des absences</li>
+        <li>Accès aux relevés de notes et bulletins scolaires</li>
+        <li>Communication avec les enseignants via la messagerie ENT</li>
+        <li>Consultation du cahier de textes (devoirs, cours)</li>
+        <li>Accès aux informations de l'établissement et au calendrier scolaire</li>
+        <li>Téléchargement de documents administratifs (attestations, autorisations)</li>
+      </ul>
+
+      <h3 id="compte-eleve">Ce que permet le compte élève (en plus)</h3>
+      <ul>
+        <li>Accès aux ressources pédagogiques interactives et aux outils de travail collaboratif</li>
+        <li>Rendu de travaux numériques et devoirs en ligne</li>
+        <li>Accès aux espaces de classe virtuels et aux supports de cours déposés par les enseignants</li>
+        <li>Utilisation des outils de visioconférence et de collaboration (selon activation par l'établissement)</li>
+        <li>Accès à des services numériques tiers intégrés (Canopé, manuels numériques, etc.)</li>
+      </ul>
+
+      <div class="pub-callout">
+        <p>📌 Important : <strong>un parent ne doit jamais utiliser le compte de son enfant</strong> — et vice-versa. Chaque compte est lié à une identité, et les accès sont tracés. En cas de partage de compte, des problèmes de synchronisation et de sécurité peuvent survenir.</p>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="acces-enseignant">Accès enseignant ENT BFC : spécificités et procédures</h2>
+      <p>Les enseignants et personnels de l'Éducation nationale accèdent à ECLAT BFC avec des droits étendus, administrés directement par les rectorats de Dijon et Besançon. Contrairement aux élèves et aux parents, les enseignants utilisent quasi-exclusivement <strong>EduConnect avec leurs identifiants académiques</strong> (prenom.nom@ac-dijon.fr ou @ac-besancon.fr).</p>
+
+      <h3 id="enseignant-premiere-connexion">Procédure de première connexion enseignant</h3>
+      <ul>
+        <li>Vos identifiants académiques vous sont remis lors de votre prise de poste par le rectorat ou par l'établissement</li>
+        <li>Rendez-vous sur <a href="https://www.eclat-bfc.fr" target="_blank" rel="noopener noreferrer">ECLAT BFC</a> et choisissez <strong>« Connexion EduConnect — Enseignant / Personnel »</strong></li>
+        <li>Connectez-vous avec votre identifiant académique (adresse e-mail) et votre mot de passe</li>
+        <li>Lors de la première connexion, activez les services pédagogiques propres à votre discipline et à votre établissement</li>
+        <li>Configurez vos classes et vos groupes dans l'espace enseignant</li>
+      </ul>
+
+      <h3 id="enseignant-droits">Droits spécifiques du compte enseignant</h3>
+      <p>Le compte enseignant donne accès à des fonctionnalités absentes des comptes élève et parent : gestion du cahier de textes numérique, dépôt et correction de travaux, création d'espaces de travail collaboratif, accès aux outils d'évaluation, et administration partielle de son espace classe. Les enseignants peuvent également activer ou désactiver l'accès de leurs élèves à certaines ressources pédagogiques.</p>
+      <p>En cas de problème de connexion persistant sur un compte enseignant, le premier interlocuteur est le <strong>référent numérique de l'établissement</strong> (ou RNIE — Référent Numérique pour les Ingénieurs et les Enseignants). Si le problème dépasse le niveau établissement, la DSIL (Division des Systèmes d'Information et des Libertés) du rectorat concerné prend le relais. Consultez les pages d'assistance de l'<a href="https://www.ac-dijon.fr/numerique-educatif" target="_blank" rel="noopener noreferrer">Académie de Dijon</a> pour plus de détails.</p>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="conseils-securite">Bonnes pratiques pour sécuriser votre accès ECLAT BFC</h2>
+      <p>La connexion à ECLAT BFC donne accès à des données personnelles sensibles — notes, absences, communications entre parents et enseignants, identité des élèves. Il est donc essentiel d'adopter quelques réflexes de sécurité élémentaires, souvent négligés.</p>
+      <ul>
+        <li><strong>Choisissez un mot de passe unique</strong> que vous n'utilisez nulle part ailleurs — un gestionnaire de mots de passe (Bitwarden, 1Password) facilite grandement cette discipline</li>
+        <li><strong>Activez la double authentification</strong> si votre établissement ou EduConnect le propose</li>
+        <li><strong>Ne partagez jamais vos identifiants</strong> — ni avec votre enfant (si vous êtes parent), ni avec un autre élève</li>
+        <li><strong>Déconnectez-vous systématiquement</strong> sur un ordinateur partagé (bibliothèque, salle informatique, cybercafé)</li>
+        <li><strong>Vérifiez l'URL</strong> avant de saisir vos identifiants : l'adresse légitime est <em>eclat-bfc.fr</em> ou <em>educonnect.education.gouv.fr</em> — méfiez-vous des sites imitateurs</li>
+        <li><strong>Mettez à jour régulièrement votre e-mail de récupération</strong> — une adresse obsolète vous bloquera en cas d'oubli de mot de passe</li>
+      </ul>
+
+      <div class="pub-quote">
+        <p>"La cybersécurité des données scolaires est une responsabilité partagée entre l'institution, les enseignants et les familles."</p>
+        <cite>— Agence nationale de la sécurité des systèmes d'information (ANSSI)</cite>
+      </div>
+
+      <div class="pub-divider"></div>
+
+      <h2 id="contacts-assistance">Où trouver de l'aide en cas de problème persistant ?</h2>
+      <p>Si aucune des solutions présentées dans ce guide ne résout votre problème de connexion ECLAT BFC, plusieurs ressources officielles sont à votre disposition :</p>
+      <ul>
+        <li><strong>Le secrétariat de l'établissement scolaire</strong> — premier point de contact pour tout problème de compte élève ou parent</li>
+        <li><strong>Le référent numérique de l'établissement</strong> — pour les problèmes techniques plus complexes</li>
+        <li><strong>L'assistance EduConnect</strong> — disponible via le formulaire de contact sur <a href="https://educonnect.education.gouv.fr" target="_blank" rel="noopener noreferrer">educonnect.education.gouv.fr</a></li>
+        <li><strong>Le service d'assistance académique</strong> — les académies de <a href="https://www.ac-dijon.fr" target="_blank" rel="noopener noreferrer">Dijon</a> et de <a href="https://www.ac-besancon.fr" target="_blank" rel="noopener noreferrer">Besançon</a> disposent de services d'assistance numérique accessibles par téléphone et par e-mail</li>
+        <li><strong>La page d'aide officielle ECLAT BFC</strong> — accessible directement depuis le portail, elle recense les maintenances programmées et les incidents en cours</li>
+      </ul>
+      <p>Pour les problèmes liés à l'accès numérique en général — équipement, connexion internet, accessibilité — notre équipe publie régulièrement des ressources pratiques sur le <a href="blog.html">blog MPOUCK</a>. N'hésitez pas à nous <a href="contact.html">contacter</a> si vous avez besoin d'un accompagnement personnalisé sur la transition numérique éducative.</p>
+
+      <!-- Tags -->
+      <div class="pub-tags">
+        <a href="#" class="pub-tag">ECLAT BFC</a>
+        <a href="#" class="pub-tag">ENT BFC</a>
+        <a href="#" class="pub-tag">EduConnect</a>
+        <a href="#" class="pub-tag">Connexion ENT</a>
+        <a href="#" class="pub-tag">Mot de passe oublié</a>
+        <a href="#" class="pub-tag">Éducation numérique</a>
+        <a href="#" class="pub-tag">Bourgogne-Franche-Comté</a>
+        <a href="#" class="pub-tag">MPOUCK</a>
+      </div>
+
+    </article>
+
+    <!-- ── Sidebar ── -->
+    <aside class="pub-sidebar">
+
+      <!-- Table des matières -->
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">📋 Table des matières</p>
+        <ul class="toc-list">
+          <li><a href="#intro" class="toc-list-link">Qu'est-ce qu'ECLAT BFC ?</a></li>
+          <li><a href="#premiere-connexion" class="toc-list-link">Première connexion</a></li>
+          <li><a href="#premiere-connexion-eleve" class="toc-list-link toc-sub">↳ Élève</a></li>
+          <li><a href="#premiere-connexion-parent" class="toc-list-link toc-sub">↳ Parent</a></li>
+          <li><a href="#educonnect" class="toc-list-link">Connexion via EduConnect</a></li>
+          <li><a href="#mot-de-passe-oublie" class="toc-list-link">Mot de passe oublié</a></li>
+          <li><a href="#compte-bloque" class="toc-list-link">Compte bloqué ENT BFC</a></li>
+          <li><a href="#erreurs-frequentes" class="toc-list-link">Erreurs fréquentes</a></li>
+          <li><a href="#acces-parent-eleve" class="toc-list-link">Accès parent vs élève</a></li>
+          <li><a href="#acces-enseignant" class="toc-list-link">Accès enseignant ENT</a></li>
+          <li><a href="#conseils-securite" class="toc-list-link">Bonnes pratiques sécurité</a></li>
+          <li><a href="#contacts-assistance" class="toc-list-link">Contacts & assistance</a></li>
+        </ul>
+      </div>
+
+      <!-- Publications liées -->
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">📰 Publications liées</p>
+        <div class="related-list">
+          <a href="article-outils-ia-contenu-2026.html" class="related-item">
+            <div class="related-thumb">🤖</div>
+            <div class="related-info">
+              <p class="related-cat">IA</p>
+              <p class="related-title">ChatGPT, Midjourney, Claude : quel outil IA choisir en 2026 ?</p>
+              <p class="related-date">6 mars 2026</p>
+            </div>
+          </a>
+          <a href="article-uiux-2026.html" class="related-item">
+            <div class="related-thumb">🎨</div>
+            <div class="related-info">
+              <p class="related-cat">Design</p>
+              <p class="related-title">Les tendances UI/UX qui vont dominer 2026</p>
+              <p class="related-date">1 mars. 2026</p>
+            </div>
+          </a>
+          <a href="article-eclat-bfc-2026.html" class="related-item">
+            <div class="related-thumb">✍️</div>
+            <div class="related-info">
+              <p class="related-cat">Éducation</p>
+              <p class="related-title">Eclat BFC : Le Guide Ultime et Complet en 2026 pour Accéder Facilement à l'ENT</p>
+              <p class="related-date">25 mars. 2026</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Partager -->
+      <div class="sidebar-card">
+        <p class="sidebar-card-title">🔗 Partager l'article</p>
+        <div class="share-row">
+          <a href="https://wa.me/?text=D%C3%A9couvrez%20cet%20article%20MPOUCK%20%3A%20https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="share-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="share-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="https://twitter.com/intent/tweet?text=Connexion%20ECLAT%20BFC%20%3A%20guide%20complet%20%E2%80%94%20MPOUCK&url=https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="share-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter / X
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmpouck.github.io%2Farticle-connexion-eclat-bfc.html" target="_blank" class="share-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <button class="share-pill" id="copyLinkSidebar">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Copier le lien
+          </button>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ══ NAV ARTICLE SUIVANT / PRÉCÉDENT ══ -->
+  <nav class="pub-nav" aria-label="Navigation entre articles">
+    <a href="article-eclat-bfc-2026.html" class="pub-nav-card prev">
+      <p class="pub-nav-dir">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Article précédent
+      </p>
+      <p class="pub-nav-ttl">Eclat BFC : Le Guide Ultime et Complet en 2026 pour Accéder Facilement à l'ENT</p>
+    </a>
+    <a href="article-outils-ia-contenu-2026.html" class="pub-nav-card next">
+      <p class="pub-nav-dir">
+        Article suivant
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </p>
+      <p class="pub-nav-ttl">ChatGPT, Midjourney, Claude : quel outil IA choisir en 2026 ?</p>
+    </a>
+  </nav>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer-wrapper" role="contentinfo">
+    <div class="footer-card">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Accueil MPOUCK">
+            <img src="favicon.png" alt="MPOUCK logo" class="footer-logo-img" width="40" height="40"/>
+            <span class="footer-logo-name">MPOUCK</span>
+          </a>
+          <p class="footer-desc">Depuis 2026, nous transformons les entreprises grâce à des solutions innovantes et accompagnons leur croissance efficace et durable.</p>
+          <div class="footer-socials" role="list">
+            <a href="#" class="social-link" role="listitem" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-link" role="listitem" aria-label="Twitter/X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-link" role="listitem" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="social-link" role="listitem" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://wa.me/242068777246" target="_blank" rel="noopener" class="social-link" role="listitem" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+            <a href="https://youtube.com/@MPOUCK" target="_blank" rel="noopener" class="social-link" role="listitem" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Liens Rapides</h4>
+          <ul>
+            <li><a href="about.html">A propos</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="projet.html">Nos projets</a></li>
+            <li><a href="index.html#testimonials">Témoignages</a></li>
+            <li><a href="about.html">Notre équipe</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="Webtemplates.html">Website Templates</a></li>
+            <li><a href="GraphicDesign.html">Design graphique</a></li>
+            <li><a href="aicours.html">AI Cours</a></li>
+            <li><a href="seoservice.html">SEO et stratégie de contenu</a></li>
+            <li><a href="social-media-packs.html">Packs réseaux sociaux</a></li>
+            <li><a href="businessAutomation.html">Automatisation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contactez-nous</h4>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div class="contact-text"><span>Brazzaville<br>République du Congo</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="contact-text"><a href="contact.html">contact@mpouck.com</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.88a16 16 0 0 0 6 6l.88-.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div class="contact-text"><a href="tel:+242068652120">+242 06 865 21 20</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 MPOUCK. Tous droits réservés.</p>
+        <nav class="footer-legal" aria-label="Liens légaux">
+          <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Sitemap</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Thème ── */
+    var html = document.documentElement;
+    var KEY = 'mpouck-theme';
+    function applyTheme(t) { html.setAttribute('data-theme', t); try { localStorage.setItem(KEY, t); } catch(e) {} }
+    (function() { var s; try { s = localStorage.getItem(KEY); } catch(e) {} if (s) applyTheme(s); else if (window.matchMedia('(prefers-color-scheme: dark)').matches) applyTheme('dark'); })();
+    document.getElementById('themeBtn').addEventListener('click', function() { applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+
+    /* ── Hamburger ── */
+    var hbg = document.getElementById('hamburger');
+    var mob = document.getElementById('mobileMenu');
+    hbg.addEventListener('click', function() { var o = mob.classList.toggle('open'); hbg.classList.toggle('open', o); hbg.setAttribute('aria-expanded', o); mob.setAttribute('aria-hidden', !o); });
+    mob.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMob); });
+    document.addEventListener('click', function(e) { if (!document.getElementById('mainNav').contains(e.target)) { closeMob(); closeDrop(); } });
+    function closeMob() { mob.classList.remove('open'); hbg.classList.remove('open'); hbg.setAttribute('aria-expanded','false'); mob.setAttribute('aria-hidden','true'); }
+
+    /* ── Dropdown ── */
+    var deskPages = document.getElementById('deskPages');
+    var pagesTrig = document.getElementById('pagesTrigger');
+    pagesTrig.addEventListener('click', function(e) { e.stopPropagation(); var o = deskPages.classList.toggle('open'); pagesTrig.setAttribute('aria-expanded', o); });
+    function closeDrop() { deskPages.classList.remove('open'); pagesTrig.setAttribute('aria-expanded','false'); }
+    document.getElementById('mainNav').addEventListener('click', function(e) { if (!deskPages.contains(e.target)) closeDrop(); });
+    document.getElementById('pagesPanel').querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeDrop); });
+
+    /* ── Accordion mobile ── */
+    var mobPagesMenu = document.getElementById('mobPages');
+    var mobPagesTrig = document.getElementById('mobPagesTrigger');
+    mobPagesTrig.addEventListener('click', function(e) { e.stopPropagation(); var o = mobPagesMenu.classList.toggle('open'); mobPagesTrig.setAttribute('aria-expanded', o); });
+
+    /* ── Ombre navbar au scroll ── */
+    var navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() { navbar.style.boxShadow = window.scrollY > 10 ? '0 8px 40px rgba(0,0,0,.14), 0 2px 8px rgba(0,0,0,.08)' : ''; }, { passive: true });
+
+    /* ── Table des matières active ── */
+    var tocLinks = document.querySelectorAll('.toc-list-link');
+    var sections = [];
+    tocLinks.forEach(function(a) { var id = a.getAttribute('href').slice(1); var el = document.getElementById(id); if (el) sections.push({ el: el, a: a }); });
+    window.addEventListener('scroll', function() {
+      var scrollY = window.scrollY + 120;
+      var active = null;
+      sections.forEach(function(s) { if (s.el.offsetTop <= scrollY) active = s; });
+      tocLinks.forEach(function(a) { a.classList.remove('active'); });
+      if (active) active.a.classList.add('active');
+    }, { passive: true });
+
+    /* ── Copier le lien ── */
+    document.getElementById('copyLink').addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var btn = document.getElementById('copyLink');
+        btn.style.color = '#4ade80';
+        setTimeout(function() { btn.style.color = ''; }, 1500);
+      });
+    });
+    document.getElementById('copyLinkSidebar').addEventListener('click', function() {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var btn = document.getElementById('copyLinkSidebar');
+        var orig = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copié !';
+        btn.style.color = '#4ade80';
+        setTimeout(function() { btn.innerHTML = orig; btn.style.color = ''; }, 1800);
+      });
+    });
+
+    /* ── Search ── */
+    var searchBtn = document.getElementById('searchBtn');
+    var searchOverlay = document.getElementById('searchOverlay');
+    var searchModal = document.getElementById('searchModal');
+    var searchInput = document.getElementById('searchInput');
+    var searchResults = document.getElementById('searchResults');
+    var searchClose = document.getElementById('searchClose');
+    var focusedIdx = -1;
+
+    var CONTENT = [
+      { type:'Page',    icon:'🏠', title:'Accueil',          desc:'Page accueil MPOUCK.',              href:'index.html'          },
+      { type:'Page',    icon:'⚡', title:'Services',         desc:'Nos services digitaux.',            href:'services.html'       },
+      { type:'Page',    icon:'👤', title:'A propos',         desc:'Notre histoire et notre équipe.',   href:'about.html'          },
+      { type:'Page',    icon:'📰', title:'Blog',             desc:'Articles et ressources.',           href:'blog.html'           },
+      { type:'Page',    icon:'✉️', title:'Contact',          desc:'Contactez-nous.',                   href:'contact.html'        },
+      { type:'Article', icon:'🔐', title:'Connexion ECLAT BFC : guide complet, problèmes & solutions', desc:'Première connexion, mot de passe oublié, compte bloqué ENT BFC.', href:'article-connexion-eclat-bfc.html' },
+      { type:'Article', icon:'🤖', title:'ChatGPT, Midjourney, Claude : quel outil IA choisir en 2026 ?', desc:'Comparatif pratique et recommandations par profil.', href:'article-outils-ia-contenu-2026.html' },
+      { type:'Article', icon:'✍️', title:'Les tendances UI/UX qui vont dominer 2026', desc:'Minimalisme, bento grids, interfaces IA.', href:'article-uiux-2026.html' },
+      { type:'Article', icon:'✍️', title:"Comment l'IA transforme la création de contenu", desc:'ChatGPT, Midjourney, Sora.', href:'article-ia-contenu-2026.html' },
+      { type:'Article', icon:'⚡', title:'5 raisons d\'utiliser un template pro', desc:'Gagner du temps et impressionner dès le lancement.', href:'article1__1_.html' },
+    ];
+
+    function openSearch() { searchOverlay.classList.add('open'); searchModal.classList.add('open'); document.body.style.overflow = 'hidden'; searchBtn.setAttribute('aria-expanded','true'); setTimeout(function(){ searchInput.focus(); }, 80); renderHints(); }
+    function closeSearch() { searchOverlay.classList.remove('open'); searchModal.classList.remove('open'); document.body.style.overflow = ''; searchBtn.setAttribute('aria-expanded','false'); searchInput.value = ''; searchResults.innerHTML = ''; searchResults.classList.remove('visible'); focusedIdx = -1; }
+    if (searchBtn) searchBtn.addEventListener('click', openSearch);
+    if (searchOverlay) searchOverlay.addEventListener('click', closeSearch);
+    if (searchClose) searchClose.addEventListener('click', closeSearch);
+    document.addEventListener('keydown', function(e) { if ((e.ctrlKey||e.metaKey) && e.key==='k') { e.preventDefault(); openSearch(); } if (e.key==='Escape' && searchModal.classList.contains('open')) closeSearch(); });
+    function hl(t,q) { if (!q) return t; return t.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>'); }
+    function iHTML(d,q) { return '<a class="search-item" href="'+d.href+'"><div class="search-item-icon">'+d.icon+'</div><div class="search-item-body"><div class="search-item-title">'+hl(d.title,q)+'</div><div class="search-item-desc">'+d.desc+'</div></div><span class="search-item-badge">'+d.type+'</span></a>'; }
+    function fHTML(n) { return '<div class="search-footer"><span>'+n+' résultat'+(n>1?'s':'')+'</span><span>ESC fermer</span></div>'; }
+    function bindItems() { document.querySelectorAll('.search-item').forEach(function(el,i) { el.addEventListener('click', closeSearch); el.addEventListener('mouseenter', function(){ focusedIdx=i; uFocus(); }); }); }
+    function uFocus() { document.querySelectorAll('.search-item').forEach(function(el,i){ el.classList.toggle('focused',i===focusedIdx); }); }
+    function renderHints() { var h=''; CONTENT.slice(0,6).forEach(function(d){ h+=iHTML(d,''); }); h+=fHTML(CONTENT.length); searchResults.innerHTML=h; searchResults.classList.add('visible'); bindItems(); }
+    var dbt;
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        clearTimeout(dbt);
+        var v = searchInput.value;
+        dbt = setTimeout(function() {
+          var q = v.trim().toLowerCase();
+          if (!q) { renderHints(); return; }
+          var hits = CONTENT.filter(function(d) { return d.title.toLowerCase().indexOf(q) >= 0 || d.desc.toLowerCase().indexOf(q) >= 0; });
+          searchResults.classList.add('visible');
+          if (!hits.length) { searchResults.innerHTML = '<div class="search-empty">Aucun résultat pour "' + v + '"</div>'; return; }
+          var h = '';
+          hits.forEach(function(d) { h += iHTML(d, q); });
+          h += fHTML(hits.length);
+          searchResults.innerHTML = h;
+          focusedIdx = -1;
+          bindItems();
+        }, 80);
+      });
+      searchInput.addEventListener('keydown', function(e) {
+        var items = document.querySelectorAll('.search-item');
+        if (!items.length) return;
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          focusedIdx = Math.min(focusedIdx + 1, items.length - 1);
+          uFocus();
+          items[focusedIdx] && items[focusedIdx].scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          focusedIdx = Math.max(focusedIdx - 1, 0);
+          uFocus();
+          items[focusedIdx] && items[focusedIdx].scrollIntoView({ block: 'nearest' });
+        } else if (e.key === 'Enter' && focusedIdx >= 0) {
+          e.preventDefault();
+          items[focusedIdx].click();
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
