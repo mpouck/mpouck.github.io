@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MPOUCK – Plateforme de solutions digitales</title>
-  <link rel="canonical" href="https://mpouck.github.io/">
+  <title>Découverte – MPOUCK</title>
+  <link rel="canonical" href="https://mpouck.github.io/decouvertes.html">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TSLNZGEPK"></script>
 <script>
@@ -15,22 +15,22 @@
   gtag('config', 'G-4TSLNZGEPK');
 </script>
 
-<meta property="og:title" content="MPOUCK – Plateforme de solutions digitales">
-<meta property="og:description" content="Créez, lancez et développez votre business en ligne avec les solutions digitales innovantes de MPOUCK.">
+<meta property="og:title" content="Découverte – MPOUCK">
+<meta property="og:description" content="Articles, images et vidéos autour de la découverte et de l'exploration : voyages, nature, sciences et cultures.">
 <meta property="og:image" content="https://mpouck.github.io/image2.png">
-<meta property="og:url" content="https://mpouck.github.io/">
+<meta property="og:url" content="https://mpouck.github.io/decouvertes.html">
 <meta property="og:type" content="website">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MPOUCK – Plateforme de solutions digitales">
-<meta name="twitter:description" content="Créez, lancez et développez votre business en ligne avec MPOUCK.">
+<meta name="twitter:title" content="Découverte – MPOUCK">
+<meta name="twitter:description" content="Articles, images et vidéos autour de la découverte et de l'exploration : voyages, nature, sciences et cultures.">
 
 <meta name="twitter:image" content="https://mpouck.github.io/image2.png">
 
     <!-- Meta description pour SEO -->
- <meta name="description" content="Créez, lancez et développez votre business en ligne avec les solutions digitales innovantes de MPOUCK. Plus de 4 800 entrepreneurs nous font déjà confiance.">
+ <meta name="description" content="Articles, images et vidéos autour de la découverte et de l'exploration : voyages, nature, sciences et cultures.">
  
-  <meta name="keywords" content="MPOUCK, solutions digitales, business en ligne, templates, formation IA">
+  <meta name="keywords" content="découverte, exploration, voyage, nature, sciences, MPOUCK">
   <link rel="icon" type="image/png" href="favicon.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1679,8 +1679,54 @@
       .footer-legal { flex-wrap: wrap; gap: 12px; }
     }
 
-  </style>
   
+    /* ══ PAGE DÉCOUVERTE ══ */
+    .dec-hero { padding: 140px 0 30px; text-align: center; position: relative; overflow: hidden; }
+    .dec-hero::before { content:''; position:absolute; top:55%; left:50%; transform:translate(-50%,-50%); width:700px; height:700px; border-radius:50%; background:radial-gradient(circle, rgba(201,167,108,.2) 0%, transparent 70%); pointer-events:none; }
+    [data-theme="dark"] .dec-hero::before { background:radial-gradient(circle, rgba(100,120,255,.12) 0%, transparent 70%); }
+    .dec-hero-inner { max-width: 760px; margin: 0 auto; padding: 0 24px; position: relative; animation: fadeUp .7s cubic-bezier(.22,1,.36,1) .1s both; }
+    .dec-hero .hero-sub { max-width: 520px; margin: 0 auto 30px; }
+    .dec-hero .hero-actions { justify-content: center; }
+    .dec-sec { scroll-margin-top: 90px; }
+    .dec-sec .blog-header > div { text-align: center; }
+    .dec-filters { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-bottom:32px; }
+    .dec-chip { font:600 .8rem var(--font); padding:8px 16px; border-radius:999px; border:1px solid var(--border-nav); background:var(--bg-nav); color:var(--text-muted); cursor:pointer; transition:background var(--ease), color var(--ease), transform var(--ease); }
+    .dec-chip:hover { transform: translateY(-2px); color: var(--text-dark); }
+    .dec-chip.active { background: var(--btn-primary); color: var(--btn-p-text); border-color: transparent; }
+    .blog-card[hidden] { display: none; }
+    .blog-img-wrap, .gal-item, .vid-thumb { background: linear-gradient(135deg, rgba(201,167,108,.35), rgba(100,120,255,.2)); }
+    /* Galerie */
+    .gal { display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:180px; gap:14px; }
+    .gal-item { position:relative; border-radius:18px; overflow:hidden; cursor:zoom-in; border:1px solid var(--border-nav); box-shadow:var(--shadow-card); }
+    .gal-item.tall { grid-row: span 2; } .gal-item.wide { grid-column: span 2; }
+    .gal-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s cubic-bezier(.4,0,.2,1); }
+    .gal-item:hover img { transform: scale(1.07); }
+    .gal-item span { position:absolute; left:0; right:0; bottom:0; padding:28px 14px 12px; font-size:.78rem; font-weight:600; color:#fff; background:linear-gradient(transparent, rgba(0,0,0,.65)); opacity:0; transition:opacity var(--ease); }
+    .gal-item:hover span { opacity:1; }
+    /* Vidéos */
+    .vid-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .vid-card { background:var(--bg-nav); border:1px solid var(--border-nav); border-radius:20px; box-shadow:var(--shadow-card); overflow:hidden; cursor:pointer; text-align:left; font-family:var(--font); color:inherit; padding:0; transition:transform var(--ease), box-shadow var(--ease), background .35s ease; }
+    .vid-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-float); }
+    .vid-thumb { position:relative; height:190px; overflow:hidden; }
+    .vid-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+    .vid-play { position:absolute; top:50%; left:50%; width:56px; height:56px; margin:-28px 0 0 -28px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(0,0,0,.25); transition:transform var(--ease); }
+    .vid-card:hover .vid-play { transform: scale(1.12); }
+    .vid-dur { position:absolute; right:10px; bottom:10px; background:rgba(0,0,0,.7); color:#fff; font-size:.7rem; font-weight:600; padding:3px 8px; border-radius:8px; }
+    .vid-body { padding:18px 20px 22px; }
+    .vid-body h3 { font-size:.98rem; font-weight:700; letter-spacing:-.02em; line-height:1.4; margin:10px 0 6px; color:var(--text-dark); }
+    .vid-body p { font-size:.8rem; line-height:1.6; color:var(--text-muted); }
+    /* Lightbox / lecteur */
+    .lb { position:fixed; inset:0; background:rgba(5,8,15,.88); display:none; align-items:center; justify-content:center; z-index:400; padding:24px; }
+    .lb.open { display:flex; }
+    .lb-box { max-width:min(960px,100%); width:100%; text-align:center; }
+    .lb-box img { max-width:100%; max-height:80vh; border-radius:14px; }
+    .lb-box iframe { width:100%; aspect-ratio:16/9; border:0; border-radius:14px; background:#000; }
+    .lb-cap { color:#e2e8f0; font-size:.85rem; margin-top:12px; }
+    .lb-x { position:absolute; top:18px; right:22px; width:38px; height:38px; border-radius:50%; border:none; background:rgba(255,255,255,.14); color:#fff; font-size:1.3rem; cursor:pointer; }
+    @media (max-width:900px) { .gal { grid-template-columns:repeat(2,1fr); grid-auto-flow:dense; } .gal-item.tall { grid-column: span 2; } .vid-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:580px) { .dec-hero { padding:110px 0 20px; } .gal { grid-auto-rows:150px; gap:10px; } .gal-item.wide { grid-column: span 2; } .vid-grid { grid-template-columns:1fr; } }
+  </style>
+
 </head>
 <body>
   
@@ -1696,7 +1742,7 @@
 
       <!-- [CONFIG] Liens desktop -->
       <ul class="nav-links" role="list">
-        <li><a href="#hero">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
 
         <li class="nav-has-dropdown" id="deskPages">
@@ -1711,6 +1757,7 @@
             <a href="projet.html" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
             <div class="sep"></div>
             <a href="blog.html"      role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+            <a href="decouvertes.html" role="menuitem"><span class="page-icon">🧭</span> Découverte</a>
           <!--  <a href="contact.html"   role="menuitem"><span class="page-icon">✉️</span> Contact</a>  -->
           </div>
         </li>
@@ -1743,7 +1790,7 @@
           </span>
         </button>
 
-        <a href="blog.html" class="nav-cta">Articles de blog </a>
+        <a href="blog.html" class="nav-cta">Articles de blog</a>
 
         <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
@@ -1754,7 +1801,7 @@
     <!-- Menu mobile -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="menu">
       <ul>
-        <li><a href="#hero"    role="menuitem">Accueil</a></li>
+        <li><a href="index.html"    role="menuitem">Home</a></li>
         <li><a href="services.html" role="menuitem">Services</a></li>
         <li class="mobile-has-sub" id="mobPages">
           <button class="mob-sub-trigger" id="mobPagesTrigger" aria-expanded="false">
@@ -1768,6 +1815,7 @@
               <a href="about.html"     class="mob-sublink" role="menuitem"><span class="page-icon">👤</span> A propos de nous</a>
               <a href="projet.html" class="mob-sublink" role="menuitem"><span class="page-icon">🖼️</span> Projets</a>
               <a href="blog.html"      class="mob-sublink" role="menuitem"><span class="page-icon">✍️</span> Blog</a>
+              <a href="decouvertes.html" class="mob-sublink" role="menuitem"><span class="page-icon">🧭</span> Découverte</a>
               <!-- <a href="contact.html"   class="mob-sublink" role="menuitem"><span class="page-icon">✉️</span> Contact</a> -->
             </div>
           </div>
@@ -1816,307 +1864,201 @@
     <div class="search-results" id="searchResults" role="listbox"></div>
   </div>
 
-  <!-- ══════════════════════════════════════════
-       ② HERO — Espace éditorial
-  ══════════════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero-inner">
 
-      <div class="hero-content">
-        <span class="hero-badge">
-          <svg width="8" height="8" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
-          Blog &amp; Ressources
-        </span>
-
-        <!-- [CONFIG] Titre -->
-        <h1 class="hero-title">
-          Des articles<em class="spark"> ✦</em><br> qui informent <br>et qui font réfléchir.
-        </h1>
-
-        <!-- [CONFIG] Sous-titre -->
-        <p class="hero-sub">
-          Un espace de publication où je partage des articles et quelques notions éducatives, pensés pour être clairs, utiles et accessibles à tous.
-        </p>
-
-        <!-- [CONFIG] Boutons -->
-        <div class="hero-actions">
-          <a href="#blog" class="btn-primary">
-            Lire les articles
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-          <a href="about.html" class="btn-secondary">À propos</a>
-        </div>
-
-        <!-- [CONFIG] Stats -->
-        <div class="hero-stats">
-          <div class="stat-item">
-            <div class="stat-num">50+</div>
-            <div class="stat-label">Articles publiés</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">6</div>
-            <div class="stat-label">Thématiques abordées</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">100%</div>
-            <div class="stat-label">Contenu original</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-circle"></div>
-
-        <!--
-        [CONFIG] IMAGE — remplacez src par votre photo PNG fond transparent
-        -->
-        <img
-          src="7.png"
-          alt="Auteur du blog MPOUCK"
-          class="hero-person"
-          loading="eager"
-        />
-
-        <div class="float-card card-chart">
-          <div class="card-chart-label">Publications</div>
-          <div class="bars">
-            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-          </div>
-        </div>
-
-        <div class="float-card card-text">
-          <div class="card-text-line"></div>
-          <div class="card-text-line"></div>
-          <div class="card-text-line accent"></div>
-          <div class="card-text-dots">
-            <span style="background:#4ade80"></span>
-            <span style="background:#60a5fa"></span>
-            <span style="background:#f472b6"></span>
-          </div>
-        </div>
-
-        <div class="float-card card-progress">
-          <div class="progress-label"><span>Progression du cours</span><span>92%</span></div>
-          <div class="progress-track"><div class="progress-fill"></div></div>
-        </div>
-
-        <div class="float-card card-curve">
-          <div class="card-curve-label">Audience</div>
-          <svg class="curve-svg" height="40" viewBox="0 0 110 40" fill="none">
-            <path d="M0 35 C20 30, 30 15, 50 18 S80 5, 110 8" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="110" cy="8" r="4" fill="#a78bfa"/>
-            <circle cx="50"  cy="18" r="3.5" fill="#c4b5fd"/>
-          </svg>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  
-  
-
-  
-  
-  
-
-  <!-- ══════════════════════════════════════════
-       ③ CTA
-  ══════════════════════════════════════════ -->
-  <section class="cta-section" id="cta">
-    <div class="cta-inner">
-      <div class="cta-card">
-        <div class="cta-text">
-          <p class="cta-label">✦ Ne manquez rien</p>
-          <h2 class="cta-title">
-            Recevez les nouveaux<br>articles et <span>notions éducatives</span>
-          </h2>
-          <p class="cta-desc">
-            Un nouvel article, une nouvelle idée à comprendre. Abonnez-vous pour être informé dès qu'une nouvelle publication est en ligne.
-          </p>
-        </div>
-        <div class="cta-actions">
-          <a href="contact.html" class="btn-cta-primary">
-            S'abonner
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-          <a href="blog.html" class="btn-cta-ghost">
-            Voir tous les articles
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </div>
+  <!-- ══ EN-TÊTE ══ -->
+  <section class="dec-hero" id="top">
+    <div class="dec-hero-inner">
+      <span class="hero-badge"><svg width="8" height="8" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>Découverte</span>
+      <h1 class="hero-title">Explorer, découvrir,<br>s'émerveiller<em class="spark"> ✦</em></h1>
+      <p class="hero-sub">Articles, images et vidéos pour voyager par la curiosité : nature, sciences, cultures et horizons à explorer.</p>
+      <div class="hero-actions">
+        <a href="#articles" class="btn-primary">Lire les articles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="#galerie" class="btn-secondary">Galerie</a>
+        <a href="#videos" class="btn-secondary">Vidéos</a>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════
-       ④ BLOG
-  ══════════════════════════════════════════ -->
-  <section class="blog-section" id="blog">
+  <!-- ══ ARTICLES ══ -->
+  <section class="blog-section dec-sec" id="articles">
     <div class="blog-inner">
-      <div class="blog-header">
-        <div>
-          <p class="blog-eyebrow">Notre Blog</p>
-          <h2 class="blog-title">Les derniers <span class="accent">articles</span></h2>
-        </div>
-        <a href="blog.html" class="blog-see-all">Voir tous les articles <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
+      <div class="blog-header"><div><p class="blog-eyebrow">Articles</p><h2 class="blog-title">Partir à la <span class="accent">découverte</span></h2></div></div>
+      <div class="dec-filters" role="group" aria-label="Filtrer les articles"><button class="dec-chip active" data-f="all">Tous</button><button class="dec-chip" data-f="Voyage">Voyage</button><button class="dec-chip" data-f="Nature">Nature</button><button class="dec-chip" data-f="Sciences">Sciences</button><button class="dec-chip" data-f="Culture">Culture</button><button class="dec-chip" data-f="Curiosité">Curiosité</button></div>
       <div class="blog-grid">
-
-        <!-- [CONFIG] Article 1 -->
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80&fit=crop" alt="UI/UX Trends" class="blog-img" loading="lazy"/>
-          </div>
+        <article class="blog-card" data-cat="Voyage">
+          <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80&fit=crop" alt="Voyager autrement : se perdre pour mieux se trouver" class="blog-img" loading="lazy" onerror="this.remove()"/></div>
           <div class="blog-body">
-            <span class="blog-cat">Design</span>
-            <h3 class="blog-art-title">Les tendances UI/UX qui vont dominer 2025</h3>
-            <p class="blog-excerpt">Entre minimalisme radical, bento grids et interfaces dopées à l'IA, le design évolue plus vite que jamais. Tour d'horizon des tendances incontournables.</p>
+            <span class="blog-cat">Voyage</span>
+            <h3 class="blog-art-title">Voyager autrement : se perdre pour mieux se trouver</h3>
+            <p class="blog-excerpt">Loin des itinéraires balisés, le voyage devient une école de curiosité. Comment transformer chaque escale en véritable découverte.</p>
             <div class="blog-meta">
               <img src="imageProfil.jpg" alt="Auteur" class="blog-avatar"/>
               <div class="blog-author-info">
                 <div class="blog-author-name">MPOUCK Jho Chadrack</div>
-                <div class="blog-date-read">
-                  <span>1 mars. 2026</span><span class="dot-sep"></span><span>8 min de lecture</span>
-                </div>
+                <div class="blog-date-read"><span>12 sept. 2026</span><span class="dot-sep"></span><span>7 min de lecture</span></div>
               </div>
             </div>
           </div>
-          <div class="blog-footer">
-            <a href="article-uiux-2026.html" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-          </div>
+          <div class="blog-footer"><a href="#" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a></div>
         </article>
-
-        <!-- [CONFIG] Article 2 -->
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80&fit=crop" alt="IA & Business" class="blog-img" loading="lazy"/>
-          </div>
+        <article class="blog-card" data-cat="Nature">
+          <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80&fit=crop" alt="Sous la canopée : ce que les forêts nous apprennent" class="blog-img" loading="lazy" onerror="this.remove()"/></div>
           <div class="blog-body">
-            <span class="blog-cat">Intelligence Artificielle</span>
-            <h3 class="blog-art-title">Comment l'IA transforme la création de contenu en 2025</h3>
-            <p class="blog-excerpt">ChatGPT, Midjourney, Sora… Les outils IA redéfinissent la façon dont les entrepreneurs créent, automatisent et scalent leur contenu digital.</p>
+            <span class="blog-cat">Nature</span>
+            <h3 class="blog-art-title">Sous la canopée : ce que les forêts nous apprennent</h3>
+            <p class="blog-excerpt">Écosystèmes, silence et lumière filtrée : une immersion au cœur des forêts pour comprendre la vie qui s'y cache.</p>
             <div class="blog-meta">
               <img src="imageProfil.jpg" alt="Auteur" class="blog-avatar"/>
               <div class="blog-author-info">
                 <div class="blog-author-name">MPOUCK Jho Chadrack</div>
-                <div class="blog-date-read">
-                  <span>1 mars 2025</span><span class="dot-sep"></span><span>6 min de lecture</span>
-                </div>
+                <div class="blog-date-read"><span>8 sept. 2026</span><span class="dot-sep"></span><span>6 min de lecture</span></div>
               </div>
             </div>
           </div>
-          <div class="blog-footer">
-            <a href="article-ia-contenu-2026.html" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-          </div>
+          <div class="blog-footer"><a href="#" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a></div>
         </article>
-
-        <!-- [CONFIG] Article 3 -->
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&fit=crop" alt="Template Business" class="blog-img" loading="lazy"/>
-          </div>
+        <article class="blog-card" data-cat="Sciences">
+          <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=80&fit=crop" alt="Aux confins du cosmos : pourquoi lever les yeux change tout" class="blog-img" loading="lazy" onerror="this.remove()"/></div>
           <div class="blog-body">
-            <span class="blog-cat">Business</span>
-            <h3 class="blog-art-title">5 raisons d'utiliser un template pro plutôt que coder from scratch</h3>
-            <p class="blog-excerpt">Gain de temps, coûts réduits, design validé… Pourquoi les entrepreneurs malins choisissent des templates premium pour lancer leur site rapidement.</p>
+            <span class="blog-cat">Sciences</span>
+            <h3 class="blog-art-title">Aux confins du cosmos : pourquoi lever les yeux change tout</h3>
+            <p class="blog-excerpt">Étoiles, galaxies et grandes questions : ce que l'exploration spatiale nous révèle sur notre place dans l'univers.</p>
             <div class="blog-meta">
               <img src="imageProfil.jpg" alt="Auteur" class="blog-avatar"/>
               <div class="blog-author-info">
                 <div class="blog-author-name">MPOUCK Jho Chadrack</div>
-                <div class="blog-date-read">
-                  <span>1 mars 2025</span><span class="dot-sep"></span><span>6 min de lecture</span>
-                </div>
+                <div class="blog-date-read"><span>3 sept. 2026</span><span class="dot-sep"></span><span>8 min de lecture</span></div>
               </div>
             </div>
           </div>
-          <div class="blog-footer">
-            <a href="article1.html" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-          </div>
+          <div class="blog-footer"><a href="#" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a></div>
         </article>
-
-        <!-- [CONFIG] Article 4 -->
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=600&q=80&fit=crop" alt="SEO 2026" class="blog-img" loading="lazy"/>
-          </div>
+        <article class="blog-card" data-cat="Culture">
+          <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80&fit=crop" alt="Les routes de la curiosité : quand l'exploration change le monde" class="blog-img" loading="lazy" onerror="this.remove()"/></div>
           <div class="blog-body">
-            <span class="blog-cat">SEO &amp; Contenu</span>
-            <h3 class="blog-art-title">SEO en 2026 : ce qui fonctionne encore (et ce qui est mort)</h3>
-            <p class="blog-excerpt">GEO, E-E-A-T, keyword stuffing… Le référencement naturel a radicalement changé. Voici les stratégies qui font vraiment la différence aujourd'hui.</p>
+            <span class="blog-cat">Culture</span>
+            <h3 class="blog-art-title">Les routes de la curiosité : quand l'exploration change le monde</h3>
+            <p class="blog-excerpt">Des grands navigateurs aux pionniers modernes, retour sur les voyages qui ont redessiné nos cartes et nos idées.</p>
             <div class="blog-meta">
               <img src="imageProfil.jpg" alt="Auteur" class="blog-avatar"/>
               <div class="blog-author-info">
                 <div class="blog-author-name">MPOUCK Jho Chadrack</div>
-                <div class="blog-date-read">
-                  <span>3 mars 2026</span><span class="dot-sep"></span><span>7 min de lecture</span>
-                </div>
+                <div class="blog-date-read"><span>28 août 2026</span><span class="dot-sep"></span><span>9 min de lecture</span></div>
               </div>
             </div>
           </div>
-          <div class="blog-footer">
-            <a href="article-seo-2026.html" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-          </div>
+          <div class="blog-footer"><a href="#" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a></div>
         </article>
-
-        <!-- [CONFIG] Article 5 -->
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&q=80&fit=crop" alt="IA et UX Designer" class="blog-img" loading="lazy"/>
-          </div>
+        <article class="blog-card" data-cat="Nature">
+          <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80&fit=crop" alt="Les abysses, dernière frontière inexplorée de la Terre" class="blog-img" loading="lazy" onerror="this.remove()"/></div>
           <div class="blog-body">
-            <span class="blog-cat">Intelligence Artificielle</span>
-            <h3 class="blog-art-title">L'IA peut-elle vraiment remplacer un UX designer ? La réponse en 2026</h3>
-            <p class="blog-excerpt">Wireframes en un clic, tests automatisés, copy optimisé… L'IA s'invite partout dans le design. Peut-elle vraiment remplacer un designer humain ?</p>
+            <span class="blog-cat">Nature</span>
+            <h3 class="blog-art-title">Les abysses, dernière frontière inexplorée de la Terre</h3>
+            <p class="blog-excerpt">Plus de la moitié des océans reste à découvrir. Plongée dans un monde de créatures et de mystères encore méconnus.</p>
             <div class="blog-meta">
               <img src="imageProfil.jpg" alt="Auteur" class="blog-avatar"/>
               <div class="blog-author-info">
                 <div class="blog-author-name">MPOUCK Jho Chadrack</div>
-                <div class="blog-date-read">
-                  <span>8 mars 2026</span><span class="dot-sep"></span><span>9 min de lecture</span>
-                </div>
+                <div class="blog-date-read"><span>21 août 2026</span><span class="dot-sep"></span><span>6 min de lecture</span></div>
               </div>
             </div>
           </div>
-          <div class="blog-footer">
-            <a href="article-ia-ux-designer-2026.html" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-          </div>
+          <div class="blog-footer"><a href="#" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a></div>
         </article>
-
-        <!-- [CONFIG] Article 6 -->
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80&fit=crop" alt="Compétences digitales 2026" class="blog-img" loading="lazy"/>
-          </div>
+        <article class="blog-card" data-cat="Curiosité">
+          <div class="blog-img-wrap"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&fit=crop" alt="Cultiver son esprit d'explorateur au quotidien" class="blog-img" loading="lazy" onerror="this.remove()"/></div>
           <div class="blog-body">
-            <span class="blog-cat">Formation &amp; Carrière</span>
-            <h3 class="blog-art-title">Les compétences digitales les plus demandées en 2026</h3>
-            <p class="blog-excerpt">IA, data analytics, cybersécurité, no-code… Les 10 compétences que les entreprises recherchent le plus et comment les acquérir rapidement.</p>
+            <span class="blog-cat">Curiosité</span>
+            <h3 class="blog-art-title">Cultiver son esprit d'explorateur au quotidien</h3>
+            <p class="blog-excerpt">Poser plus de questions, changer de point de vue, tester l'inconnu : des habitudes simples pour rester curieux.</p>
             <div class="blog-meta">
               <img src="imageProfil.jpg" alt="Auteur" class="blog-avatar"/>
               <div class="blog-author-info">
                 <div class="blog-author-name">MPOUCK Jho Chadrack</div>
-                <div class="blog-date-read">
-                  <span>10 mars 2026</span><span class="dot-sep"></span><span>11 min de lecture</span>
-                </div>
+                <div class="blog-date-read"><span>14 août 2026</span><span class="dot-sep"></span><span>5 min de lecture</span></div>
               </div>
             </div>
           </div>
-          <div class="blog-footer">
-            <a href="article-competences-digitales-2026.html" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-          </div>
+          <div class="blog-footer"><a href="#" class="blog-read-link">Lire la suite <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a></div>
         </article>
-
       </div>
     </div>
   </section>
 
+  <!-- ══ GALERIE ══ -->
+  <section class="blog-section dec-sec" id="galerie">
+    <div class="blog-inner">
+      <div class="blog-header"><div><p class="blog-eyebrow">Images</p><h2 class="blog-title">La galerie de l' <span class="accent">exploration</span></h2></div></div>
+      <!-- [CONFIG] remplace les src par tes propres images -->
+      <div class="gal">
+        <figure class="gal-item tall" data-cap="Horizons infinis"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80&fit=crop" alt="Horizons infinis" loading="lazy" onerror="this.remove()"/><span>Horizons infinis</span></figure>
+        <figure class="gal-item wide" data-cap="Rivages lointains"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80&fit=crop" alt="Rivages lointains" loading="lazy" onerror="this.remove()"/><span>Rivages lointains</span></figure>
+        <figure class="gal-item " data-cap="La Terre vue de nuit"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80&fit=crop" alt="La Terre vue de nuit" loading="lazy" onerror="this.remove()"/><span>La Terre vue de nuit</span></figure>
+        <figure class="gal-item " data-cap="Lumière en forêt"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&q=80&fit=crop" alt="Lumière en forêt" loading="lazy" onerror="this.remove()"/><span>Lumière en forêt</span></figure>
+        <figure class="gal-item wide" data-cap="Sommets à conquérir"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80&fit=crop" alt="Sommets à conquérir" loading="lazy" onerror="this.remove()"/><span>Sommets à conquérir</span></figure>
+        <figure class="gal-item tall" data-cap="Au cœur des vagues"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900&q=80&fit=crop" alt="Au cœur des vagues" loading="lazy" onerror="this.remove()"/><span>Au cœur des vagues</span></figure>
+        <figure class="gal-item " data-cap="La route devant soi"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80&fit=crop" alt="La route devant soi" loading="lazy" onerror="this.remove()"/><span>La route devant soi</span></figure>
+        <figure class="gal-item " data-cap="Reflets sur le lac"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80&fit=crop" alt="Reflets sur le lac" loading="lazy" onerror="this.remove()"/><span>Reflets sur le lac</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VIDÉOS ══ -->
+  <section class="blog-section dec-sec" id="videos">
+    <div class="blog-inner">
+      <div class="blog-header"><div><p class="blog-eyebrow">Vidéos</p><h2 class="blog-title">Explorer en <span class="accent">mouvement</span></h2></div></div>
+      <div class="vid-grid">
+        <!-- [CONFIG] colle le lien YouTube complet de ta vidéo dans data-yt (la miniature se met à jour toute seule) -->
+        <button class="vid-card" data-yt="https://youtu.be/I-Lp49r34vM?si=6ZCvDQdxyyCYcY-z" aria-label="Lire la vidéo : Sur les routes du monde : un carnet de découvertes">
+          <div class="vid-thumb"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80&fit=crop" data-fb="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80&fit=crop" alt="" loading="lazy"/><span class="vid-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1b2a"><polygon points="8 5 20 12 8 19"/></svg></span></div>
+          <div class="vid-body"><span class="blog-cat">Voyage</span><h3>Sur les routes du monde : un carnet de découvertes</h3><p>Un tour d'horizon visuel des paysages et rencontres qui donnent envie de partir.</p></div>
+        </button>
+        <!-- [CONFIG] colle le lien YouTube complet de ta vidéo dans data-yt (la miniature se met à jour toute seule) -->
+        <button class="vid-card" data-yt="https://youtu.be/Sig0McBajHk?si=UmPNV3VvZ9cX_2EG" aria-label="Lire la vidéo : Voyage au cœur de l'univers">
+          <div class="vid-thumb"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=80&fit=crop" data-fb="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=80&fit=crop" alt="" loading="lazy"/><span class="vid-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1b2a"><polygon points="8 5 20 12 8 19"/></svg></span></div>
+          <div class="vid-body"><span class="blog-cat">Sciences</span><h3>Voyage au cœur de l'univers</h3><p>Étoiles, planètes et mystères cosmiques expliqués simplement.</p></div>
+        </button>
+        <!-- [CONFIG] colle le lien YouTube complet de ta vidéo dans data-yt (la miniature se met à jour toute seule) -->
+        <button class="vid-card" data-yt="https://youtu.be/bQliPfjncnk?si=ErNOcmPWPK1eliNa" aria-label="Lire la vidéo : Les merveilles cachées de la nature">
+          <div class="vid-thumb"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80&fit=crop" data-fb="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80&fit=crop" alt="" loading="lazy"/><span class="vid-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1b2a"><polygon points="8 5 20 12 8 19"/></svg></span></div>
+          <div class="vid-body"><span class="blog-cat">Nature</span><h3>Les merveilles cachées de la nature</h3><p>Forêts, océans et vie sauvage : la planète comme terrain d'exploration.</p></div>
+        </button>
+        <!-- [CONFIG] colle le lien YouTube complet de ta vidéo dans data-yt (la miniature se met à jour toute seule) -->
+        <button class="vid-card" data-yt="COLLE_ICI_LE_LIEN_YOUTUBE_4" aria-label="Lire la vidéo : Sur les traces des grands explorateurs">
+          <div class="vid-thumb"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80&fit=crop" data-fb="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80&fit=crop" alt="" loading="lazy"/><span class="vid-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1b2a"><polygon points="8 5 20 12 8 19"/></svg></span></div>
+          <div class="vid-body"><span class="blog-cat">Culture</span><h3>Sur les traces des grands explorateurs</h3><p>Ceux qui ont redessiné les cartes et changé notre regard sur le monde.</p></div>
+        </button>
+        <!-- [CONFIG] colle le lien YouTube complet de ta vidéo dans data-yt (la miniature se met à jour toute seule) -->
+        <button class="vid-card" data-yt="COLLE_ICI_LE_LIEN_YOUTUBE_5" aria-label="Lire la vidéo : Plongée au cœur des océans">
+          <div class="vid-thumb"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80&fit=crop" data-fb="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80&fit=crop" alt="" loading="lazy"/><span class="vid-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1b2a"><polygon points="8 5 20 12 8 19"/></svg></span></div>
+          <div class="vid-body"><span class="blog-cat">Nature</span><h3>Plongée au cœur des océans</h3><p>Un monde encore largement inexploré, à couper le souffle.</p></div>
+        </button>
+        <!-- [CONFIG] colle le lien YouTube complet de ta vidéo dans data-yt (la miniature se met à jour toute seule) -->
+        <button class="vid-card" data-yt="COLLE_ICI_LE_LIEN_YOUTUBE_6" aria-label="Lire la vidéo : Apprendre à voir le monde autrement">
+          <div class="vid-thumb"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&fit=crop" data-fb="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&fit=crop" alt="" loading="lazy"/><span class="vid-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0d1b2a"><polygon points="8 5 20 12 8 19"/></svg></span></div>
+          <div class="vid-body"><span class="blog-cat">Curiosité</span><h3>Apprendre à voir le monde autrement</h3><p>Des idées simples pour cultiver sa curiosité au quotidien.</p></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner"><div class="cta-card">
+      <div class="cta-text">
+        <p class="cta-label">✦ Une piste à explorer ?</p>
+        <h2 class="cta-title">Un lieu, un sujet,<br>une <span>idée à découvrir</span></h2>
+        <p class="cta-desc">Tu as un thème d'exploration à me suggérer ? Écris-moi, il pourrait devenir le prochain article.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn-cta-primary">Proposer un sujet <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="blog.html" class="btn-cta-ghost">Tous les articles</a>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- Lightbox / lecteur vidéo -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true"><button class="lb-x" aria-label="Fermer">×</button><div class="lb-box" id="lbBox"></div></div>
 
   <!-- ══════════════════════════════════════════
        ⑥ FOOTER      ⑥ FOOTER
@@ -2182,7 +2124,7 @@
           <ul>
             <li><a href="about.html">À propos de nous</a></li>
             <li><a href="services.html">Nos Services</a></li>
-            <li><a href="projet.html">Nos projets</a></li>
+            <li><a href="blog.html">Articles de blog</a></li>
             <li><a href="index.html#testimonials">Témoignages</a></li>
             <li><a href="about.html">Notre équipe</a></li>
             <li><a href="creation-sites-internet.html">Agence web Congo</a></li>
@@ -2361,6 +2303,7 @@
        SEARCH ENGINE
     ══════════════════════════════════════════ */
     const CONTENT = [
+  { type: 'Page', icon: '🧭', title: 'Découverte', desc: 'Articles, images et vidéos autour de la découverte et de l exploration.', href: 'https://mpouck.github.io/decouvertes.html', keywords: ['découverte', 'decouverte', 'exploration', 'voyage', 'nature', 'images', 'videos'] },
   // =========================
   // PAGES PRINCIPALES
   // =========================
@@ -3004,6 +2947,44 @@
       }
     }, { passive: true });
 
+  </script>
+
+
+  <script>
+  (function () {
+    var chips = document.querySelectorAll('.dec-chip'), cards = document.querySelectorAll('#articles .blog-card');
+    chips.forEach(function (c) { c.addEventListener('click', function () {
+      chips.forEach(function (x) { x.classList.remove('active'); }); c.classList.add('active');
+      cards.forEach(function (k) { k.hidden = !(c.dataset.f === 'all' || k.dataset.cat === c.dataset.f); });
+    }); });
+    var lb = document.getElementById('lb'), box = document.getElementById('lbBox');
+    function openLb(h) { box.innerHTML = h; lb.classList.add('open'); }
+    function closeLb() { lb.classList.remove('open'); box.innerHTML = ''; }
+    document.querySelectorAll('.gal-item').forEach(function (g) { g.addEventListener('click', function () {
+      var i = g.querySelector('img'); if (i) openLb('<img src="' + i.src + '" alt=""><p class="lb-cap">' + g.dataset.cap + '</p>');
+    }); });
+    function ytId(str) {
+      str = (str || '').trim();
+      var m = str.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/|\/live\/)([A-Za-z0-9_-]{11})/);
+      return m ? m[1] : (/^[A-Za-z0-9_-]{11}$/.test(str) ? str : null);
+    }
+    document.querySelectorAll('.vid-card').forEach(function (v) {
+      var id = ytId(v.dataset.yt), im = v.querySelector('img');
+      if (id && im) {
+        im.onerror = function () { im.onerror = null; im.src = im.dataset.fb; };
+        im.src = 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg';
+      }
+      v.addEventListener('click', function () {
+        if (!id) { openLb('<p class="lb-cap">Colle le lien YouTube de ta vidéo dans data-yt pour la lire ici.</p>'); return; }
+        var watch = 'https://www.youtube.com/watch?v=' + id;
+        if (location.protocol === 'file:') { window.open(watch, '_blank', 'noopener'); return; }
+        openLb('<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1" title="Vidéo" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
+          '<p class="lb-cap"><a href="' + watch + '" target="_blank" rel="noopener" style="color:#c9a76c">Si la vidéo ne se lance pas, ouvrir sur YouTube ↗</a></p>');
+      });
+    });
+    lb.addEventListener('click', function (e) { if (e.target === lb || e.target.closest('.lb-x')) closeLb(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+  })();
   </script>
 
 </body>
